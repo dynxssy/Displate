@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ – תשלום";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "אני מסכים לקבל עדכוני מוצר והצעות מ־%@ בדוא״ל. ניתן לבטל את ההרשמה בכל עת.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "%@%% הנחה!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "נדרש קוד רישיון תקף. נא לנסות שוב.";
+
+/* No comment provided by engineer. */
+"Activate" = "הפעלת";
+
+/* No comment provided by engineer. */
+"Activate License" = "הפעלת רישיון";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "כבר רכשת רישיון? יש למלא את הטופס למטה ולהפעיל את %@ מיד.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "אירעה שגיאה";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "אירעה שגיאה לא צפויה בביצוע הפעולה.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "רכישה כעת";
+
+/* No comment provided by engineer. */
+"By %@" = "מאת %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "ביטול";
+
+/* No comment provided by engineer. */
+"Close" = "סגירה";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "המשך תקופת הניסיון";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "השבתת הרישיון מתבצעת";
+
+/* No comment provided by engineer. */
+"Email Address" = "כתובת דוא״ל";
+
+/* No comment provided by engineer. */
+"Enter License" = "הזנת רישיון";
+
+/* No comment provided by engineer. */
+"Error" = "שגיאה";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "שכחת את מפתח הרישיון?";
+
+/* No comment provided by engineer. */
+"Join" = "הצטרפות";
+
+/* No comment provided by engineer. */
+"License Code" = "קוד רישיון";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "לא, תודה!";
+
+/* No comment provided by engineer. */
+"OK" = "אישור";
+
+/* No comment provided by engineer. */
+"Order Complete" = "ההזמנה הושלמה";
+
+/* No comment provided by engineer. */
+"Order Success" = "ההזמנה הצליחה";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "נא להזין את כתובת הדוא״ל ששימשה לרכישת הרישיון.";
+
+/* No comment provided by engineer. */
+"Quit" = "יציאה";
+
+/* No comment provided by engineer. */
+"Recover" = "שחזור";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "שחזור הרישיון של %@";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "הרישיון של %@ משוחזר כעת";
+
+/* No comment provided by engineer. */
+"Retry" = "ניסיון חוזר";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "לשלוח נתוני שימוש אנונימיים?";
+
+/* No comment provided by engineer. */
+"Success" = "הצלחה";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "תודה שניסית את %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "תודה על ההזמנה. הודעת דוא״ל תישלח בקרוב.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "עותק זה של %@ רשום עם הפרטים שלהלן.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "לא ניתן להשבית את הרישיון. נא לנסות שוב מאוחר יותר.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "שגיאה לא מוגדרת. נא לפנות לתמיכה.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "שימוש בכתובת דוא״ל אחרת";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "בדיקת רישיון כבר מתבצעת. נא להמתין רגע.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "השבתת רישיון כבר מתבצעת. נא להמתין רגע.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "שלחנו פרטים על רישיונות עבור %1$@ אל %2$@";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "ברוכים הבאים אל %@!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "אופס! משהו השתבש.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "לשלוח נתוני שימוש אנונימיים למפתח של %@ כדי לעזור לשפר את היישום?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "נותר %d יום לתקופת הניסיון.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "מספר הימים שנותרו לתקופת הניסיון: %d.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "הרישיון שלך עבור %@";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "ההזמנה שלך בטיפול";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "ההזמנה שלך בטיפול. הודעת דוא״ל תישלח בקרוב.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "לאחר מכן %@ לכל %ld ימים";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "לאחר מכן %@ לכל %ld חודשים";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "לאחר מכן %@ לכל %ld שבועות";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "לאחר מכן %@ לכל %ld שנים";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "לאחר מכן %@ ליום";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "לאחר מכן %@ לחודש";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "לאחר מכן %@ לשבוע";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "לאחר מכן %@ לשנה";
+
+/* No comment provided by engineer. */
+"after %ld days" = "לאחר %ld ימים";
+
+/* No comment provided by engineer. */
+"after 1 day" = "לאחר יום אחד";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "קוד הרישיון כבר נוצל";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "קוד הרישיון כבר נוצל.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "קוד הרישיון אינו פעיל";
+
+/* No comment provided by engineer. */
+"License does not match product" = "הרישיון אינו תואם למוצר";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "הרישיון הושבת בהצלחה";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "המטבע שסופק אינו תקף";
+
+/* No comment provided by engineer. */
+"This license has expired" = "תוקף הרישיון הזה פג";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "האימות נכשל. יש לבדוק את מפתח ה־API של ה־SDK.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "ההפעלה המבוקשת לא נמצאה";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "המוצר המבוקש לא נמצא";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "לא הצלחנו לאשר את מצב ההזמנה שלך";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "לא הצלחנו לאשר את מצב ההזמנה שלך. הודעת דוא״ל תישלח בקרוב.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "מפתח הרישיון שסופק למוצר זה לא נמצא.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "אין לך הרשאה לגשת למשאב זה";

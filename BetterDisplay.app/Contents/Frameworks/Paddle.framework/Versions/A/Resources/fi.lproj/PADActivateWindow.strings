@@ -1,0 +1,30 @@
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "17"; */
+"17.title" = "Peru";
+
+/* Class = "NSButtonCell"; title = "Buy Now"; ObjectID = "18"; */
+"18.title" = "Osta nyt";
+
+/* Class = "NSButtonCell"; title = "Activate License"; ObjectID = "19"; */
+"19.title" = "Aktivoi lisenssi";
+
+/* Class = "NSTextFieldCell"; title = "Email Address"; ObjectID = "21"; */
+"21.title" = "Sähköpostiosoite";
+
+/* Class = "NSTextFieldCell"; title = "License Code"; ObjectID = "22"; */
+"22.title" = "Lisenssikoodi";
+
+/* Class = "NSTextFieldCell"; title = "Activate"; ObjectID = "25"; */
+"25.title" = "Aktivoi";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "26"; */
+"26.title" = "Test Product";
+
+/* Class = "NSTextFieldCell"; title = "Already purchased a license? Fill in the form below and activate Test Product instantly."; ObjectID = "27"; */
+"27.title" = "Ostitko jo lisenssin? Täytä alla oleva lomake ja aktivoi Test Product heti.";
+
+/* Class = "NSTextFieldCell"; title = "Activating License"; ObjectID = "lwY-yD-CE9"; */
+"lwY-yD-CE9.title" = "Aktivoidaan lisenssiä";
+
+/* Class = "NSButtonCell"; title = "Deactivate License"; ObjectID = "pEH-Ih-5sP"; */
+"pEH-Ih-5sP.title" = "Poista lisenssin aktivointi";

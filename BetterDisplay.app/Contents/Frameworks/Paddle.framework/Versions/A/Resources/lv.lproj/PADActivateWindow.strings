@@ -1,0 +1,30 @@
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "17"; */
+"17.title" = "Atcelt";
+
+/* Class = "NSButtonCell"; title = "Buy Now"; ObjectID = "18"; */
+"18.title" = "Pirkt tagad";
+
+/* Class = "NSButtonCell"; title = "Activate License"; ObjectID = "19"; */
+"19.title" = "Aktivizēt licenci";
+
+/* Class = "NSTextFieldCell"; title = "Email Address"; ObjectID = "21"; */
+"21.title" = "E-pasta adrese";
+
+/* Class = "NSTextFieldCell"; title = "License Code"; ObjectID = "22"; */
+"22.title" = "Licences kods";
+
+/* Class = "NSTextFieldCell"; title = "Activate"; ObjectID = "25"; */
+"25.title" = "Aktivizēt";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "26"; */
+"26.title" = "Test Product";
+
+/* Class = "NSTextFieldCell"; title = "Already purchased a license? Fill in the form below and activate Test Product instantly."; ObjectID = "27"; */
+"27.title" = "Already purchased a license? Fill in the form below and activate Test Product instantly.";
+
+/* Class = "NSTextFieldCell"; title = "Activating License"; ObjectID = "lwY-yD-CE9"; */
+"lwY-yD-CE9.title" = "Licences aktivizēšana";
+
+/* Class = "NSButtonCell"; title = "Deactivate License"; ObjectID = "pEH-Ih-5sP"; */
+"pEH-Ih-5sP.title" = "Deaktivizēt licenci";

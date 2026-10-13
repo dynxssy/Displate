@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ - Оплата";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ може надсилати мені оновлення продукту та пропозиції електронною поштою. Ви можете відмовитися в будь-який час.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "Знижка %@%%!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "Потрібен дійсний код ліцензії. Спробуйте ще раз.";
+
+/* No comment provided by engineer. */
+"Activate" = "Активувати";
+
+/* No comment provided by engineer. */
+"Activate License" = "Активувати ліцензію";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "Уже придбали ліцензію? Заповніть форму нижче й миттєво активуйте %@.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "Сталася помилка";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "Під час виконання цієї дії сталася неочікувана помилка.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "Придбати зараз";
+
+/* No comment provided by engineer. */
+"By %@" = "Від %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "Скасувати";
+
+/* No comment provided by engineer. */
+"Close" = "Закрити";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "Продовжити пробний період";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "Деактивація ліцензії";
+
+/* No comment provided by engineer. */
+"Email Address" = "Адреса електронної пошти";
+
+/* No comment provided by engineer. */
+"Enter License" = "Ввести ліцензію";
+
+/* No comment provided by engineer. */
+"Error" = "Помилка";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "Забули ліцензійний ключ?";
+
+/* No comment provided by engineer. */
+"Join" = "Приєднатися";
+
+/* No comment provided by engineer. */
+"License Code" = "Код ліцензії";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "Ні, дякую!";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Order Complete" = "Замовлення завершено";
+
+/* No comment provided by engineer. */
+"Order Success" = "Замовлення успішне";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "Введіть адресу електронної пошти, використану для придбання ліцензії.";
+
+/* No comment provided by engineer. */
+"Quit" = "Вийти";
+
+/* No comment provided by engineer. */
+"Recover" = "Відновити";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "Відновити ліцензію %@";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "Відновлення ліцензії %@";
+
+/* No comment provided by engineer. */
+"Retry" = "Повторити";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "Надіслати анонімну інформацію про використання?";
+
+/* No comment provided by engineer. */
+"Success" = "Успіх";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "Дякуємо, що випробовуєте %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "Дякуємо за замовлення. Невдовзі ви отримаєте електронний лист.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "Цю копію %@ зареєстровано з наведеною нижче інформацією.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "Не вдалося деактивувати ліцензію. Спробуйте пізніше.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "Невизначена помилка. Зверніться до служби підтримки.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "Використати іншу адресу електронної пошти";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "Ми вже перевіряємо ліцензію. Зачекайте хвилину.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "Ми вже деактивуємо ліцензію. Зачекайте хвилину.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "Ми надіслали відомості про всі ліцензії для %1$@ на адресу %2$@";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "Вітаємо в %@!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "Ой! Щось пішло не так.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Бажаєте надіслати анонімну інформацію про використання розробнику %@, щоб допомогти покращити програму?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "У пробному періоді залишився %d день.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "Залишок пробного періоду: %d дн.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "Ваша ліцензія %@";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "Ваше замовлення обробляється";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "Ваше замовлення обробляється. Невдовзі ви отримаєте електронний лист.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Далі %@/%ld дн.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Далі %@/%ld міс.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Далі %@/%ld тиж.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Далі %@/%ld р.";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Далі %@/день";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Далі %@/місяць";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Далі %@/тиждень";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Далі %@/рік";
+
+/* No comment provided by engineer. */
+"after %ld days" = "через %ld дн.";
+
+/* No comment provided by engineer. */
+"after 1 day" = "через 1 день";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "Код ліцензії вже використано";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "Код ліцензії вже використано.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "Код ліцензії неактивний";
+
+/* No comment provided by engineer. */
+"License does not match product" = "Ліцензія не відповідає продукту";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "Ліцензію успішно деактивовано";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "Указана валюта недійсна";
+
+/* No comment provided by engineer. */
+"This license has expired" = "Термін дії цієї ліцензії минув";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "Не вдалося пройти автентифікацію. Перевірте ключ API для SDK.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "Запитану активацію не знайдено";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "Запитаний продукт не знайдено";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "Не вдалося підтвердити стан вашого замовлення";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "Не вдалося підтвердити стан вашого замовлення. Невдовзі ви отримаєте електронний лист.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "Указаний ліцензійний ключ для цього продукту не знайдено.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "У вас немає дозволу на доступ до цього ресурсу";

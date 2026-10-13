@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ - Pagament";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ em pot enviar novetats del producte i ofertes per correu electrònic. Pots donar-te de baixa en qualsevol moment.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "%@%% de descompte!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "Cal un codi de llicència vàlid. Torna-ho a provar.";
+
+/* No comment provided by engineer. */
+"Activate" = "Activa";
+
+/* No comment provided by engineer. */
+"Activate License" = "Activa la llicència";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "Ja has comprat una llicència? Omple el formulari següent i activa %@ a l'instant.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "S'ha produït un error";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "S'ha produït un error inesperat en fer aquesta acció.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "Compra ara";
+
+/* No comment provided by engineer. */
+"By %@" = "De %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "Cancel·la";
+
+/* No comment provided by engineer. */
+"Close" = "Tanca";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "Continua la prova";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "Desactivant la llicència";
+
+/* No comment provided by engineer. */
+"Email Address" = "Adreça electrònica";
+
+/* No comment provided by engineer. */
+"Enter License" = "Introdueix la llicència";
+
+/* No comment provided by engineer. */
+"Error" = "Error";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "Has oblidat la clau de llicència?";
+
+/* No comment provided by engineer. */
+"Join" = "Uneix-t'hi";
+
+/* No comment provided by engineer. */
+"License Code" = "Codi de llicència";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "No, gràcies!";
+
+/* No comment provided by engineer. */
+"OK" = "D'acord";
+
+/* No comment provided by engineer. */
+"Order Complete" = "Comanda completada";
+
+/* No comment provided by engineer. */
+"Order Success" = "Comanda correcta";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "Introdueix l'adreça electrònica utilitzada per comprar la llicència.";
+
+/* No comment provided by engineer. */
+"Quit" = "Surt";
+
+/* No comment provided by engineer. */
+"Recover" = "Recupera";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "Recupera la llicència de %@";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "Recuperant la llicència de %@";
+
+/* No comment provided by engineer. */
+"Retry" = "Torna-ho a provar";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "Vols enviar dades d'ús anònimes?";
+
+/* No comment provided by engineer. */
+"Success" = "Èxit";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "Gràcies per provar %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "Gràcies per la comanda. Aviat rebràs un correu electrònic.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "Aquesta còpia de %@ està registrada amb les dades següents.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "No s'ha pogut desactivar la llicència. Torna-ho a provar més tard.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "Error no especificat. Contacta amb el servei d'assistència.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "Utilitza una altra adreça electrònica";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "Ja s'està comprovant una llicència. Espera un moment.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "Ja s'està desactivant una llicència. Espera un moment.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "Hem enviat les dades de les llicències de %1$@ a %2$@";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "Benvinguts a %@!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "Ui! Alguna cosa ha fallat.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Vols enviar dades d'ús anònimes al desenvolupador de %@ per ajudar a millorar l'aplicació?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "Et queda %d dia del període de prova.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "Et queden %d dies del període de prova.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "La teva llicència de %@";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "S'està processant la comanda";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "S'està processant la comanda. Aviat rebràs un correu electrònic.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Després, %@/%ld dies";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Després, %@/%ld mesos";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Després, %@/%ld setmanes";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Després, %@/%ld anys";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Després, %@/dia";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Després, %@/mes";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Després, %@/setmana";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Després, %@/any";
+
+/* No comment provided by engineer. */
+"after %ld days" = "al cap de %ld dies";
+
+/* No comment provided by engineer. */
+"after 1 day" = "al cap d'1 dia";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "El codi de llicència ja s'ha utilitzat";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "El codi de llicència ja s'ha utilitzat.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "El codi de llicència no està actiu";
+
+/* No comment provided by engineer. */
+"License does not match product" = "La llicència no correspon al producte";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "La llicència s'ha desactivat correctament";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "La moneda indicada no és vàlida";
+
+/* No comment provided by engineer. */
+"This license has expired" = "Aquesta llicència ha caducat";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "No s'ha pogut autenticar. Comprova la clau d'API de l'SDK.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "No s'ha trobat l'activació sol·licitada";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "No s'ha trobat el producte sol·licitat";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "No hem pogut confirmar l'estat de la comanda";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "No hem pogut confirmar l'estat de la comanda. Aviat rebràs un correu electrònic.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "No hem trobat la clau de llicència indicada per a aquest producte.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "No tens permís per accedir a aquest recurs";

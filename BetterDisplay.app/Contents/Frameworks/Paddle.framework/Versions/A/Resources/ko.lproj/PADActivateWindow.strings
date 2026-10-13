@@ -1,0 +1,29 @@
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "17"; */
+"17.title" = "취소";
+
+/* Class = "NSButtonCell"; title = "Buy Now"; ObjectID = "18"; */
+"18.title" = "지금 구매";
+
+/* Class = "NSButtonCell"; title = "Activate License"; ObjectID = "19"; */
+"19.title" = "라이선스 활성화";
+
+/* Class = "NSTextFieldCell"; title = "Email Address"; ObjectID = "21"; */
+"21.title" = "이메일 주소";
+
+/* Class = "NSTextFieldCell"; title = "License Code"; ObjectID = "22"; */
+"22.title" = "라이선스 코드";
+
+/* Class = "NSTextFieldCell"; title = "Activate"; ObjectID = "25"; */
+"25.title" = "활성화:";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "26"; */
+"26.title" = "테스트 제품";
+
+/* Class = "NSTextFieldCell"; title = "Already purchased a license? Fill in the form below and activate Test Product instantly."; ObjectID = "27"; */
+"27.title" = "이미 라이선스를 구매하셨나요? 아래 양식을 작성하면 테스트 제품을 즉시 활성화할 수 있습니다.";
+
+/* Class = "NSTextFieldCell"; title = "Activating License"; ObjectID = "lwY-yD-CE9"; */
+"lwY-yD-CE9.title" = "라이선스 활성화 중";
+
+/* Class = "NSButtonCell"; title = "Deactivate License"; ObjectID = "pEH-Ih-5sP"; */
+"pEH-Ih-5sP.title" = "라이선스 비활성화";

@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ - إتمام الشراء";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "يمكن لـ %@ إرسال تحديثات المنتج والعروض إليّ عبر البريد الإلكتروني. يمكنك إلغاء الاشتراك في أي وقت.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "خصم %@%%!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "يلزم رمز ترخيص صالح. يرجى المحاولة مجددًا.";
+
+/* No comment provided by engineer. */
+"Activate" = "تفعيل";
+
+/* No comment provided by engineer. */
+"Activate License" = "تفعيل الترخيص";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "هل اشتريت ترخيصًا بالفعل؟ املأ النموذج أدناه لتفعيل %@ فورًا.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "حدث خطأ";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "حدث خطأ غير متوقع أثناء تنفيذ هذا الإجراء.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "شراء الآن";
+
+/* No comment provided by engineer. */
+"By %@" = "من %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "إلغاء";
+
+/* No comment provided by engineer. */
+"Close" = "إغلاق";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "متابعة التجربة";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "جارٍ إلغاء تفعيل الترخيص";
+
+/* No comment provided by engineer. */
+"Email Address" = "عنوان البريد الإلكتروني";
+
+/* No comment provided by engineer. */
+"Enter License" = "إدخال الترخيص";
+
+/* No comment provided by engineer. */
+"Error" = "خطأ";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "هل نسيت مفتاح الترخيص؟";
+
+/* No comment provided by engineer. */
+"Join" = "انضمام";
+
+/* No comment provided by engineer. */
+"License Code" = "رمز الترخيص";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "لا، شكرًا!";
+
+/* No comment provided by engineer. */
+"OK" = "موافق";
+
+/* No comment provided by engineer. */
+"Order Complete" = "اكتمل الطلب";
+
+/* No comment provided by engineer. */
+"Order Success" = "نجح الطلب";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "أدخل عنوان البريد الإلكتروني الذي استخدمته لشراء الترخيص.";
+
+/* No comment provided by engineer. */
+"Quit" = "إنهاء";
+
+/* No comment provided by engineer. */
+"Recover" = "استرجاع";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "استرجاع ترخيص %@";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "جارٍ استرجاع ترخيص %@";
+
+/* No comment provided by engineer. */
+"Retry" = "إعادة المحاولة";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "هل تريد إرسال معلومات استخدام مجهولة الهوية؟";
+
+/* No comment provided by engineer. */
+"Success" = "نجاح";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "شكرًا لتجربة %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "شكرًا لطلبك، ستصلك رسالة بريد إلكتروني قريبًا.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "هذه النسخة من %@ مسجلة بالمعلومات أدناه.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "تعذّر إلغاء تفعيل الترخيص. يرجى المحاولة لاحقًا.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "خطأ غير محدد، يرجى التواصل مع الدعم.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "استخدام عنوان بريد إلكتروني آخر";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "جارٍ التحقق من ترخيص بالفعل، يرجى الانتظار قليلًا.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "جارٍ إلغاء تفعيل ترخيص بالفعل، يرجى الانتظار قليلًا.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "أرسلنا تفاصيل أي تراخيص لـ %1$@ إلى %2$@";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "مرحبًا بك في %@!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "عفوًا! حدث خطأ ما.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "هل تريد إرسال معلومات استخدام مجهولة الهوية إلى مطوّر %@ للمساعدة في تحسين التطبيق؟";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "الأيام المتبقية من الفترة التجريبية: %d.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "الأيام المتبقية من الفترة التجريبية: %d.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "ترخيص %@ الخاص بك";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "جارٍ معالجة طلبك";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "جارٍ معالجة طلبك. ستصلك رسالة بريد إلكتروني قريبًا.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "ثم %@ كل %ld يومًا";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "ثم %@ كل %ld شهرًا";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "ثم %@ كل %ld أسبوعًا";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "ثم %@ كل %ld عامًا";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "ثم %@ يوميًا";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "ثم %@ شهريًا";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "ثم %@ أسبوعيًا";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "ثم %@ سنويًا";
+
+/* No comment provided by engineer. */
+"after %ld days" = "بعد %ld يومًا";
+
+/* No comment provided by engineer. */
+"after 1 day" = "بعد يوم واحد";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "رمز الترخيص مستخدم بالفعل";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "رمز الترخيص مستخدم بالفعل.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "رمز الترخيص غير نشط";
+
+/* No comment provided by engineer. */
+"License does not match product" = "الترخيص لا يطابق المنتج";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "تم إلغاء تفعيل الترخيص بنجاح";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "العملة المقدمة غير صالحة";
+
+/* No comment provided by engineer. */
+"This license has expired" = "انتهت صلاحية هذا الترخيص";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "تعذّرت المصادقة، تحقق من مفتاح API لحزمة SDK.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "تعذّر العثور على التفعيل المطلوب";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "تعذّر العثور على المنتج المطلوب";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "تعذّر تأكيد حالة طلبك";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "تعذّر تأكيد حالة طلبك. ستصلك رسالة بريد إلكتروني قريبًا.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "تعذّر العثور على مفتاح الترخيص المقدم لهذا المنتج.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "ليس لديك إذن للوصول إلى هذا المورد";

@@ -1,0 +1,11 @@
+/* Class = "NSWindow"; title = "Window"; ObjectID = "1"; */
+"1.title" = "창";
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "14"; */
+"14.title" = "취소";
+
+/* Class = "NSButtonCell"; title = "Enter License"; ObjectID = "15"; */
+"15.title" = "라이선스 입력";
+
+/* Class = "NSTextFieldCell"; title = "Completing Purchase"; ObjectID = "cSe-YQ-ICA"; */
+"cSe-YQ-ICA.title" = "구매 완료 중";

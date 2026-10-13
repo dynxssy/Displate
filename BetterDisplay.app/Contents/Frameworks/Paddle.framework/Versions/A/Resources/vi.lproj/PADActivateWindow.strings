@@ -1,0 +1,29 @@
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "17"; */
+"17.title" = "Hủy";
+
+/* Class = "NSButtonCell"; title = "Buy Now"; ObjectID = "18"; */
+"18.title" = "Mua ngay";
+
+/* Class = "NSButtonCell"; title = "Activate License"; ObjectID = "19"; */
+"19.title" = "Kích hoạt giấy phép";
+
+/* Class = "NSTextFieldCell"; title = "Email Address"; ObjectID = "21"; */
+"21.title" = "Địa chỉ email";
+
+/* Class = "NSTextFieldCell"; title = "License Code"; ObjectID = "22"; */
+"22.title" = "Mã giấy phép";
+
+/* Class = "NSTextFieldCell"; title = "Activate"; ObjectID = "25"; */
+"25.title" = "Kích hoạt";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "26"; */
+"26.title" = "Sản phẩm thử nghiệm";
+
+/* Class = "NSTextFieldCell"; title = "Already purchased a license? Fill in the form below and activate Test Product instantly."; ObjectID = "27"; */
+"27.title" = "Bạn đã mua giấy phép? Điền vào biểu mẫu bên dưới để kích hoạt Sản phẩm thử nghiệm ngay lập tức.";
+
+/* Class = "NSTextFieldCell"; title = "Activating License"; ObjectID = "lwY-yD-CE9"; */
+"lwY-yD-CE9.title" = "Đang kích hoạt giấy phép";
+
+/* Class = "NSButtonCell"; title = "Deactivate License"; ObjectID = "pEH-Ih-5sP"; */
+"pEH-Ih-5sP.title" = "Hủy kích hoạt giấy phép";

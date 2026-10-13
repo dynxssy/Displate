@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ApplicationDescription</key>
+	<string>BetterDisplay Pro</string>
+	<key>Website</key>
+	<string>https://betterdisplay.pro</string>
+	<key>Connections</key>
+	<array>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>*.ingest.sentry.io</string>
+			<key>NetworkProtocol</key>
+			<string>TCP</string>
+			<key>Port</key>
+			<string>443</string>
+			<key>Purpose</key>
+			<string>Error Reporting</string>
+			<key>DenyConsequences</key>
+			<string>If you deny these connections, the app will not send crash reports to the developer. Crash reporting is handled by Sentry (sentry.io).</string>
+		</dict>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>*.betterdisplay.pro, *.github.com</string>
+			<key>NetworkProtocol</key>
+			<string>TCP</string>
+			<key>Port</key>
+			<string>443</string>
+			<key>Purpose</key>
+			<string>Software Update</string>
+			<key>DenyConsequences</key>
+			<string>If you deny these connections, you will not be notified about new versions and will not be able to update to newer app versions using the app&apos;s UI.</string>
+		</dict>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>*.paddleapi.com, *.paddle.com</string>
+			<key>NetworkProtocol</key>
+			<string>TCP</string>
+			<key>Port</key>
+			<string>443</string>
+			<key>Purpose</key>
+			<string>Licensing</string>
+			<key>DenyConsequences</key>
+			<string>If you deny these connections, you will not be able to purchase or activate a Pro license. Licensing is managed by Paddle (paddle.com).</string>
+		</dict>
+		<dict>
+			<key>IsIncoming</key>
+			<false/>
+			<key>Host</key>
+			<string>*</string>
+			<key>Purpose</key>
+			<string>User Defined Custom Integration</string>
+			<key>DenyConsequences</key>
+			<string>You may create network based custom controls (for example to control a network-enabled device like a smart TV, amplifier) in the app that can connect to any hosts you specify on your local network or over the Internet. If you deny these connections, these custom controls will not work.</string>
+		</dict>
+	</array>
+</dict>
+</plist>

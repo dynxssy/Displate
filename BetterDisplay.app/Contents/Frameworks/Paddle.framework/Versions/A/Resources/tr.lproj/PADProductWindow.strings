@@ -1,0 +1,41 @@
+/* Class = "NSTextFieldCell"; title = "Save 50% today!"; ObjectID = "32"; */
+"32.title" = "Bugün %50 tasarruf edin!";
+
+/* Class = "NSTextFieldCell"; title = "NOW"; ObjectID = "34"; */
+"34.title" = "ŞİMDİ";
+
+/* Class = "NSTextFieldCell"; title = "$10.00"; ObjectID = "35"; */
+"35.title" = "$10.00";
+
+/* Class = "NSTextFieldCell"; title = "$11.00"; ObjectID = "36"; */
+"36.title" = "$11.00";
+
+/* Class = "NSTextFieldCell"; title = "WAS"; ObjectID = "37"; */
+"37.title" = "ÖNCE";
+
+/* Class = "NSTextFieldCell"; title = "By John Smith"; ObjectID = "38"; */
+"38.title" = "John Smith tarafından";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "39"; */
+"39.title" = "Test Ürünü";
+
+/* Class = "NSTextFieldCell"; title = "28 days"; ObjectID = "41"; */
+"41.title" = "28 gün";
+
+/* Class = "NSButtonCell"; title = "Enter License"; ObjectID = "44"; */
+"44.title" = "Lisans Gir";
+
+/* Class = "NSButtonCell"; title = "Buy Now"; ObjectID = "45"; */
+"45.title" = "Şimdi Satın Al";
+
+/* Class = "NSButtonCell"; title = "Continue Trial"; ObjectID = "46"; */
+"46.title" = "Denemeye Devam Et";
+
+/* Class = "NSTextFieldCell"; title = "Thanks for evaluating this version of Test Product."; ObjectID = "47"; */
+"47.title" = "Test Ürününün bu sürümünü değerlendirdiğiniz için teşekkürler.";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "48"; */
+"48.title" = "Test Ürünü";
+
+/* Class = "NSTextFieldCell"; title = "Thank you for trying"; ObjectID = "49"; */
+"49.title" = "Denediğiniz için teşekkürler";

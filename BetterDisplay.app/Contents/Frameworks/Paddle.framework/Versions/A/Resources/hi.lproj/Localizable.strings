@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ - भुगतान";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ मुझे ईमेल से उत्पाद के अपडेट और ऑफ़र भेज सकता है। आप कभी भी सदस्यता छोड़ सकते हैं।";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "%@%% की छूट!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "मान्य लाइसेंस कोड ज़रूरी है। फिर से कोशिश करें।";
+
+/* No comment provided by engineer. */
+"Activate" = "सक्रिय करें";
+
+/* No comment provided by engineer. */
+"Activate License" = "लाइसेंस सक्रिय करें";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "लाइसेंस पहले ही खरीद लिया है? नीचे का फ़ॉर्म भरें और %@ तुरंत सक्रिय करें।";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "एक त्रुटि हुई";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "यह कार्रवाई करते समय एक अनपेक्षित त्रुटि हुई।";
+
+/* No comment provided by engineer. */
+"Buy Now" = "अभी खरीदें";
+
+/* No comment provided by engineer. */
+"By %@" = "%@ द्वारा";
+
+/* No comment provided by engineer. */
+"Cancel" = "रद्द करें";
+
+/* No comment provided by engineer. */
+"Close" = "बंद करें";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "परीक्षण जारी रखें";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "लाइसेंस निष्क्रिय हो रहा है";
+
+/* No comment provided by engineer. */
+"Email Address" = "ईमेल पता";
+
+/* No comment provided by engineer. */
+"Enter License" = "लाइसेंस दर्ज करें";
+
+/* No comment provided by engineer. */
+"Error" = "त्रुटि";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "लाइसेंस कुंजी भूल गए?";
+
+/* No comment provided by engineer. */
+"Join" = "जुड़ें";
+
+/* No comment provided by engineer. */
+"License Code" = "लाइसेंस कोड";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "नहीं, धन्यवाद!";
+
+/* No comment provided by engineer. */
+"OK" = "ठीक है";
+
+/* No comment provided by engineer. */
+"Order Complete" = "ऑर्डर पूरा हुआ";
+
+/* No comment provided by engineer. */
+"Order Success" = "ऑर्डर सफल रहा";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "लाइसेंस खरीदते समय इस्तेमाल किया गया ईमेल पता दर्ज करें।";
+
+/* No comment provided by engineer. */
+"Quit" = "बाहर निकलें";
+
+/* No comment provided by engineer. */
+"Recover" = "पुनः प्राप्त करें";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "अपना %@ लाइसेंस पुनः प्राप्त करें";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "आपका %@ लाइसेंस पुनः प्राप्त हो रहा है";
+
+/* No comment provided by engineer. */
+"Retry" = "फिर कोशिश करें";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "अनाम उपयोग जानकारी भेजें?";
+
+/* No comment provided by engineer. */
+"Success" = "सफल";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "%@ आज़माने के लिए धन्यवाद";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "आपके ऑर्डर के लिए धन्यवाद। आपको जल्द ही ईमेल मिलेगा।";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "%@ की यह प्रति नीचे दी गई जानकारी के साथ पंजीकृत है।";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "लाइसेंस निष्क्रिय नहीं हो सका। बाद में फिर कोशिश करें।";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "अज्ञात त्रुटि। सहायता टीम से संपर्क करें।";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "दूसरा ईमेल पता इस्तेमाल करें";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "लाइसेंस की जाँच पहले से चल रही है। कुछ पल रुकें।";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "लाइसेंस पहले से निष्क्रिय किया जा रहा है। कुछ पल रुकें।";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "हमने %1$@ के सभी लाइसेंसों का विवरण %2$@ पर भेज दिया है";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "%@ में आपका स्वागत है!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "ओह! कुछ गड़बड़ हो गई।";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "क्या आप ऐप को बेहतर बनाने में मदद के लिए %@ के डेवलपर को अनाम उपयोग जानकारी भेजना चाहते हैं?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "आपकी परीक्षण अवधि का %d दिन बाकी है।";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "आपकी परीक्षण अवधि के %d दिन बाकी हैं।";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "आपका %@ लाइसेंस";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "आपका ऑर्डर संसाधित हो रहा है";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "आपका ऑर्डर संसाधित हो रहा है। आपको जल्द ही ईमेल मिलेगा।";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "फिर %@ प्रति %ld दिन";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "फिर %@ प्रति %ld महीने";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "फिर %@ प्रति %ld सप्ताह";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "फिर %@ प्रति %ld वर्ष";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "फिर %@ प्रति दिन";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "फिर %@ प्रति माह";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "फिर %@ प्रति सप्ताह";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "फिर %@ प्रति वर्ष";
+
+/* No comment provided by engineer. */
+"after %ld days" = "%ld दिन बाद";
+
+/* No comment provided by engineer. */
+"after 1 day" = "1 दिन बाद";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "लाइसेंस कोड पहले ही इस्तेमाल हो चुका है";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "लाइसेंस कोड पहले ही इस्तेमाल हो चुका है।";
+
+/* No comment provided by engineer. */
+"License code is not active" = "लाइसेंस कोड सक्रिय नहीं है";
+
+/* No comment provided by engineer. */
+"License does not match product" = "लाइसेंस उत्पाद से मेल नहीं खाता";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "लाइसेंस सफलतापूर्वक निष्क्रिय हो गया";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "दी गई मुद्रा मान्य नहीं है";
+
+/* No comment provided by engineer. */
+"This license has expired" = "इस लाइसेंस की अवधि समाप्त हो गई है";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "प्रमाणीकरण नहीं हो सका। अपनी SDK API कुंजी जाँचें।";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "अनुरोधित सक्रियण नहीं मिला";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "अनुरोधित उत्पाद नहीं मिला";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "हम आपके ऑर्डर की स्थिति की पुष्टि नहीं कर सके";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "हम आपके ऑर्डर की स्थिति की पुष्टि नहीं कर सके। आपको जल्द ही ईमेल मिलेगा।";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "इस उत्पाद के लिए दी गई लाइसेंस कुंजी नहीं मिली।";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "आपको इस संसाधन तक पहुँचने की अनुमति नहीं है";

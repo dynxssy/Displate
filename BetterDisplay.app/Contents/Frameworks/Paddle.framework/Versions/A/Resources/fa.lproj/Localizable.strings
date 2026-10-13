@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ - پرداخت";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ می‌تواند اخبار محصول و پیشنهادها را با ایمیل برایم بفرستد. هر زمان بخواهید می‌توانید لغو اشتراک کنید.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "%@%% تخفیف!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "کد مجوز معتبر لازم است. دوباره تلاش کنید.";
+
+/* No comment provided by engineer. */
+"Activate" = "فعال‌سازی";
+
+/* No comment provided by engineer. */
+"Activate License" = "فعال‌سازی مجوز";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "قبلاً مجوز خریده‌اید؟ فرم زیر را پر کنید و %@ را فوراً فعال کنید.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "خطایی رخ داد";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "هنگام انجام این کار خطای غیرمنتظره‌ای رخ داد.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "خرید اکنون";
+
+/* No comment provided by engineer. */
+"By %@" = "از %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "لغو";
+
+/* No comment provided by engineer. */
+"Close" = "بستن";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "ادامهٔ دورهٔ آزمایشی";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "در حال غیرفعال‌سازی مجوز";
+
+/* No comment provided by engineer. */
+"Email Address" = "نشانی ایمیل";
+
+/* No comment provided by engineer. */
+"Enter License" = "وارد کردن مجوز";
+
+/* No comment provided by engineer. */
+"Error" = "خطا";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "کلید مجوز را فراموش کرده‌اید؟";
+
+/* No comment provided by engineer. */
+"Join" = "عضویت";
+
+/* No comment provided by engineer. */
+"License Code" = "کد مجوز";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "نه، ممنون!";
+
+/* No comment provided by engineer. */
+"OK" = "تأیید";
+
+/* No comment provided by engineer. */
+"Order Complete" = "سفارش تکمیل شد";
+
+/* No comment provided by engineer. */
+"Order Success" = "سفارش موفق بود";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "نشانی ایمیلی را وارد کنید که برای خرید مجوز استفاده کرده‌اید.";
+
+/* No comment provided by engineer. */
+"Quit" = "خروج";
+
+/* No comment provided by engineer. */
+"Recover" = "بازیابی";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "بازیابی مجوز %@";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "در حال بازیابی مجوز %@";
+
+/* No comment provided by engineer. */
+"Retry" = "تلاش دوباره";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "اطلاعات ناشناس استفاده ارسال شود؟";
+
+/* No comment provided by engineer. */
+"Success" = "موفقیت";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "ممنون که %@ را امتحان کردید";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "از سفارش شما سپاسگزاریم. به‌زودی ایمیلی دریافت می‌کنید.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "این نسخه از %@ با اطلاعات زیر ثبت شده است.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "غیرفعال‌سازی مجوز ممکن نشد. بعداً دوباره تلاش کنید.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "خطای نامشخص؛ با پشتیبانی تماس بگیرید.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "استفاده از نشانی ایمیل دیگر";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "بررسی یک مجوز در حال انجام است. کمی صبر کنید.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "غیرفعال‌سازی یک مجوز در حال انجام است. کمی صبر کنید.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "جزئیات مجوزهای %1$@ را به %2$@ فرستادیم";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "به %@ خوش آمدید!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "متأسفیم! مشکلی پیش آمد.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "آیا می‌خواهید برای کمک به بهبود برنامه، اطلاعات ناشناس استفاده را برای توسعه‌دهندهٔ %@ بفرستید؟";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "%d روز از دورهٔ آزمایشی شما باقی مانده است.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "%d روز از دورهٔ آزمایشی شما باقی مانده است.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "مجوز %@ شما";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "سفارش شما در حال پردازش است";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "سفارش شما در حال پردازش است. به‌زودی ایمیلی دریافت می‌کنید.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "سپس %@ هر %ld روز";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "سپس %@ هر %ld ماه";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "سپس %@ هر %ld هفته";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "سپس %@ هر %ld سال";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "سپس %@ در روز";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "سپس %@ در ماه";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "سپس %@ در هفته";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "سپس %@ در سال";
+
+/* No comment provided by engineer. */
+"after %ld days" = "پس از %ld روز";
+
+/* No comment provided by engineer. */
+"after 1 day" = "پس از 1 روز";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "کد مجوز قبلاً استفاده شده است";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "کد مجوز قبلاً استفاده شده است.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "کد مجوز فعال نیست";
+
+/* No comment provided by engineer. */
+"License does not match product" = "مجوز با محصول مطابقت ندارد";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "مجوز با موفقیت غیرفعال شد";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "ارز ارائه‌شده معتبر نیست";
+
+/* No comment provided by engineer. */
+"This license has expired" = "این مجوز منقضی شده است";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "احراز هویت ممکن نشد. کلید API مربوط به SDK را بررسی کنید.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "فعال‌سازی درخواستی یافت نشد";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "محصول درخواستی یافت نشد";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "تأیید وضعیت سفارش شما ممکن نشد";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "تأیید وضعیت سفارش شما ممکن نشد. به‌زودی ایمیلی دریافت می‌کنید.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "کلید مجوز ارائه‌شده برای این محصول یافت نشد.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "اجازهٔ دسترسی به این منبع را ندارید";

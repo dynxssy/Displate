@@ -1,0 +1,30 @@
+
+/* Class = "NSButtonCell"; title = "Cancel"; ObjectID = "17"; */
+"17.title" = "Cancel·la";
+
+/* Class = "NSButtonCell"; title = "Buy Now"; ObjectID = "18"; */
+"18.title" = "Compra ara";
+
+/* Class = "NSButtonCell"; title = "Activate License"; ObjectID = "19"; */
+"19.title" = "Activa la llicència";
+
+/* Class = "NSTextFieldCell"; title = "Email Address"; ObjectID = "21"; */
+"21.title" = "Adreça electrònica";
+
+/* Class = "NSTextFieldCell"; title = "License Code"; ObjectID = "22"; */
+"22.title" = "Codi de llicència";
+
+/* Class = "NSTextFieldCell"; title = "Activate"; ObjectID = "25"; */
+"25.title" = "Activa";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "26"; */
+"26.title" = "Test Product";
+
+/* Class = "NSTextFieldCell"; title = "Already purchased a license? Fill in the form below and activate Test Product instantly."; ObjectID = "27"; */
+"27.title" = "Ja has comprat una llicència? Omple el formulari següent i activa Test Product a l'instant.";
+
+/* Class = "NSTextFieldCell"; title = "Activating License"; ObjectID = "lwY-yD-CE9"; */
+"lwY-yD-CE9.title" = "Activant la llicència";
+
+/* Class = "NSButtonCell"; title = "Deactivate License"; ObjectID = "pEH-Ih-5sP"; */
+"pEH-Ih-5sP.title" = "Desactiva la llicència";

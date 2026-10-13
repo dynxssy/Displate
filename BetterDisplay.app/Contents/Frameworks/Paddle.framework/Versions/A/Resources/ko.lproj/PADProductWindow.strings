@@ -1,0 +1,41 @@
+/* Class = "NSTextFieldCell"; title = "Save 50% today!"; ObjectID = "32"; */
+"32.title" = "오늘 50% 할인!";
+
+/* Class = "NSTextFieldCell"; title = "NOW"; ObjectID = "34"; */
+"34.title" = "현재";
+
+/* Class = "NSTextFieldCell"; title = "$10.00"; ObjectID = "35"; */
+"35.title" = "$10.00";
+
+/* Class = "NSTextFieldCell"; title = "$11.00"; ObjectID = "36"; */
+"36.title" = "$11.00";
+
+/* Class = "NSTextFieldCell"; title = "WAS"; ObjectID = "37"; */
+"37.title" = "이전";
+
+/* Class = "NSTextFieldCell"; title = "By John Smith"; ObjectID = "38"; */
+"38.title" = "John Smith 제공";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "39"; */
+"39.title" = "테스트 제품";
+
+/* Class = "NSTextFieldCell"; title = "28 days"; ObjectID = "41"; */
+"41.title" = "28일";
+
+/* Class = "NSButtonCell"; title = "Enter License"; ObjectID = "44"; */
+"44.title" = "라이선스 입력";
+
+/* Class = "NSButtonCell"; title = "Buy Now"; ObjectID = "45"; */
+"45.title" = "지금 구매";
+
+/* Class = "NSButtonCell"; title = "Continue Trial"; ObjectID = "46"; */
+"46.title" = "평가판 계속 사용";
+
+/* Class = "NSTextFieldCell"; title = "Thanks for evaluating this version of Test Product."; ObjectID = "47"; */
+"47.title" = "테스트 제품의 이 버전을 평가해 주셔서 감사합니다.";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "48"; */
+"48.title" = "테스트 제품";
+
+/* Class = "NSTextFieldCell"; title = "Thank you for trying"; ObjectID = "49"; */
+"49.title" = "사용해 주셔서 감사합니다";

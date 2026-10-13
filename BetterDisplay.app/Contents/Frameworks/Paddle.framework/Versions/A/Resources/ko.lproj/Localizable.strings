@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ - 결제";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@이(가) 제품 업데이트와 혜택을 이메일로 보내도 됩니다. 언제든지 수신을 거부할 수 있습니다.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "%@%% 할인!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "유효한 라이선스 코드가 필요합니다. 다시 시도하십시오.";
+
+/* No comment provided by engineer. */
+"Activate" = "활성화:";
+
+/* No comment provided by engineer. */
+"Activate License" = "라이선스 활성화";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "이미 라이선스를 구매하셨나요? 아래 양식을 작성하면 %@을(를) 즉시 활성화할 수 있습니다.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "오류가 발생했습니다";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "이 작업을 수행하는 동안 예기치 않은 오류가 발생했습니다.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "지금 구매";
+
+/* No comment provided by engineer. */
+"By %@" = "%@ 제공";
+
+/* No comment provided by engineer. */
+"Cancel" = "취소";
+
+/* No comment provided by engineer. */
+"Close" = "닫기";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "평가판 계속 사용";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "라이선스 비활성화 중";
+
+/* No comment provided by engineer. */
+"Email Address" = "이메일 주소";
+
+/* No comment provided by engineer. */
+"Enter License" = "라이선스 입력";
+
+/* No comment provided by engineer. */
+"Error" = "오류";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "라이선스 키를 잊으셨나요?";
+
+/* No comment provided by engineer. */
+"Join" = "가입";
+
+/* No comment provided by engineer. */
+"License Code" = "라이선스 코드";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "괜찮습니다";
+
+/* No comment provided by engineer. */
+"OK" = "확인";
+
+/* No comment provided by engineer. */
+"Order Complete" = "주문 완료";
+
+/* No comment provided by engineer. */
+"Order Success" = "주문 성공";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "라이선스를 구매할 때 사용한 이메일 주소를 입력하십시오.";
+
+/* No comment provided by engineer. */
+"Quit" = "종료";
+
+/* No comment provided by engineer. */
+"Recover" = "복구";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "%@ 라이선스 복구";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "%@ 라이선스 복구 중";
+
+/* No comment provided by engineer. */
+"Retry" = "다시 시도";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "익명 사용 정보를 보내시겠습니까?";
+
+/* No comment provided by engineer. */
+"Success" = "성공";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "%@을(를) 사용해 주셔서 감사합니다";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "주문해 주셔서 감사합니다. 곧 이메일을 받게 됩니다.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "이 %@ 사본은 아래 정보로 등록되어 있습니다.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "라이선스를 비활성화할 수 없습니다. 나중에 다시 시도하십시오.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "알 수 없는 오류입니다. 지원팀에 문의하십시오.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "다른 이메일 주소 사용";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "이미 라이선스를 확인하고 있습니다. 잠시만 기다려 주십시오.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "이미 라이선스를 비활성화하고 있습니다. 잠시만 기다려 주십시오.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "%1$@의 라이선스 정보가 있는 경우 %2$@ 주소로 전송했습니다";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "%@에 오신 것을 환영합니다!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "문제가 발생했습니다.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "응용 프로그램 개선을 위해 %@ 개발자에게 익명 사용 정보를 보내시겠습니까?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "평가판 기간이 %d일 남았습니다.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "평가판 기간이 %d일 남았습니다.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "%@ 라이선스";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "주문을 처리하는 중입니다";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "주문을 처리하는 중입니다. 곧 이메일을 받게 됩니다.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "이후 %@/%ld일";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "이후 %@/%ld개월";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "이후 %@/%ld주";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "이후 %@/%ld년";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "이후 %@/일";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "이후 %@/월";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "이후 %@/주";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "이후 %@/년";
+
+/* No comment provided by engineer. */
+"after %ld days" = "%ld일 후";
+
+/* No comment provided by engineer. */
+"after 1 day" = "1일 후";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "라이선스 코드가 이미 사용되었습니다";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "라이선스 코드가 이미 사용되었습니다.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "라이선스 코드가 활성 상태가 아닙니다";
+
+/* No comment provided by engineer. */
+"License does not match product" = "라이선스가 제품과 일치하지 않습니다";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "라이선스가 비활성화되었습니다";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "제공된 통화가 유효하지 않습니다";
+
+/* No comment provided by engineer. */
+"This license has expired" = "이 라이선스는 만료되었습니다";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "인증할 수 없습니다. SDK API 키를 확인하십시오.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "요청한 활성화를 찾을 수 없습니다";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "요청한 제품을 찾을 수 없습니다";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "주문 상태를 확인할 수 없습니다";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "주문 상태를 확인할 수 없습니다. 곧 이메일을 받게 됩니다.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "이 제품에 입력한 라이선스 키를 찾을 수 없습니다.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "이 리소스에 접근할 권한이 없습니다";

@@ -1,0 +1,38 @@
+/* Class = "NSTextFieldCell"; title = "Save 50% today!"; ObjectID = "25"; */
+"25.title" = "Spara 50 % idag!";
+
+/* Class = "NSTextFieldCell"; title = "NOW"; ObjectID = "27"; */
+"27.title" = "NU";
+
+/* Class = "NSTextFieldCell"; title = "$10.00"; ObjectID = "28"; */
+"28.title" = "$10.00";
+
+/* Class = "NSTextFieldCell"; title = "$10.00"; ObjectID = "29"; */
+"29.title" = "$10.00";
+
+/* Class = "NSTextFieldCell"; title = "WAS"; ObjectID = "30"; */
+"30.title" = "TIDIGARE";
+
+/* Class = "NSTextFieldCell"; title = "By John Smith"; ObjectID = "31"; */
+"31.title" = "Av John Smith";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "32"; */
+"32.title" = "Testprodukt";
+
+/* Class = "NSButtonCell"; title = "Enter License"; ObjectID = "37"; */
+"37.title" = "Ange licens";
+
+/* Class = "NSButtonCell"; title = "Buy Now"; ObjectID = "38"; */
+"38.title" = "Köp nu";
+
+/* Class = "NSButtonCell"; title = "Continue Trial"; ObjectID = "39"; */
+"39.title" = "Fortsätt provperioden";
+
+/* Class = "NSTextFieldCell"; title = "Thanks for evaluating this version of Test Product."; ObjectID = "40"; */
+"40.title" = "Tack för att du utvärderar den här versionen av Testprodukt.";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "41"; */
+"41.title" = "Testprodukt";
+
+/* Class = "NSTextFieldCell"; title = "Thank you for trying"; ObjectID = "42"; */
+"42.title" = "Tack för att du provar";

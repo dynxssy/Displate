@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ – Platba";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ mi môže e-mailom posielať novinky o produkte a ponuky. Odber môžete kedykoľvek zrušiť.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "Zľava %@%%!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "Vyžaduje sa platný licenčný kód. Skúste to znova.";
+
+/* No comment provided by engineer. */
+"Activate" = "Aktivovať";
+
+/* No comment provided by engineer. */
+"Activate License" = "Aktivovať licenciu";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "Už ste si kúpili licenciu? Vyplňte formulár nižšie a ihneď aktivujte %@.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "Vyskytla sa chyba";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "Pri vykonávaní tejto akcie sa vyskytla neočakávaná chyba.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "Kúpiť teraz";
+
+/* No comment provided by engineer. */
+"By %@" = "Od %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "Zrušiť";
+
+/* No comment provided by engineer. */
+"Close" = "Zavrieť";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "Pokračovať v skúšaní";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "Deaktivácia licencie";
+
+/* No comment provided by engineer. */
+"Email Address" = "E-mailová adresa";
+
+/* No comment provided by engineer. */
+"Enter License" = "Zadať licenciu";
+
+/* No comment provided by engineer. */
+"Error" = "Chyba";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "Zabudli ste licenčný kľúč?";
+
+/* No comment provided by engineer. */
+"Join" = "Pripojiť sa";
+
+/* No comment provided by engineer. */
+"License Code" = "Licenčný kód";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "Nie, ďakujem!";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Order Complete" = "Objednávka dokončená";
+
+/* No comment provided by engineer. */
+"Order Success" = "Objednávka úspešná";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "Zadajte e-mailovú adresu použitú pri kúpe licencie.";
+
+/* No comment provided by engineer. */
+"Quit" = "Ukončiť";
+
+/* No comment provided by engineer. */
+"Recover" = "Obnoviť";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "Obnoviť licenciu pre %@";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "Obnovovanie licencie pre %@";
+
+/* No comment provided by engineer. */
+"Retry" = "Skúsiť znova";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "Odosielať anonymné údaje o používaní?";
+
+/* No comment provided by engineer. */
+"Success" = "Úspech";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "Ďakujeme za vyskúšanie %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "Ďakujeme za objednávku. Čoskoro dostanete e-mail.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "Táto kópia %@ je zaregistrovaná s údajmi uvedenými nižšie.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "Licenciu sa nepodarilo deaktivovať. Skúste to neskôr.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "Nešpecifikovaná chyba. Kontaktujte podporu.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "Použiť inú e-mailovú adresu";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "Licenciu už overujeme. Chvíľu počkajte.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "Licenciu už deaktivujeme. Chvíľu počkajte.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "Údaje o všetkých licenciách pre %1$@ sme odoslali na %2$@";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "Vitajte v %@!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "Ups! Niečo sa pokazilo.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Chcete vývojárovi %@ odosielať anonymné údaje o používaní a pomôcť tak zlepšiť aplikáciu?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "Zo skúšobnej doby zostáva %d deň.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "Počet zostávajúcich dní skúšobnej doby: %d.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "Vaša licencia pre %@";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "Vaša objednávka sa spracúva";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "Vaša objednávka sa spracúva. Čoskoro dostanete e-mail.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Potom %@ za obdobie %ld dní";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Potom %@/%ld mes.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Potom %@/%ld týž.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Potom %@ za obdobie %ld rokov";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Potom %@/deň";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Potom %@/mesiac";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Potom %@/týždeň";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Potom %@/rok";
+
+/* No comment provided by engineer. */
+"after %ld days" = "po %ld dňoch";
+
+/* No comment provided by engineer. */
+"after 1 day" = "po 1 dni";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "Licenčný kód už bol použitý";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "Licenčný kód už bol použitý.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "Licenčný kód nie je aktívny";
+
+/* No comment provided by engineer. */
+"License does not match product" = "Licencia nezodpovedá produktu";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "Licencia bola úspešne deaktivovaná";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "Zadaná mena nie je platná";
+
+/* No comment provided by engineer. */
+"This license has expired" = "Platnosť tejto licencie vypršala";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "Overenie zlyhalo. Skontrolujte kľúč API súpravy SDK.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "Požadovaná aktivácia sa nenašla";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "Požadovaný produkt sa nenašiel";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "Nepodarilo sa potvrdiť stav vašej objednávky";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "Nepodarilo sa potvrdiť stav vašej objednávky. Čoskoro dostanete e-mail.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "Zadaný licenčný kľúč pre tento produkt sa nenašiel.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "Nemáte oprávnenie na prístup k tomuto prostriedku";

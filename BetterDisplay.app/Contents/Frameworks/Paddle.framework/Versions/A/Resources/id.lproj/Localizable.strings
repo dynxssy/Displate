@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ - Pembayaran";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ boleh mengirimi saya kabar produk dan penawaran lewat email. Anda bisa berhenti berlangganan kapan saja.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "Diskon %@%%!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "Kode lisensi yang valid diperlukan. Coba lagi.";
+
+/* No comment provided by engineer. */
+"Activate" = "Aktifkan";
+
+/* No comment provided by engineer. */
+"Activate License" = "Aktifkan Lisensi";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "Sudah membeli lisensi? Isi formulir di bawah dan langsung aktifkan %@.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "Terjadi Kesalahan";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "Terjadi kesalahan tak terduga saat melakukan tindakan ini.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "Beli Sekarang";
+
+/* No comment provided by engineer. */
+"By %@" = "Oleh %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "Batal";
+
+/* No comment provided by engineer. */
+"Close" = "Tutup";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "Lanjutkan Uji Coba";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "Menonaktifkan Lisensi";
+
+/* No comment provided by engineer. */
+"Email Address" = "Alamat Email";
+
+/* No comment provided by engineer. */
+"Enter License" = "Masukkan Lisensi";
+
+/* No comment provided by engineer. */
+"Error" = "Kesalahan";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "Lupa kunci lisensi Anda?";
+
+/* No comment provided by engineer. */
+"Join" = "Bergabung";
+
+/* No comment provided by engineer. */
+"License Code" = "Kode Lisensi";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "Tidak, Terima Kasih!";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Order Complete" = "Pesanan Selesai";
+
+/* No comment provided by engineer. */
+"Order Success" = "Pesanan Berhasil";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "Masukkan alamat email yang digunakan untuk membeli lisensi.";
+
+/* No comment provided by engineer. */
+"Quit" = "Keluar";
+
+/* No comment provided by engineer. */
+"Recover" = "Pulihkan";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "Pulihkan lisensi %@ Anda";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "Memulihkan lisensi %@ Anda";
+
+/* No comment provided by engineer. */
+"Retry" = "Coba Lagi";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "Kirim informasi penggunaan anonim?";
+
+/* No comment provided by engineer. */
+"Success" = "Berhasil";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "Terima kasih telah mencoba %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "Terima kasih atas pesanan Anda. Anda akan segera menerima email.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "Salinan %@ ini terdaftar dengan informasi di bawah.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "Lisensi tidak dapat dinonaktifkan. Coba lagi nanti.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "Kesalahan tidak diketahui. Hubungi dukungan.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "Gunakan alamat email lain";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "Kami sedang memeriksa lisensi. Tunggu sebentar.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "Kami sedang menonaktifkan lisensi. Tunggu sebentar.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "Kami telah mengirim detail lisensi untuk %1$@ ke %2$@";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "Selamat datang di %@!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "Ups! Ada yang tidak beres.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Apakah Anda ingin mengirim informasi penggunaan anonim kepada pengembang %@ untuk membantu meningkatkan aplikasi?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "Masa uji coba Anda tersisa %d hari.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "Masa uji coba Anda tersisa %d hari.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "Lisensi %@ Anda";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "Pesanan Anda sedang diproses";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "Pesanan Anda sedang diproses. Anda akan segera menerima email.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Lalu %@/%ld hari";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Lalu %@/%ld bulan";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Lalu %@/%ld minggu";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Lalu %@/%ld tahun";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Lalu %@/hari";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Lalu %@/bulan";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Lalu %@/minggu";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Lalu %@/tahun";
+
+/* No comment provided by engineer. */
+"after %ld days" = "setelah %ld hari";
+
+/* No comment provided by engineer. */
+"after 1 day" = "setelah 1 hari";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "Kode lisensi sudah digunakan";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "Kode lisensi sudah digunakan.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "Kode lisensi tidak aktif";
+
+/* No comment provided by engineer. */
+"License does not match product" = "Lisensi tidak cocok dengan produk";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "Lisensi berhasil dinonaktifkan";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "Mata uang yang diberikan tidak valid";
+
+/* No comment provided by engineer. */
+"This license has expired" = "Lisensi ini telah kedaluwarsa";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "Autentikasi gagal. Periksa kunci API SDK Anda.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "Aktivasi yang diminta tidak ditemukan";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "Produk yang diminta tidak ditemukan";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "Kami tidak dapat mengonfirmasi status pesanan Anda";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "Kami tidak dapat mengonfirmasi status pesanan Anda. Anda akan segera menerima email.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "Kunci lisensi yang diberikan untuk produk ini tidak ditemukan.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "Anda tidak memiliki izin untuk mengakses sumber daya ini";

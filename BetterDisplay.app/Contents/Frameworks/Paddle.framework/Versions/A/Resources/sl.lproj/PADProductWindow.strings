@@ -1,0 +1,41 @@
+/* Class = "NSTextFieldCell"; title = "Save 50% today!"; ObjectID = "32"; */
+"32.title" = "Danes prihranite 50 %!";
+
+/* Class = "NSTextFieldCell"; title = "NOW"; ObjectID = "34"; */
+"34.title" = "ZDAJ";
+
+/* Class = "NSTextFieldCell"; title = "$10.00"; ObjectID = "35"; */
+"35.title" = "$10.00";
+
+/* Class = "NSTextFieldCell"; title = "$11.00"; ObjectID = "36"; */
+"36.title" = "$11.00";
+
+/* Class = "NSTextFieldCell"; title = "WAS"; ObjectID = "37"; */
+"37.title" = "PREJ";
+
+/* Class = "NSTextFieldCell"; title = "By John Smith"; ObjectID = "38"; */
+"38.title" = "Avtor: John Smith";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "39"; */
+"39.title" = "Preizkusni izdelek";
+
+/* Class = "NSTextFieldCell"; title = "28 days"; ObjectID = "41"; */
+"41.title" = "28 dni";
+
+/* Class = "NSButtonCell"; title = "Enter License"; ObjectID = "44"; */
+"44.title" = "Vnesite licenco";
+
+/* Class = "NSButtonCell"; title = "Buy Now"; ObjectID = "45"; */
+"45.title" = "Kupi zdaj";
+
+/* Class = "NSButtonCell"; title = "Continue Trial"; ObjectID = "46"; */
+"46.title" = "Nadaljuj preizkus";
+
+/* Class = "NSTextFieldCell"; title = "Thanks for evaluating this version of Test Product."; ObjectID = "47"; */
+"47.title" = "Hvala, ker preizkušate to različico preizkusnega izdelka.";
+
+/* Class = "NSTextFieldCell"; title = "Test Product"; ObjectID = "48"; */
+"48.title" = "Preizkusni izdelek";
+
+/* Class = "NSTextFieldCell"; title = "Thank you for trying"; ObjectID = "49"; */
+"49.title" = "Hvala, ker preizkušate";

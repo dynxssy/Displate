@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ - Fizetés";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ e-mailben küldhet nekem termékfrissítéseket és ajánlatokat. Bármikor leiratkozhat.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "%@%% kedvezmény!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "Érvényes licenckód szükséges. Kérjük, próbálja újra.";
+
+/* No comment provided by engineer. */
+"Activate" = "Aktiválás:";
+
+/* No comment provided by engineer. */
+"Activate License" = "Licenc aktiválása";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "Már vásárolt licencet? Töltse ki az alábbi űrlapot, és azonnal aktiválhatja a következőt: %@.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "Hiba történt";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "Váratlan hiba történt a művelet végrehajtása közben.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "Vásárlás most";
+
+/* No comment provided by engineer. */
+"By %@" = "Készítette: %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "Mégse";
+
+/* No comment provided by engineer. */
+"Close" = "Bezárás";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "Próba folytatása";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "Licenc deaktiválása";
+
+/* No comment provided by engineer. */
+"Email Address" = "E-mail-cím";
+
+/* No comment provided by engineer. */
+"Enter License" = "Licenc megadása";
+
+/* No comment provided by engineer. */
+"Error" = "Hiba";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "Elfelejtette a licenckulcsát?";
+
+/* No comment provided by engineer. */
+"Join" = "Csatlakozás";
+
+/* No comment provided by engineer. */
+"License Code" = "Licenckód";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "Köszönöm, nem!";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Order Complete" = "A rendelés befejeződött";
+
+/* No comment provided by engineer. */
+"Order Success" = "Sikeres rendelés";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "Kérjük, adja meg a licenc vásárlásához használt e-mail-címet.";
+
+/* No comment provided by engineer. */
+"Quit" = "Kilépés";
+
+/* No comment provided by engineer. */
+"Recover" = "Visszaállítás";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "%@-licenc visszaállítása";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "%@-licenc visszaállítása";
+
+/* No comment provided by engineer. */
+"Retry" = "Újrapróbálkozás";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "Névtelen használati adatok küldése?";
+
+/* No comment provided by engineer. */
+"Success" = "Siker";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "Köszönjük, hogy kipróbálta: %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "Köszönjük a rendelést. Hamarosan e-mailt fog kapni.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "A(z) %@ ezen példánya az alábbi adatokkal van regisztrálva.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "Nem sikerült deaktiválni a licencet. Kérjük, próbálja újra később.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "Ismeretlen hiba történt. Kérjük, forduljon az ügyfélszolgálathoz.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "Másik e-mail-cím használata";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "Már ellenőrzünk egy licencet, kérjük, várjon egy pillanatot.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "Már deaktiválunk egy licencet, kérjük, várjon egy pillanatot.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "Elküldtük a(z) %1$@ esetleges licenceinek adatait erre a címre: %2$@";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "Üdvözli a(z) %@!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "Hoppá! Valami hiba történt.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Szeretne névtelen használati adatokat küldeni a(z) %@ fejlesztőjének az alkalmazás fejlesztésének elősegítéséhez?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "%d nap van hátra a próbaidőszakból.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "%d nap van hátra a próbaidőszakból.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "%@-licenc";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "Rendelése feldolgozás alatt áll";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "Rendelése feldolgozás alatt áll. Hamarosan e-mailt fog kapni.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Ezután %@/%ld nap";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Ezután %@/%ld hónap";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Ezután %@/%ld hét";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Ezután %@/%ld év";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Ezután %@/nap";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Ezután %@/hónap";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Ezután %@/hét";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Ezután %@/év";
+
+/* No comment provided by engineer. */
+"after %ld days" = "%ld nap után";
+
+/* No comment provided by engineer. */
+"after 1 day" = "1 nap után";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "A licenckódot már felhasználták";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "A licenckódot már felhasználták.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "A licenckód nem aktív";
+
+/* No comment provided by engineer. */
+"License does not match product" = "A licenc nem ehhez a termékhez tartozik";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "A licenc deaktiválása sikerült";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "A megadott pénznem érvénytelen";
+
+/* No comment provided by engineer. */
+"This license has expired" = "Ez a licenc lejárt";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "Sikertelen hitelesítés. Ellenőrizze az SDK API-kulcsát.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "A kért aktiválás nem található";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "A kért termék nem található";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "Nem sikerült megerősíteni a rendelése állapotát";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "Nem sikerült megerősíteni a rendelése állapotát. Hamarosan e-mailt fog kapni.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "A megadott licenckulcs nem található ehhez a termékhez.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "Nincs jogosultsága hozzáférni ehhez az erőforráshoz";

@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ – Kassa";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ saa lähettää minulle tuoteuutisia ja tarjouksia sähköpostitse. Voit perua viestitilauksen milloin tahansa.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "%@%% alennusta!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "Tarvitaan kelvollinen lisenssikoodi. Yritä uudelleen.";
+
+/* No comment provided by engineer. */
+"Activate" = "Aktivoi";
+
+/* No comment provided by engineer. */
+"Activate License" = "Aktivoi lisenssi";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "Ostitko jo lisenssin? Täytä alla oleva lomake ja aktivoi %@ heti.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "Tapahtui virhe";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "Toiminnon aikana tapahtui odottamaton virhe.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "Osta nyt";
+
+/* No comment provided by engineer. */
+"By %@" = "Tekijä: %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "Peru";
+
+/* No comment provided by engineer. */
+"Close" = "Sulje";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "Jatka kokeilua";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "Poistetaan lisenssin aktivointia";
+
+/* No comment provided by engineer. */
+"Email Address" = "Sähköpostiosoite";
+
+/* No comment provided by engineer. */
+"Enter License" = "Syötä lisenssi";
+
+/* No comment provided by engineer. */
+"Error" = "Virhe";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "Unohditko lisenssiavaimesi?";
+
+/* No comment provided by engineer. */
+"Join" = "Liity";
+
+/* No comment provided by engineer. */
+"License Code" = "Lisenssikoodi";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "Ei kiitos!";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Order Complete" = "Tilaus valmis";
+
+/* No comment provided by engineer. */
+"Order Success" = "Tilaus onnistui";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "Syötä lisenssin ostamiseen käytetty sähköpostiosoite.";
+
+/* No comment provided by engineer. */
+"Quit" = "Lopeta";
+
+/* No comment provided by engineer. */
+"Recover" = "Palauta";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "Palauta tuotteen %@ lisenssi";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "Palautetaan tuotteen %@ lisenssiä";
+
+/* No comment provided by engineer. */
+"Retry" = "Yritä uudelleen";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "Lähetetäänkö nimettömiä käyttötietoja?";
+
+/* No comment provided by engineer. */
+"Success" = "Onnistui";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "Kiitos, että kokeilit tuotetta %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "Kiitos tilauksestasi. Saat pian sähköpostin.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "Tämä tuotteen %@ kopio on rekisteröity alla olevilla tiedoilla.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "Lisenssin aktivointia ei voitu poistaa. Yritä myöhemmin uudelleen.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "Määrittelemätön virhe. Ota yhteyttä tukeen.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "Käytä toista sähköpostiosoitetta";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "Lisenssiä tarkistetaan jo. Odota hetki.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "Lisenssin aktivointia poistetaan jo. Odota hetki.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "Lähetimme tuotteen %1$@ lisenssitiedot osoitteeseen %2$@";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "Tervetuloa %@-sovellukseen!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "Hups! Jotain meni pieleen.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Haluatko lähettää nimettömiä käyttötietoja tuotteen %@ kehittäjälle sovelluksen parantamiseksi?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "Kokeiluaikaa on jäljellä %d päivä.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "Kokeiluaikaa on jäljellä %d päivää.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "Tuotteen %@ lisenssisi";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "Tilaustasi käsitellään";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "Tilaustasi käsitellään. Saat pian sähköpostin.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Sitten %@ / %ld päivää";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Sitten %@ / %ld kuukautta";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Sitten %@ / %ld viikkoa";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Sitten %@ / %ld vuotta";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Sitten %@/päivä";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Sitten %@/kuukausi";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Sitten %@/viikko";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Sitten %@/vuosi";
+
+/* No comment provided by engineer. */
+"after %ld days" = "%ld päivän kuluttua";
+
+/* No comment provided by engineer. */
+"after 1 day" = "1 päivän kuluttua";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "Lisenssikoodi on jo käytetty";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "Lisenssikoodi on jo käytetty.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "Lisenssikoodi ei ole aktiivinen";
+
+/* No comment provided by engineer. */
+"License does not match product" = "Lisenssi ei vastaa tuotetta";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "Lisenssin aktivointi poistettiin";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "Annettu valuutta ei kelpaa";
+
+/* No comment provided by engineer. */
+"This license has expired" = "Tämä lisenssi on vanhentunut";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "Todennus epäonnistui. Tarkista SDK:n API-avain.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "Pyydettyä aktivointia ei löydy";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "Pyydettyä tuotetta ei löydy";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "Tilauksesi tilaa ei voitu vahvistaa";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "Tilauksesi tilaa ei voitu vahvistaa. Saat pian sähköpostin.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "Annettua lisenssiavainta ei löydy tälle tuotteelle.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "Sinulla ei ole oikeutta käyttää tätä resurssia";

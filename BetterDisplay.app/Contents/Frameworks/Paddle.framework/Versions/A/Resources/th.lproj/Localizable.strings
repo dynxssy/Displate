@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ - ชำระเงิน";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ สามารถส่งข่าวผลิตภัณฑ์และข้อเสนอให้ฉันทางอีเมลได้ คุณยกเลิกรับอีเมลได้ทุกเมื่อ";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "ลด %@%%!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "ต้องใช้รหัสสิทธิ์การใช้งานที่ถูกต้อง โปรดลองอีกครั้ง";
+
+/* No comment provided by engineer. */
+"Activate" = "เปิดใช้งาน";
+
+/* No comment provided by engineer. */
+"Activate License" = "เปิดใช้งานสิทธิ์";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "ซื้อสิทธิ์การใช้งานแล้วใช่ไหม? กรอกแบบฟอร์มด้านล่างเพื่อเปิดใช้งาน %@ ทันที";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "เกิดข้อผิดพลาด";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "เกิดข้อผิดพลาดที่ไม่คาดคิดขณะดำเนินการนี้";
+
+/* No comment provided by engineer. */
+"Buy Now" = "ซื้อเลย";
+
+/* No comment provided by engineer. */
+"By %@" = "โดย %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "ยกเลิก";
+
+/* No comment provided by engineer. */
+"Close" = "ปิด";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "ทดลองใช้ต่อ";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "กำลังปิดใช้งานสิทธิ์";
+
+/* No comment provided by engineer. */
+"Email Address" = "ที่อยู่อีเมล";
+
+/* No comment provided by engineer. */
+"Enter License" = "ป้อนสิทธิ์การใช้งาน";
+
+/* No comment provided by engineer. */
+"Error" = "ข้อผิดพลาด";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "ลืมคีย์สิทธิ์การใช้งานใช่ไหม?";
+
+/* No comment provided by engineer. */
+"Join" = "เข้าร่วม";
+
+/* No comment provided by engineer. */
+"License Code" = "รหัสสิทธิ์การใช้งาน";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "ไม่ ขอบคุณ!";
+
+/* No comment provided by engineer. */
+"OK" = "ตกลง";
+
+/* No comment provided by engineer. */
+"Order Complete" = "คำสั่งซื้อเสร็จสมบูรณ์";
+
+/* No comment provided by engineer. */
+"Order Success" = "สั่งซื้อสำเร็จ";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "ป้อนที่อยู่อีเมลที่ใช้ซื้อสิทธิ์การใช้งาน";
+
+/* No comment provided by engineer. */
+"Quit" = "ออก";
+
+/* No comment provided by engineer. */
+"Recover" = "กู้คืน";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "กู้คืนสิทธิ์การใช้งาน %@";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "กำลังกู้คืนสิทธิ์การใช้งาน %@";
+
+/* No comment provided by engineer. */
+"Retry" = "ลองอีกครั้ง";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "ส่งข้อมูลการใช้งานแบบไม่ระบุตัวตนหรือไม่?";
+
+/* No comment provided by engineer. */
+"Success" = "สำเร็จ";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "ขอบคุณที่ทดลองใช้ %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "ขอบคุณสำหรับคำสั่งซื้อ คุณจะได้รับอีเมลในไม่ช้า";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "สำเนา %@ นี้ลงทะเบียนด้วยข้อมูลด้านล่าง";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "ปิดใช้งานสิทธิ์ไม่ได้ โปรดลองอีกครั้งในภายหลัง";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "เกิดข้อผิดพลาดที่ไม่ระบุ โปรดติดต่อฝ่ายสนับสนุน";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "ใช้ที่อยู่อีเมลอื่น";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "กำลังตรวจสอบสิทธิ์การใช้งานอยู่ โปรดรอสักครู่";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "กำลังปิดใช้งานสิทธิ์อยู่ โปรดรอสักครู่";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "เราส่งรายละเอียดสิทธิ์การใช้งานทั้งหมดของ %1$@ ไปยัง %2$@ แล้ว";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "ยินดีต้อนรับสู่ %@!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "อ๊ะ! มีบางอย่างผิดพลาด";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "คุณต้องการส่งข้อมูลการใช้งานแบบไม่ระบุตัวตนให้ผู้พัฒนา %@ เพื่อช่วยปรับปรุงแอปหรือไม่?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "เหลือระยะทดลองใช้ %d วัน";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "เหลือระยะทดลองใช้ %d วัน";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "สิทธิ์การใช้งาน %@ ของคุณ";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "กำลังดำเนินการคำสั่งซื้อของคุณ";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "กำลังดำเนินการคำสั่งซื้อของคุณ คุณจะได้รับอีเมลในไม่ช้า";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "จากนั้น %@/%ld วัน";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "จากนั้น %@/%ld เดือน";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "จากนั้น %@/%ld สัปดาห์";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "จากนั้น %@/%ld ปี";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "จากนั้น %@/วัน";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "จากนั้น %@/เดือน";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "จากนั้น %@/สัปดาห์";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "จากนั้น %@/ปี";
+
+/* No comment provided by engineer. */
+"after %ld days" = "หลังจาก %ld วัน";
+
+/* No comment provided by engineer. */
+"after 1 day" = "หลังจาก 1 วัน";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "รหัสสิทธิ์การใช้งานถูกใช้แล้ว";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "รหัสสิทธิ์การใช้งานถูกใช้แล้ว";
+
+/* No comment provided by engineer. */
+"License code is not active" = "รหัสสิทธิ์การใช้งานไม่ได้เปิดใช้งาน";
+
+/* No comment provided by engineer. */
+"License does not match product" = "สิทธิ์การใช้งานไม่ตรงกับผลิตภัณฑ์";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "ปิดใช้งานสิทธิ์สำเร็จแล้ว";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "สกุลเงินที่ระบุไม่ถูกต้อง";
+
+/* No comment provided by engineer. */
+"This license has expired" = "สิทธิ์การใช้งานนี้หมดอายุแล้ว";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "ยืนยันตัวตนไม่ได้ โปรดตรวจสอบคีย์ API ของ SDK";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "ไม่พบการเปิดใช้งานที่ร้องขอ";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "ไม่พบผลิตภัณฑ์ที่ร้องขอ";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "เราไม่สามารถยืนยันสถานะคำสั่งซื้อของคุณได้";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "เราไม่สามารถยืนยันสถานะคำสั่งซื้อของคุณได้ คุณจะได้รับอีเมลในไม่ช้า";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "ไม่พบคีย์สิทธิ์การใช้งานที่ระบุสำหรับผลิตภัณฑ์นี้";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "คุณไม่มีสิทธิ์เข้าถึงทรัพยากรนี้";

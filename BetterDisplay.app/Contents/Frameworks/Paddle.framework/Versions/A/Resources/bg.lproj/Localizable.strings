@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ – Плащане";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ може да ми изпраща новости за продукта и оферти по имейл. Можете да се отпишете по всяко време.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "%@%% отстъпка!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "Изисква се валиден лицензен код. Опитайте отново.";
+
+/* No comment provided by engineer. */
+"Activate" = "Активиране на";
+
+/* No comment provided by engineer. */
+"Activate License" = "Активиране на лиценз";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "Вече купихте лиценз? Попълнете формуляра по-долу и активирайте %@ веднага.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "Възникна грешка";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "Възникна неочаквана грешка при това действие.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "Купете сега";
+
+/* No comment provided by engineer. */
+"By %@" = "От %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "Отказ";
+
+/* No comment provided by engineer. */
+"Close" = "Затваряне";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "Продължи пробния период";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "Деактивиране на лиценз";
+
+/* No comment provided by engineer. */
+"Email Address" = "Имейл адрес";
+
+/* No comment provided by engineer. */
+"Enter License" = "Въвеждане на лиценз";
+
+/* No comment provided by engineer. */
+"Error" = "Грешка";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "Забравихте лицензния си ключ?";
+
+/* No comment provided by engineer. */
+"Join" = "Присъединяване";
+
+/* No comment provided by engineer. */
+"License Code" = "Лицензен код";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "Не, благодаря!";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Order Complete" = "Поръчката е завършена";
+
+/* No comment provided by engineer. */
+"Order Success" = "Успешна поръчка";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "Въведете имейл адреса, използван при покупката на лиценза.";
+
+/* No comment provided by engineer. */
+"Quit" = "Изход";
+
+/* No comment provided by engineer. */
+"Recover" = "Възстановяване";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "Възстановяване на лиценз за %@";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "Възстановяване на лиценз за %@";
+
+/* No comment provided by engineer. */
+"Retry" = "Повторен опит";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "Изпращане на анонимни данни за употребата?";
+
+/* No comment provided by engineer. */
+"Success" = "Успех";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "Благодарим ви, че изпробвахте %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "Благодарим за поръчката. Скоро ще получите имейл.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "Това копие на %@ е регистрирано с данните по-долу.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "Лицензът не може да се деактивира. Опитайте по-късно.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "Неуточнена грешка. Свържете се с поддръжката.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "Използване на друг имейл адрес";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "Вече се проверява лиценз. Изчакайте малко.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "Вече се деактивира лиценз. Изчакайте малко.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "Изпратихме данни за всички лицензи за %1$@ на %2$@";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "Добре дошли в %@!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "Опа! Нещо се обърка.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Искате ли да изпращате анонимни данни за употребата на разработчика на %@, за да помогнете за подобряване на приложението?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "Остава ви %d ден от пробния период.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "Остават ви %d дни от пробния период.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "Вашият лиценз за %@";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "Поръчката ви се обработва";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "Поръчката ви се обработва. Скоро ще получите имейл.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "След това %@/%ld дни";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "След това %@/%ld месеца";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "След това %@/%ld седмици";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "След това %@/%ld години";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "След това %@/ден";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "След това %@/месец";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "След това %@/седмица";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "След това %@/година";
+
+/* No comment provided by engineer. */
+"after %ld days" = "след %ld дни";
+
+/* No comment provided by engineer. */
+"after 1 day" = "след 1 ден";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "Лицензният код вече е използван";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "Лицензният код вече е използван.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "Лицензният код не е активен";
+
+/* No comment provided by engineer. */
+"License does not match product" = "Лицензът не съответства на продукта";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "Лицензът е деактивиран успешно";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "Посочената валута е невалидна";
+
+/* No comment provided by engineer. */
+"This license has expired" = "Този лиценз е изтекъл";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "Неуспешно удостоверяване. Проверете API ключа на SDK.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "Заявеното активиране не е намерено";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "Заявеният продукт не е намерен";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "Не успяхме да потвърдим състоянието на поръчката ви";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "Не успяхме да потвърдим състоянието на поръчката ви. Скоро ще получите имейл.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "Посоченият лицензен ключ за този продукт не е намерен.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "Нямате разрешение за достъп до този ресурс";

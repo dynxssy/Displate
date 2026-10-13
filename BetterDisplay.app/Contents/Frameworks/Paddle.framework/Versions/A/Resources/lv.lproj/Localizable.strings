@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ — Apmaksa";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ drīkst sūtīt man produktu jaunumus un piedāvājumus e-pastā. Jebkurā brīdī varat atteikties.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "%@%% atlaide!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "Vajadzīgs derīgs licences kods. Mēģiniet vēlreiz.";
+
+/* No comment provided by engineer. */
+"Activate" = "Aktivizēt";
+
+/* No comment provided by engineer. */
+"Activate License" = "Aktivizēt licenci";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "Jau iegādājāties licenci? Aizpildiet veidlapu zemāk un uzreiz aktivizējiet %@.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "Radās kļūda";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "Veicot šo darbību, radās neparedzēta kļūda.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "Pirkt tagad";
+
+/* No comment provided by engineer. */
+"By %@" = "Autors: %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "Atcelt";
+
+/* No comment provided by engineer. */
+"Close" = "Aizvērt";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "Turpināt izmēģināt";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "Licences deaktivizēšana";
+
+/* No comment provided by engineer. */
+"Email Address" = "E-pasta adrese";
+
+/* No comment provided by engineer. */
+"Enter License" = "Ievadīt licenci";
+
+/* No comment provided by engineer. */
+"Error" = "Kļūda";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "Aizmirsāt licences atslēgu?";
+
+/* No comment provided by engineer. */
+"Join" = "Pievienoties";
+
+/* No comment provided by engineer. */
+"License Code" = "Licences kods";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "Nē, paldies!";
+
+/* No comment provided by engineer. */
+"OK" = "Labi";
+
+/* No comment provided by engineer. */
+"Order Complete" = "Pasūtījums pabeigts";
+
+/* No comment provided by engineer. */
+"Order Success" = "Pasūtījums veiksmīgs";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "Ievadiet e-pasta adresi, kuru izmantojāt licences iegādei.";
+
+/* No comment provided by engineer. */
+"Quit" = "Iziet";
+
+/* No comment provided by engineer. */
+"Recover" = "Atgūt";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "Atgūt %@ licenci";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "%@ licences atgūšana";
+
+/* No comment provided by engineer. */
+"Retry" = "Mēģināt vēlreiz";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "Sūtīt anonīmus lietojuma datus?";
+
+/* No comment provided by engineer. */
+"Success" = "Izdevās";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "Paldies, ka izmēģinājāt %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "Paldies par pasūtījumu! Drīzumā saņemsiet e-pastu.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "Šī %@ kopija ir reģistrēta ar tālāk norādītajiem datiem.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "Licenci neizdevās deaktivizēt. Mēģiniet vēlāk.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "Nenorādīta kļūda. Sazinieties ar atbalsta dienestu.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "Izmantot citu e-pasta adresi";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "Jau pārbaudām licenci. Lūdzu, uzgaidiet.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "Jau deaktivizējam licenci. Lūdzu, uzgaidiet.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "Nosūtījām ziņas par %1$@ licencēm uz %2$@";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "Jūs sveicina %@!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "Ak vai! Kaut kas nogāja greizi.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Vai vēlaties sūtīt anonīmus lietojuma datus %@ izstrādātājam, lai palīdzētu uzlabot lietotni?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "Atlikusi %d izmēģinājuma diena.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "Atlikušās izmēģinājuma dienas: %d.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "Jūsu %@ licence";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "Pasūtījums tiek apstrādāts";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "Pasūtījums tiek apstrādāts. Drīzumā saņemsiet e-pastu.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Tad %@/%ld d.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Tad %@/%ld mēn.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Tad %@/%ld ned.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Tad %@/%ld g.";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Tad %@/dienā";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Tad %@/mēnesī";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Tad %@/nedēļā";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Tad %@/gadā";
+
+/* No comment provided by engineer. */
+"after %ld days" = "pēc %ld d.";
+
+/* No comment provided by engineer. */
+"after 1 day" = "pēc 1 dienas";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "Licences kods jau ir izmantots";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "Licences kods jau ir izmantots.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "Licences kods nav aktīvs";
+
+/* No comment provided by engineer. */
+"License does not match product" = "Licence neatbilst produktam";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "Licence veiksmīgi deaktivizēta";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "Norādītā valūta nav derīga";
+
+/* No comment provided by engineer. */
+"This license has expired" = "Licences termiņš ir beidzies";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "Autentifikācija neizdevās. Pārbaudiet SDK API atslēgu.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "Pieprasītā aktivizācija nav atrasta";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "Pieprasītais produkts nav atrasts";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "Neizdevās apstiprināt pasūtījuma statusu";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "Neizdevās apstiprināt pasūtījuma statusu. Drīzumā saņemsiet e-pastu.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "Norādītā licences atslēga šim produktam nav atrasta.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "Jums nav tiesību piekļūt šim resursam";

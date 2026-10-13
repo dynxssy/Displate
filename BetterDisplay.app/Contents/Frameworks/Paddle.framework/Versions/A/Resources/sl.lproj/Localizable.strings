@@ -1,0 +1,221 @@
+/* No comment provided by engineer. */
+"%@ - Checkout" = "%@ - Nakup";
+
+/* No comment provided by engineer. */
+"%@ can send me product updates and offers via email. You can opt-out at any time." = "%@ mi lahko po e-pošti pošilja posodobitve izdelka in ponudbe. Odjavite se lahko kadar koli.";
+
+/* No comment provided by engineer. */
+"%@%% off!" = "%@%% popust!";
+
+/* No comment provided by engineer. */
+"A valid license code is required. Please try again." = "Zahtevana je veljavna licenčna koda. Poskusite znova.";
+
+/* No comment provided by engineer. */
+"Activate" = "Aktiviraj";
+
+/* No comment provided by engineer. */
+"Activate License" = "Aktiviraj licenco";
+
+/* No comment provided by engineer. */
+"Already purchased a license? Fill in the form below and activate %@ instantly." = "Ste že kupili licenco? Izpolnite spodnji obrazec in takoj aktivirajte %@.";
+
+/* No comment provided by engineer. */
+"An Error Occurred" = "Prišlo je do napake";
+
+/* No comment provided by engineer. */
+"An unexpected error occurred performing this action." = "Med izvajanjem tega dejanja je prišlo do nepričakovane napake.";
+
+/* No comment provided by engineer. */
+"Buy Now" = "Kupi zdaj";
+
+/* No comment provided by engineer. */
+"By %@" = "Avtor: %@";
+
+/* No comment provided by engineer. */
+"Cancel" = "Prekliči";
+
+/* No comment provided by engineer. */
+"Close" = "Zapri";
+
+/* No comment provided by engineer. */
+"Continue Trial" = "Nadaljuj preizkus";
+
+/* No comment provided by engineer. */
+"Deactivating License" = "Deaktiviranje licence";
+
+/* No comment provided by engineer. */
+"Email Address" = "E-poštni naslov";
+
+/* No comment provided by engineer. */
+"Enter License" = "Vnesite licenco";
+
+/* No comment provided by engineer. */
+"Error" = "Napaka";
+
+/* No comment provided by engineer. */
+"Forgotten your license key?" = "Ste pozabili licenčni ključ?";
+
+/* No comment provided by engineer. */
+"Join" = "Pridruži se";
+
+/* No comment provided by engineer. */
+"License Code" = "Licenčna koda";
+
+/* No comment provided by engineer. */
+"No Thanks!" = "Ne, hvala!";
+
+/* No comment provided by engineer. */
+"OK" = "V redu";
+
+/* No comment provided by engineer. */
+"Order Complete" = "Naročilo zaključeno";
+
+/* No comment provided by engineer. */
+"Order Success" = "Naročilo uspešno";
+
+/* No comment provided by engineer. */
+"Please enter the email address used to purchase your license." = "Vnesite e-poštni naslov, uporabljen pri nakupu licence.";
+
+/* No comment provided by engineer. */
+"Quit" = "Zapri program";
+
+/* No comment provided by engineer. */
+"Recover" = "Obnovi";
+
+/* No comment provided by engineer. */
+"Recover your %@ license" = "Obnovite licenco za %@";
+
+/* No comment provided by engineer. */
+"Recovering your %@ license" = "Obnavljanje licence za %@";
+
+/* No comment provided by engineer. */
+"Retry" = "Poskusi znova";
+
+/* No comment provided by engineer. */
+"Send anonymous usage information?" = "Pošlji anonimne podatke o uporabi?";
+
+/* No comment provided by engineer. */
+"Success" = "Uspeh";
+
+/* No comment provided by engineer. */
+"Thank you for trying %@" = "Hvala, ker preizkušate %@";
+
+/* No comment provided by engineer. */
+"Thank you for your order, you'll receive an email shortly." = "Hvala za naročilo. Kmalu boste prejeli e-poštno sporočilo.";
+
+/* No comment provided by engineer. */
+"This copy of %@ is registered with the information below." = "Ta kopija %@ je registrirana s spodnjimi podatki.";
+
+/* No comment provided by engineer. */
+"Unable to deactivate license. Please try again later." = "Licence ni bilo mogoče deaktivirati. Poskusite znova pozneje.";
+
+/* No comment provided by engineer. */
+"Unspecified error, please contact support." = "Nedoločena napaka. Obrnite se na podporo.";
+
+/* No comment provided by engineer. */
+"Use a different email address" = "Uporabi drug e-poštni naslov";
+
+/* No comment provided by engineer. */
+"We're already checking a license, please wait a moment." = "Licenco že preverjamo. Počakajte trenutek.";
+
+/* No comment provided by engineer. */
+"We're already deactivating a license, please wait a moment." = "Licenco že deaktiviramo. Počakajte trenutek.";
+
+/* No comment provided by engineer. */
+"We've sent details of any licenses for %@ to %@" = "Podrobnosti o morebitnih licencah za %1$@ smo poslali na %2$@";
+
+/* No comment provided by engineer. */
+"Welcome to %@!" = "Dobrodošli v %@!";
+
+/* No comment provided by engineer. */
+"Whoops! Something went wrong." = "Ups! Nekaj je šlo narobe.";
+
+/* No comment provided by engineer. */
+"Would you like to send anonymous usage information to the developer of %@ to help improve the application?" = "Ali želite razvijalcu %@ poslati anonimne podatke o uporabi in s tem pomagati izboljšati aplikacijo?";
+
+/* No comment provided by engineer. */
+"You have %d day remaining of your trial period." = "Do konca preizkusnega obdobja imate še %d dan.";
+
+/* No comment provided by engineer. */
+"You have %d days remaining of your trial period." = "Preostalo število dni preizkusa: %d.";
+
+/* No comment provided by engineer. */
+"Your %@ License" = "Vaša licenca za %@";
+
+/* No comment provided by engineer. */
+"Your order is being processed" = "Vaše naročilo se obdeluje";
+
+/* No comment provided by engineer. */
+"Your order is being processed. You'll receive an email soon." = "Vaše naročilo se obdeluje. Kmalu boste prejeli e-poštno sporočilo.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld days" = "Nato %@/%ld dni";
+
+/* No comment provided by engineer. */
+"Then %@/%ld months" = "Nato %@/%ld mes.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld weeks" = "Nato %@/%ld ted.";
+
+/* No comment provided by engineer. */
+"Then %@/%ld years" = "Nato %@ / obdobje %ld let";
+
+/* No comment provided by engineer. */
+"Then %@/day" = "Nato %@/dan";
+
+/* No comment provided by engineer. */
+"Then %@/month" = "Nato %@/mesec";
+
+/* No comment provided by engineer. */
+"Then %@/week" = "Nato %@/teden";
+
+/* No comment provided by engineer. */
+"Then %@/year" = "Nato %@/leto";
+
+/* No comment provided by engineer. */
+"after %ld days" = "po %ld dneh";
+
+/* No comment provided by engineer. */
+"after 1 day" = "po 1 dnevu";
+
+/* No comment provided by engineer. */
+"License code has already been utilized" = "Licenčna koda je bila že uporabljena";
+
+/* No comment provided by engineer. */
+"License code has already been used." = "Licenčna koda je bila že uporabljena.";
+
+/* No comment provided by engineer. */
+"License code is not active" = "Licenčna koda ni aktivna";
+
+/* No comment provided by engineer. */
+"License does not match product" = "Licenca se ne ujema z izdelkom";
+
+/* No comment provided by engineer. */
+"License successfully deactivated" = "Licenca je bila uspešno deaktivirana";
+
+/* No comment provided by engineer. */
+"Provided currency is not valid'," = "Navedena valuta ni veljavna";
+
+/* No comment provided by engineer. */
+"This license has expired" = "Ta licenca je potekla";
+
+/* No comment provided by engineer. */
+"Unable to authenticate, check your SDK API key." = "Preverjanje pristnosti ni uspelo. Preverite ključ API za SDK.";
+
+/* No comment provided by engineer. */
+"Unable to find requested activation" = "Zahtevane aktivacije ni mogoče najti";
+
+/* No comment provided by engineer. */
+"Unable to find requested product" = "Zahtevanega izdelka ni mogoče najti";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order" = "Stanja vašega naročila ni bilo mogoče potrditi";
+
+/* No comment provided by engineer. */
+"We were unable to confirm the status of your order. You'll receive an email soon." = "Stanja vašega naročila ni bilo mogoče potrditi. Kmalu boste prejeli e-poštno sporočilo.";
+
+/* No comment provided by engineer. */
+"We're unable to find the supplied license key for this product." = "Navedenega licenčnega ključa za ta izdelek ni mogoče najti.";
+
+/* No comment provided by engineer. */
+"You don't have permission to access this resource" = "Nimate dovoljenja za dostop do tega vira";
