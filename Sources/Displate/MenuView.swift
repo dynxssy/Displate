@@ -1,80 +1,141 @@
-import Combine
 import SwiftUI
 
 struct MenuView: View {
     @ObservedObject var state: AppState
-    @Environment(\.openSettings) private var openSettings
 
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 8) {
             header
 
+            if state.showWelcome {
+                WelcomeCard(state: state)
+                    .transition(.opacity.combined(with: .scale(scale: 0.96, anchor: .top)))
+            } else if state.useBrightnessKeys && !state.accessibilityGranted {
+                BrightnessKeysCard(state: state)
+                    .transition(.opacity.combined(with: .scale(scale: 0.96, anchor: .top)))
+            }
+
             if state.displays.isEmpty {
-                VStack(spacing: 6) {
-                    Image(systemName: "display.trianglebadge.exclamationmark")
-                        .font(.system(size: 28))
-                        .foregroundStyle(.secondary)
-                    Text("No displays found")
-                        .foregroundStyle(.secondary)
-                }
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 24)
+                Text("No displays found")
+                    .font(.system(size: 12))
+                    .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 20)
             }
 
             ForEach(state.displays) { display in
                 DisplayCard(display: display, state: state)
-                    .transition(.asymmetric(insertion: .scale(scale: 0.95).combined(with: .opacity), removal: .opacity))
+                    .transition(.opacity.combined(with: .scale(scale: 0.97)))
             }
-
-            footer
         }
-        .padding(12)
-        .frame(width: 360)
-        .animation(.spring(response: 0.4, dampingFraction: 0.85), value: state.displays.map(\.id))
-        .onAppear { state.refresh() }
-        .onReceive(NotificationCenter.default.publisher(for: NSWindow.didBecomeKeyNotification)) { _ in
-            state.refresh()
-        }
+        .padding(10)
+        .frame(width: 320)
+        .animation(.spring(response: 0.38, dampingFraction: 0.86), value: state.displays.map(\.id))
+        .animation(.spring(response: 0.38, dampingFraction: 0.86), value: state.accessibilityGranted)
     }
 
     private var header: some View {
-        HStack(spacing: 10) {
-            AppBadge(size: 30)
-            VStack(alignment: .leading, spacing: 0) {
-                Text("Displate")
-                    .font(.system(size: 14, weight: .semibold))
-                Text(state.displays.count == 1 ? "1 display" : "\(state.displays.count) displays")
-                    .font(.system(size: 11))
-                    .foregroundStyle(.secondary)
-            }
+        HStack(spacing: 8) {
+            AppBadge(size: 22)
+            Text("Displate")
+                .font(.system(size: 13, weight: .semibold))
             Spacer()
             if state.displays.count > 1 {
                 IconButton(symbol: "link", active: state.syncBrightness,
                            help: state.syncBrightness ? "Brightness is synced across displays" : "Sync brightness across displays") {
-                    withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) { state.syncBrightness.toggle() }
+                    state.syncBrightness.toggle()
                 }
             }
             IconButton(symbol: "gearshape.fill", help: "Settings") {
-                NSApp.activate(ignoringOtherApps: true)
-                openSettings()
+                SettingsWindowController.shared.show()
+            }
+            IconButton(symbol: "power", help: "Quit Displate") {
+                NSApp.terminate(nil)
             }
         }
-        .padding(.horizontal, 4)
+        .padding(.leading, 4)
+        .padding(.bottom, 2)
     }
+}
 
-    private var footer: some View {
-        HStack {
-            if let up = state.shortcuts[.brightnessUp], let down = state.shortcuts[.brightnessDown] {
-                Label("\(down.displayString) \(up.displayString)", systemImage: "keyboard")
-                    .font(.system(size: 10.5, weight: .medium))
-                    .foregroundStyle(.tertiary)
-                    .labelStyle(.titleAndIcon)
-                    .help("Brightness shortcuts — they act on the display under the pointer")
+// MARK: - Onboarding cards
+
+private struct WelcomeCard: View {
+    @ObservedObject var state: AppState
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 6) {
+                Image(systemName: "hand.wave.fill").foregroundStyle(.yellow)
+                Text("Displate lives in your menu bar")
+                    .font(.system(size: 12.5, weight: .semibold))
             }
-            Spacer()
-            HoverTextButton(title: "Quit") { NSApp.terminate(nil) }
+            VStack(alignment: .leading, spacing: 4) {
+                ShortcutHint(keys: state.shortcuts[.brightnessDown].map { "\($0.displayString)  \(state.shortcuts[.brightnessUp]?.displayString ?? "")" } ?? "F1  F2",
+                             text: "Brightness")
+                ShortcutHint(keys: "\(state.shortcuts[.resolutionPrevious]?.displayString ?? "")  \(state.shortcuts[.resolutionNext]?.displayString ?? "")",
+                             text: "Resolution")
+                ShortcutHint(keys: state.shortcuts[.toggleHiDPI]?.displayString ?? "", text: "HiDPI")
+            }
+            HStack {
+                if state.useBrightnessKeys && !state.accessibilityGranted {
+                    Button("Enable F1/F2 keys…") { state.requestAccessibility() }
+                        .controlSize(.small)
+                }
+                Spacer()
+                Button("Got it") { state.dismissWelcome() }
+                    .controlSize(.small)
+                    .keyboardShortcut(.defaultAction)
+            }
         }
-        .padding(.horizontal, 4)
+        .padding(12)
+        .background(
+            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .fill(LinearGradient(colors: [Color.orange.opacity(0.16), Color.purple.opacity(0.14)],
+                                     startPoint: .topLeading, endPoint: .bottomTrailing))
+        )
+    }
+}
+
+private struct ShortcutHint: View {
+    let keys: String
+    let text: String
+
+    var body: some View {
+        HStack {
+            Text(text)
+                .font(.system(size: 11.5))
+                .foregroundStyle(.secondary)
+            Spacer()
+            Text(keys)
+                .font(.system(size: 11.5, weight: .medium, design: .rounded))
+                .foregroundStyle(.primary.opacity(0.8))
+        }
+    }
+}
+
+private struct BrightnessKeysCard: View {
+    @ObservedObject var state: AppState
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "keyboard")
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundStyle(.secondary)
+            VStack(alignment: .leading, spacing: 1) {
+                Text("Brightness keys")
+                    .font(.system(size: 12, weight: .semibold))
+                Text("Allow access so F1/F2 work on external displays")
+                    .font(.system(size: 10.5))
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 4)
+            Button("Allow") { state.requestAccessibility() }
+                .controlSize(.small)
+        }
+        .padding(10)
+        .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Color.accentColor.opacity(0.12)))
     }
 }
 
@@ -83,22 +144,14 @@ struct MenuView: View {
 private struct DisplayCard: View {
     let display: DisplayInfo
     @ObservedObject var state: AppState
-    @State private var expanded: Bool
-    @Namespace private var selection
-
-    init(display: DisplayInfo, state: AppState) {
-        self.display = display
-        self.state = state
-        _expanded = State(initialValue: display.isMain)
-    }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 10) {
             header
 
             PillSlider(
                 value: Binding(get: { display.brightness }, set: { state.setBrightness($0, for: display.id) }),
-                symbol: brightnessSymbol(display.brightness),
+                symbol: display.brightness < 0.33 ? "sun.min.fill" : "sun.max.fill",
                 tint: .accentColor
             )
             .help("Brightness (\(display.brightnessMethod.rawValue))")
@@ -112,183 +165,200 @@ private struct DisplayCard: View {
                 .help("Contrast")
             }
 
-            if expanded {
-                resolutionSection
-                    .transition(.opacity.combined(with: .offset(y: -6)))
+            if display.presets.count > 1 {
+                ResolutionStrip(display: display) { mode in
+                    state.applyMode(mode.id, for: display.id)
+                }
             }
         }
-        .padding(12)
+        .padding(10)
         .background(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .fill(Color.primary.opacity(0.045))
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .strokeBorder(Color.primary.opacity(0.07), lineWidth: 0.5)
+            RoundedRectangle(cornerRadius: 13, style: .continuous)
+                .fill(Color.primary.opacity(0.05))
         )
     }
 
     private var header: some View {
-        Button {
-            withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) { expanded.toggle() }
-        } label: {
-            HStack(spacing: 10) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 8, style: .continuous)
+        HStack(spacing: 8) {
+            Image(systemName: display.isBuiltIn ? "laptopcomputer" : "display")
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(.white)
+                .frame(width: 26, height: 26)
+                .background(
+                    RoundedRectangle(cornerRadius: 7, style: .continuous)
                         .fill(LinearGradient(colors: display.isBuiltIn ? [.blue, .cyan] : [.purple, .pink],
                                              startPoint: .topLeading, endPoint: .bottomTrailing))
-                    Image(systemName: display.isBuiltIn ? "laptopcomputer" : "display")
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundStyle(.white)
-                }
-                .frame(width: 30, height: 30)
+                )
 
-                VStack(alignment: .leading, spacing: 1) {
-                    HStack(spacing: 5) {
-                        Text(display.name)
-                            .font(.system(size: 13, weight: .semibold))
-                            .lineLimit(1)
-                        if display.isMain && state.displays.count > 1 {
-                            Text("MAIN")
-                                .font(.system(size: 8.5, weight: .bold))
-                                .padding(.horizontal, 4)
-                                .padding(.vertical, 1.5)
-                                .background(Capsule().fill(Color.primary.opacity(0.1)))
-                                .foregroundStyle(.secondary)
-                        }
-                    }
-                    Text(display.subtitle)
-                        .font(.system(size: 11))
-                        .foregroundStyle(.secondary)
-                        .monospacedDigit()
-                        .contentTransition(.numericText())
-                }
-                Spacer()
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 11, weight: .bold))
-                    .foregroundStyle(.tertiary)
-                    .rotationEffect(.degrees(expanded ? 90 : 0))
-            }
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-    }
-
-    private var resolutionSection: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack {
-                Text("Resolution")
-                    .font(.system(size: 11, weight: .semibold))
+            VStack(alignment: .leading, spacing: 0) {
+                Text(display.name)
+                    .font(.system(size: 12.5, weight: .semibold))
+                    .lineLimit(1)
+                Text(display.subtitle)
+                    .font(.system(size: 10.5))
                     .foregroundStyle(.secondary)
-                Spacer()
-                if display.hasHiDPIModes {
-                    HStack(spacing: 6) {
-                        Text("HiDPI")
-                            .font(.system(size: 11, weight: .medium))
-                            .foregroundStyle(.secondary)
-                        Toggle("HiDPI", isOn: Binding(
-                            get: { display.currentMode?.isHiDPI ?? false },
-                            set: { _ in state.toggleHiDPI(for: display.id) }
-                        ))
-                        .labelsHidden()
-                        .toggleStyle(.switch)
-                        .controlSize(.mini)
-                    }
-                }
+                    .monospacedDigit()
+                    .lineLimit(1)
             }
+            Spacer(minLength: 4)
+            DisplayMenu(display: display, state: state)
+        }
+    }
+}
 
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 92), spacing: 6)], spacing: 6) {
-                ForEach(display.gridModes) { mode in
-                    ResolutionChip(
-                        mode: mode,
-                        selected: isCurrent(mode),
-                        namespace: selection
-                    ) {
-                        state.applyMode(mode.id, for: display.id)
-                    }
-                }
+/// "⋯" menu with everything that doesn't need to be on screen all the time.
+private struct DisplayMenu: View {
+    let display: DisplayInfo
+    @ObservedObject var state: AppState
+    @State private var hovering = false
+
+    var body: some View {
+        Menu {
+            if display.hasHiDPIModes {
+                Toggle("HiDPI", isOn: Binding(
+                    get: { display.currentMode?.isHiDPI ?? false },
+                    set: { _ in state.toggleHiDPI(for: display.id) }
+                ))
             }
 
             if display.refreshRates.count > 1 {
-                HStack {
-                    Text("Refresh rate")
-                        .font(.system(size: 11, weight: .semibold))
-                        .foregroundStyle(.secondary)
-                    Spacer()
-                    Picker("Refresh rate", selection: Binding(
-                        get: { display.currentMode?.refreshRate.rounded() ?? 0 },
-                        set: { state.setRefreshRate($0, for: display.id) }
-                    )) {
-                        ForEach(display.refreshRates, id: \.self) { rate in
-                            Text("\(Int(rate)) Hz").tag(rate)
-                        }
+                Picker("Refresh Rate", selection: Binding(
+                    get: { display.currentMode?.refreshRate.rounded() ?? 0 },
+                    set: { state.setRefreshRate($0, for: display.id) }
+                )) {
+                    ForEach(display.refreshRates, id: \.self) { rate in
+                        Text("\(Int(rate)) Hz").tag(rate)
                     }
-                    .labelsHidden()
-                    .pickerStyle(.segmented)
-                    .fixedSize()
-                    .controlSize(.small)
                 }
+                .pickerStyle(.menu)
             }
 
-            HStack(spacing: 12) {
-                Menu {
-                    ForEach(display.modes) { mode in
-                        Button {
-                            state.applyMode(mode.id, for: display.id)
-                        } label: {
-                            if mode.id == display.currentMode?.id {
-                                Label(mode.label, systemImage: "checkmark")
-                            } else {
-                                Text(mode.label)
-                            }
-                        }
-                    }
-                } label: {
-                    Text("All modes")
-                }
-                .menuStyle(.borderlessButton)
-                .menuIndicator(.visible)
-                .fixedSize()
-
-                Spacer()
-
-                if !display.isBuiltIn {
-                    if display.hasOverride {
-                        HoverTextButton(title: "Remove HiDPI unlock") { state.removeHiDPIOverride(for: display.id) }
-                    } else if !display.hasHiDPIModes {
-                        HoverTextButton(title: "Unlock HiDPI modes…", prominent: true) { state.installHiDPIOverride(for: display.id) }
-                    }
-                }
-            }
-            .font(.system(size: 11))
-
-            if display.hasDDC {
-                HStack {
-                    Text("Software dimming")
-                        .font(.system(size: 11, weight: .medium))
-                        .foregroundStyle(.secondary)
-                    Spacer()
-                    Toggle("Software dimming", isOn: Binding(
-                        get: { display.softwareDimmingForced },
-                        set: { state.setSoftwareDimming($0, for: display.id) }
+            Menu("All Resolutions") {
+                ForEach(display.modes) { mode in
+                    Toggle(mode.id == display.defaultModeID ? "\(mode.label) (Default)" : mode.label, isOn: Binding(
+                        get: { mode.id == display.currentMode?.id },
+                        set: { _ in state.applyMode(mode.id, for: display.id) }
                     ))
-                    .labelsHidden()
-                    .toggleStyle(.switch)
-                    .controlSize(.mini)
                 }
-                .help("Dim with the graphics card instead of DDC (for monitors that ignore DDC brightness)")
+            }
+
+            if display.hasDDC || !display.isBuiltIn {
+                Divider()
+            }
+            if display.hasDDC {
+                Toggle("Software Dimming", isOn: Binding(
+                    get: { display.softwareDimmingForced },
+                    set: { state.setSoftwareDimming($0, for: display.id) }
+                ))
+            }
+            if !display.isBuiltIn {
+                if display.hasOverride {
+                    Button("Remove HiDPI Unlock…") { state.removeHiDPIOverride(for: display.id) }
+                } else if !display.hasHiDPIModes {
+                    Button("Unlock HiDPI Modes…") { state.installHiDPIOverride(for: display.id) }
+                }
+            }
+        } label: {
+            Image(systemName: "ellipsis")
+                .font(.system(size: 12, weight: .bold))
+                .foregroundStyle(.secondary)
+                .frame(width: 26, height: 26)
+                .background(Circle().fill(Color.primary.opacity(hovering ? 0.12 : 0.06)))
+                .contentShape(Circle())
+        }
+        .menuStyle(.borderlessButton)
+        .menuIndicator(.hidden)
+        .fixedSize()
+        .onHover { hovering = $0 }
+        .animation(.easeOut(duration: 0.12), value: hovering)
+    }
+}
+
+/// System Settings style picker: five sizes from "Larger Text" to "More Space".
+private struct ResolutionStrip: View {
+    let display: DisplayInfo
+    let onSelect: (DisplayMode) -> Void
+    @State private var hovered: Int32?
+    @Namespace private var selection
+
+    private var selectedID: Int32? {
+        guard let current = display.currentMode else { return nil }
+        return display.presets.first { $0.sizeLabel == current.sizeLabel }?.id
+    }
+
+    private var caption: String {
+        let id = hovered ?? selectedID
+        guard let mode = display.presets.first(where: { $0.id == id }) else { return display.currentMode?.sizeLabel ?? "" }
+        return mode.id == display.defaultModeID ? "\(mode.sizeLabel) · Default" : mode.sizeLabel
+    }
+
+    var body: some View {
+        VStack(spacing: 6) {
+            HStack(spacing: 6) {
+                ForEach(Array(display.presets.enumerated()), id: \.element.id) { index, mode in
+                    tile(mode, index: index)
+                }
+            }
+            ZStack {
+                HStack {
+                    Text("Larger Text")
+                    Spacer()
+                    Text("More Space")
+                }
+                .foregroundStyle(.tertiary)
+                Text(caption)
+                    .font(.system(size: 10.5, weight: .semibold, design: .rounded))
+                    .foregroundStyle(.secondary)
+                    .monospacedDigit()
+                    .contentTransition(.numericText())
+                    .animation(.smooth(duration: 0.2), value: caption)
+            }
+            .font(.system(size: 10))
+        }
+    }
+
+    private func tile(_ mode: DisplayMode, index: Int) -> some View {
+        let selected = mode.id == selectedID
+        let isDefault = mode.id == display.defaultModeID
+        let count = max(display.presets.count - 1, 1)
+        let fontSize = 17 - 8 * CGFloat(index) / CGFloat(count)
+
+        return Button {
+            onSelect(mode)
+        } label: {
+            Text("Aa")
+                .font(.system(size: fontSize, weight: .semibold, design: .rounded))
+                .foregroundStyle(selected ? Color.white : Color.primary.opacity(0.75))
+                .frame(maxWidth: .infinity)
+                .frame(height: 38)
+                .background {
+                    if selected {
+                        RoundedRectangle(cornerRadius: 9, style: .continuous)
+                            .fill(Color.accentColor)
+                            .matchedGeometryEffect(id: "selection", in: selection)
+                            .shadow(color: Color.accentColor.opacity(0.35), radius: 4, y: 2)
+                    } else {
+                        RoundedRectangle(cornerRadius: 9, style: .continuous)
+                            .fill(Color.primary.opacity(hovered == mode.id ? 0.11 : 0.06))
+                    }
+                }
+                .overlay(alignment: .topTrailing) {
+                    if isDefault {
+                        Circle()
+                            .fill(selected ? Color.white : Color.accentColor)
+                            .frame(width: 4, height: 4)
+                            .padding(5)
+                    }
+                }
+                .contentShape(RoundedRectangle(cornerRadius: 9, style: .continuous))
+        }
+        .buttonStyle(PressableStyle())
+        .onHover { inside in
+            withAnimation(.easeOut(duration: 0.12)) {
+                if inside { hovered = mode.id } else if hovered == mode.id { hovered = nil }
             }
         }
-        .padding(.top, 2)
-    }
-
-    private func isCurrent(_ mode: DisplayMode) -> Bool {
-        guard let current = display.currentMode else { return false }
-        return mode.width == current.width && mode.height == current.height
-    }
-
-    private func brightnessSymbol(_ value: Double) -> String {
-        value < 0.33 ? "sun.min.fill" : value < 0.66 ? "sun.max" : "sun.max.fill"
+        .help(isDefault ? "\(mode.label) (Default)" : mode.label)
     }
 }
 
@@ -302,32 +372,31 @@ struct PillSlider: View {
 
     @State private var dragging = false
     @State private var hovering = false
-    private let height: CGFloat = 26
+    private let height: CGFloat = 24
 
     var body: some View {
         GeometryReader { geometry in
             let width = geometry.size.width
-            let fillWidth = max(height, width * value)
             ZStack(alignment: .leading) {
                 Capsule()
-                    .fill(Color.primary.opacity(hovering || dragging ? 0.1 : 0.075))
+                    .fill(Color.primary.opacity(hovering || dragging ? 0.1 : 0.07))
 
                 Capsule()
-                    .fill(LinearGradient(colors: [tint.opacity(0.75), tint], startPoint: .leading, endPoint: .trailing))
-                    .frame(width: fillWidth)
+                    .fill(LinearGradient(colors: [tint.opacity(0.8), tint], startPoint: .leading, endPoint: .trailing))
+                    .frame(width: max(height, width * value))
                     .animation(dragging ? .interactiveSpring(response: 0.12) : .smooth(duration: 0.25), value: value)
 
                 HStack {
                     Image(systemName: symbol)
-                        .font(.system(size: 11.5, weight: .semibold))
+                        .font(.system(size: 11, weight: .semibold))
                         .foregroundStyle(Color.white)
                         .contentTransition(.symbolEffect(.replace))
-                        .frame(width: 16)
+                        .frame(width: 14)
                     Spacer()
                     Text("\(Int((value * 100).rounded()))%")
-                        .font(.system(size: 11, weight: .semibold, design: .rounded))
+                        .font(.system(size: 10.5, weight: .semibold, design: .rounded))
                         .monospacedDigit()
-                        .foregroundStyle(value > 0.9 ? Color.white : Color.secondary)
+                        .foregroundStyle(value > 0.88 ? Color.white : Color.secondary)
                         .contentTransition(.numericText(value: value))
                         .animation(.smooth(duration: 0.2), value: value)
                 }
@@ -344,54 +413,17 @@ struct PillSlider: View {
             )
         }
         .frame(height: height)
-        .scaleEffect(dragging ? 1.02 : 1)
+        .scaleEffect(dragging ? 1.015 : 1)
         .animation(.spring(response: 0.25, dampingFraction: 0.7), value: dragging)
         .onHover { hovering = $0 }
         .animation(.easeOut(duration: 0.15), value: hovering)
     }
 }
 
-private struct ResolutionChip: View {
-    let mode: DisplayMode
-    let selected: Bool
-    let namespace: Namespace.ID
-    let action: () -> Void
-    @State private var hovering = false
-
-    var body: some View {
-        Button(action: action) {
-            Text("\(mode.width) × \(mode.height)")
-                .font(.system(size: 11, weight: selected ? .semibold : .medium, design: .rounded))
-                .monospacedDigit()
-                .lineLimit(1)
-                .minimumScaleFactor(0.8)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 6)
-                .foregroundStyle(selected ? Color.white : Color.primary)
-                .background {
-                    if selected {
-                        RoundedRectangle(cornerRadius: 7, style: .continuous)
-                            .fill(Color.accentColor)
-                            .matchedGeometryEffect(id: "selection", in: namespace)
-                            .shadow(color: Color.accentColor.opacity(0.35), radius: 4, y: 2)
-                    } else {
-                        RoundedRectangle(cornerRadius: 7, style: .continuous)
-                            .fill(Color.primary.opacity(hovering ? 0.1 : 0.05))
-                    }
-                }
-                .contentShape(RoundedRectangle(cornerRadius: 7, style: .continuous))
-        }
-        .buttonStyle(PressableStyle())
-        .onHover { hovering = $0 }
-        .animation(.easeOut(duration: 0.12), value: hovering)
-        .help(mode.label)
-    }
-}
-
 struct PressableStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .scaleEffect(configuration.isPressed ? 0.95 : 1)
+            .scaleEffect(configuration.isPressed ? 0.94 : 1)
             .animation(.spring(response: 0.2, dampingFraction: 0.6), value: configuration.isPressed)
     }
 }
@@ -406,11 +438,11 @@ struct IconButton: View {
     var body: some View {
         Button(action: action) {
             Image(systemName: symbol)
-                .font(.system(size: 12, weight: .semibold))
-                .foregroundStyle(active ? Color.white : Color.primary.opacity(0.8))
-                .frame(width: 28, height: 28)
+                .font(.system(size: 11, weight: .semibold))
+                .foregroundStyle(active ? Color.white : Color.primary.opacity(0.75))
+                .frame(width: 24, height: 24)
                 .background(
-                    Circle().fill(active ? Color.accentColor : Color.primary.opacity(hovering ? 0.12 : 0.06))
+                    Circle().fill(active ? Color.accentColor : Color.primary.opacity(hovering ? 0.12 : 0.0))
                 )
                 .contentShape(Circle())
         }
@@ -419,28 +451,6 @@ struct IconButton: View {
         .animation(.easeOut(duration: 0.15), value: hovering)
         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: active)
         .help(help)
-    }
-}
-
-struct HoverTextButton: View {
-    let title: String
-    var prominent = false
-    let action: () -> Void
-    @State private var hovering = false
-
-    var body: some View {
-        Button(action: action) {
-            Text(title)
-                .font(.system(size: 11, weight: .medium))
-                .foregroundStyle(prominent ? Color.accentColor : (hovering ? Color.primary : Color.secondary))
-                .padding(.horizontal, 8)
-                .padding(.vertical, 4)
-                .background(Capsule().fill(Color.primary.opacity(hovering ? 0.08 : 0)))
-                .contentShape(Capsule())
-        }
-        .buttonStyle(.plain)
-        .onHover { hovering = $0 }
-        .animation(.easeOut(duration: 0.12), value: hovering)
     }
 }
 
@@ -456,7 +466,6 @@ struct AppBadge: View {
             Image(systemName: "sun.max.fill")
                 .font(.system(size: size * 0.5, weight: .semibold))
                 .foregroundStyle(.white)
-                .shadow(color: .black.opacity(0.15), radius: size * 0.04, y: size * 0.02)
         }
         .frame(width: size, height: size)
     }

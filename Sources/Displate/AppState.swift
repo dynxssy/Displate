@@ -17,8 +17,9 @@ struct DisplayInfo: Identifiable {
     var hasHiDPIModes: Bool
     var hasOverride: Bool
     var contrast: Double?
-    /// Sizes offered in the resolution grid: same HiDPI-ness and refresh rate as the current mode.
-    var gridModes: [DisplayMode]
+    /// Up to five curated sizes, from "Larger Text" to "More Space" (like System Settings).
+    var presets: [DisplayMode]
+    var defaultModeID: Int32?
     /// Refresh rates available at the current size.
     var refreshRates: [Double]
 
@@ -43,6 +44,8 @@ final class AppState: ObservableObject {
         static let showHUD = "showHUD"
         static let brightnessStep = "brightnessStep"
         static let syncBrightness = "syncBrightness"
+        static let useBrightnessKeys = "useBrightnessKeys"
+        static let welcomeDismissed = "welcomeDismissed"
     }
 
     @Published private(set) var displays: [DisplayInfo] = []
@@ -67,6 +70,17 @@ final class AppState: ObservableObject {
         didSet { UserDefaults.standard.set(syncBrightness, forKey: Keys.syncBrightness) }
     }
 
+    @Published var useBrightnessKeys = UserDefaults.standard.object(forKey: Keys.useBrightnessKeys) as? Bool ?? true {
+        didSet {
+            UserDefaults.standard.set(useBrightnessKeys, forKey: Keys.useBrightnessKeys)
+            MediaKeys.shared.update()
+            if useBrightnessKeys { watchAccessibility() }
+        }
+    }
+
+    @Published private(set) var accessibilityGranted = MediaKeys.isTrusted
+    @Published private(set) var showWelcome = !UserDefaults.standard.bool(forKey: Keys.welcomeDismissed)
+
     @Published var launchAtLogin = false {
         didSet {
             guard launchAtLogin != (SMAppService.mainApp.status == .enabled) else { return }
@@ -84,6 +98,7 @@ final class AppState: ObservableObject {
 
     private var names: [CGDirectDisplayID: String] = [:]
     private var refreshTask: Task<Void, Never>?
+    private var accessibilityTask: Task<Void, Never>?
     /// Mode switches requested by shortcuts but not applied yet, so fast repeated presses keep stepping.
     private var pendingModes: [CGDirectDisplayID: DisplayMode] = [:]
 
@@ -96,6 +111,38 @@ final class AppState: ObservableObject {
         registerHotkeys()
         CGDisplayRegisterReconfigurationCallback(displayReconfigured, nil)
         refresh()
+        if useBrightnessKeys { watchAccessibility() }
+    }
+
+    func dismissWelcome() {
+        withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) { showWelcome = false }
+        UserDefaults.standard.set(true, forKey: Keys.welcomeDismissed)
+    }
+
+    func requestAccessibility() {
+        MediaKeys.requestPermission()
+        watchAccessibility()
+    }
+
+    /// Polls until Accessibility access is granted, then starts the brightness key tap.
+    private func watchAccessibility() {
+        accessibilityGranted = MediaKeys.isTrusted
+        guard !accessibilityGranted, accessibilityTask == nil else {
+            MediaKeys.shared.update()
+            return
+        }
+        accessibilityTask = Task { @MainActor [weak self] in
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(1.5))
+                guard let self else { return }
+                if MediaKeys.isTrusted {
+                    withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) { self.accessibilityGranted = true }
+                    MediaKeys.shared.update()
+                    self.accessibilityTask = nil
+                    return
+                }
+            }
+        }
     }
 
     func stop() {
@@ -123,6 +170,7 @@ final class AppState: ObservableObject {
         displays = ids.map { id in
             let all = DisplayModes.list(for: id)
             let current = DisplayModes.current(for: id)
+            let presets = Self.presets(all, current: current)
             return DisplayInfo(
                 id: id,
                 name: name(for: id),
@@ -137,7 +185,8 @@ final class AppState: ObservableObject {
                 hasHiDPIModes: all.contains(where: \.isHiDPI),
                 hasOverride: HiDPI.hasOverride(id),
                 contrast: brightness.contrast(for: id),
-                gridModes: Self.gridModes(all, current: current),
+                presets: presets.modes,
+                defaultModeID: presets.defaultID,
                 refreshRates: Self.refreshRates(all, current: current)
             )
         }
@@ -150,18 +199,57 @@ final class AppState: ObservableObject {
         displays[index].contrast = BrightnessController.shared.contrast(for: display)
     }
 
-    private static func gridModes(_ modes: [DisplayMode], current: DisplayMode?) -> [DisplayMode] {
-        guard let current else { return [] }
+    private static let niceWidths: Set<Int> = [1024, 1152, 1280, 1344, 1366, 1440, 1470, 1512, 1600, 1680, 1710, 1728,
+                                                1800, 1920, 2048, 2056, 2240, 2304, 2560, 2880, 3008, 3200, 3360, 3440, 3840, 4096, 5120]
+
+    /// Curated resolutions for the current HiDPI setting and refresh rate: up to five sizes around
+    /// macOS' default, preferring familiar resolutions, always including the current one.
+    static func presets(_ modes: [DisplayMode], current: DisplayMode?) -> (modes: [DisplayMode], defaultID: Int32?) {
+        guard let current else { return ([], nil) }
         var seen = Set<String>()
-        return modes
+        let sizes = modes
             .filter { $0.isHiDPI == current.isHiDPI }
-            .sorted { (abs($0.refreshRate - current.refreshRate), -$0.refreshRate) < (abs($1.refreshRate - current.refreshRate), -$1.refreshRate) }
+            .sorted { (abs($0.refreshRate - current.refreshRate), $0.isDefault ? 0 : 1) < (abs($1.refreshRate - current.refreshRate), $1.isDefault ? 0 : 1) }
             .filter { seen.insert($0.sizeLabel).inserted }
-            .map { mode in
-                // Prefer the exact current mode for the current size so the selection matches.
-                (mode.width == current.width && mode.height == current.height) ? current : mode
-            }
-            .sorted { ($0.width * $0.height, $0.width) < ($1.width * $1.height, $1.width) }
+            .map { ($0.width == current.width && $0.height == current.height) ? current : $0 }
+            .sorted { $0.width < $1.width }
+        guard !sizes.isEmpty else { return ([current], current.id) }
+
+        let defaultMode = Self.defaultMode(sizes, all: modes, current: current)
+        guard sizes.count > 5 else { return (sizes, defaultMode.id) }
+
+        let minWidth = Double(sizes.first!.width)
+        let maxWidth = Double(sizes.last!.width)
+        func pick(_ target: Double) -> DisplayMode {
+            let target = min(max(target, minWidth), maxWidth)
+            let near = sizes.filter { abs(Double($0.width) - target) <= target * 0.08 }
+            let nice = near.filter { niceWidths.contains($0.width) }
+            let pool = !nice.isEmpty ? nice : (!near.isEmpty ? near : sizes)
+            return pool.min { abs(Double($0.width) - target) < abs(Double($1.width) - target) }!
+        }
+
+        let base = Double(defaultMode.width)
+        var result: [DisplayMode] = [defaultMode]
+        for factor in [0.66, 0.82, 1.2, 1.45, 0.74, 0.9, 1.1, 1.3, 0.58, 1.6] where result.count < 5 {
+            let mode = pick(base * factor)
+            if !result.contains(where: { $0.sizeLabel == mode.sizeLabel }) { result.append(mode) }
+        }
+        if !result.contains(where: { $0.sizeLabel == current.sizeLabel }),
+           let replace = result.indices.filter({ result[$0].id != defaultMode.id })
+               .min(by: { abs(result[$0].width - current.width) < abs(result[$1].width - current.width) }) {
+            result[replace] = current
+        }
+        return (result.sorted { $0.width < $1.width }, defaultMode.id)
+    }
+
+    private static func defaultMode(_ sizes: [DisplayMode], all: [DisplayMode], current: DisplayMode) -> DisplayMode {
+        if let flagged = sizes.first(where: \.isDefault) { return flagged }
+        if let flagged = all.first(where: \.isDefault),
+           let match = sizes.first(where: { $0.sizeLabel == flagged.sizeLabel }) { return match }
+        // No flag (e.g. modes added by a HiDPI unlock): 4K+ panels default to half their pixels, smaller ones to native.
+        let nativeWidth = Double(all.map(\.pixelWidth).max() ?? current.pixelWidth)
+        let target = current.isHiDPI && nativeWidth >= 3000 ? nativeWidth / 2 : nativeWidth
+        return sizes.min { abs(Double($0.width) - target) < abs(Double($1.width) - target) }!
     }
 
     private static func refreshRates(_ modes: [DisplayMode], current: DisplayMode?) -> [Double] {
@@ -286,24 +374,29 @@ final class AppState: ObservableObject {
         return screen?.displayID
     }
 
+    /// Brightness keys: handles displays macOS can't (or everything when synced). Returns false to let macOS handle it.
+    func handleBrightnessKey(up: Bool, fine: Bool) -> Bool {
+        guard useBrightnessKeys, let display = displayUnderMouse() else { return false }
+        if !syncBrightness && BrightnessController.shared.method(for: display) == .native { return false }
+        let step = fine ? brightnessStep / 4 : brightnessStep
+        adjustBrightness(by: up ? step : -step, on: display)
+        return true
+    }
+
     private func adjustBrightness(by delta: Double, on display: CGDirectDisplayID) {
         let current = BrightnessController.shared.targetBrightness(for: display)
         // Snap to the step grid so repeated presses land on even values.
-        let steps = ((current + delta) / brightnessStep).rounded()
-        let value = min(max(steps * brightnessStep, 0), 1)
+        let step = abs(delta)
+        let steps = ((current + delta) / step).rounded()
+        let value = min(max(steps * step, 0), 1)
         setBrightness(value, for: display, animated: true)
         let symbol = value < 0.01 ? "sun.min" : value < 0.5 ? "sun.min.fill" : "sun.max.fill"
-        HUD.shared.show(symbol: symbol, title: "\(Int((value * 100).rounded()))%",
-                        subtitle: syncBrightness ? "All Displays" : name(for: display), value: value, on: display)
+        HUD.shared.show(symbol: symbol, title: syncBrightness ? "All Displays" : name(for: display), value: value, on: display)
     }
 
     private func cycleResolution(_ direction: Int, on display: CGDirectDisplayID) {
         guard let current = pendingModes[display] ?? DisplayModes.current(for: display) else { return }
-        var seen = Set<String>()
-        let candidates = DisplayModes.list(for: display)
-            .filter { $0.isHiDPI == current.isHiDPI && abs($0.refreshRate - current.refreshRate) < 1 }
-            .sorted { $0.width * $0.height < $1.width * $1.height }
-            .filter { seen.insert($0.sizeLabel).inserted }
+        let candidates = Self.presets(DisplayModes.list(for: display), current: current).modes
 
         guard let index = candidates.firstIndex(where: { $0.width == current.width && $0.height == current.height }) else { return }
         let next = index + direction
@@ -313,7 +406,8 @@ final class AppState: ObservableObject {
             return
         }
         let mode = candidates[next]
-        var detail = mode.isHiDPI ? "HiDPI" : "Low resolution"
+        let isDefault = mode.id == Self.presets(DisplayModes.list(for: display), current: current).defaultID
+        var detail = isDefault ? "Default" : (mode.isHiDPI ? "HiDPI" : "Low resolution")
         if mode.refreshRate > 0 { detail += " · \(Int(mode.refreshRate.rounded())) Hz" }
         HUD.shared.show(symbol: direction > 0 ? "arrow.up.left.and.arrow.down.right" : "arrow.down.right.and.arrow.up.left",
                         title: mode.sizeLabel, subtitle: detail, on: display)

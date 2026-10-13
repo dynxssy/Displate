@@ -8,6 +8,8 @@ struct DisplayMode: Identifiable, Hashable {
     let pixelWidth: Int
     let pixelHeight: Int
     let refreshRate: Double
+    /// macOS' own "Default" mode (kDisplayModeDefaultFlag), as shown in System Settings.
+    let isDefault: Bool
 
     var isHiDPI: Bool { pixelWidth > width }
 
@@ -27,6 +29,7 @@ struct DisplayMode: Identifiable, Hashable {
         pixelWidth = mode.pixelWidth
         pixelHeight = mode.pixelHeight
         refreshRate = mode.refreshRate
+        isDefault = mode.ioFlags & 0x0000_0004 != 0
     }
 }
 

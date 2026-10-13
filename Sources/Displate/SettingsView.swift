@@ -26,13 +26,27 @@ private struct GeneralSettings: View {
                 Toggle("Launch at login", isOn: $state.launchAtLogin)
                 Toggle("Show on-screen indicator", isOn: $state.showHUD)
             }
-            Section("Brightness") {
+            Section {
+                Toggle("Use brightness keys (F1/F2) for external displays", isOn: $state.useBrightnessKeys)
+                if state.useBrightnessKeys && !state.accessibilityGranted {
+                    HStack {
+                        Label("Needs Accessibility access", systemImage: "exclamationmark.triangle.fill")
+                            .foregroundStyle(.orange)
+                        Spacer()
+                        Button("Allow…") { state.requestAccessibility() }
+                    }
+                }
                 Toggle("Sync brightness across displays", isOn: $state.syncBrightness)
                 Picker("Shortcut step", selection: $state.brightnessStep) {
                     Text("5%").tag(0.05)
                     Text("6.25% (16 steps)").tag(0.0625)
                     Text("10%").tag(0.1)
                 }
+            } header: {
+                Text("Brightness")
+            } footer: {
+                Text("Brightness keys adjust the display under the pointer. Hold ⌥⇧ for finer steps.")
+                    .foregroundStyle(.secondary)
             }
             Section {
                 Toggle("Show low resolution duplicates in All modes", isOn: $state.showAllModes)
