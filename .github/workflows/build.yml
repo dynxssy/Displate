@@ -32,6 +32,19 @@ jobs:
           sleep 8
           pgrep -x Displate || { echo "Displate exited during launch"; log show --last 2m --predicate 'process == "Displate"' | tail -50; exit 1; }
           pkill -x Displate
+      - name: Render UI preview
+        run: |
+          build/Displate.app/Contents/MacOS/Displate --render-preview build/preview
+          for f in build/preview/*.png; do
+            sips -s format jpeg -s formatOptions 70 "$f" --out "${f%.png}.jpg" >/dev/null
+            echo "BEGIN-IMAGE $(basename "${f%.png}")"
+            base64 -i "${f%.png}.jpg" | fold -w 4000
+            echo "END-IMAGE"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ui-preview
+          path: build/preview/*.png
       - name: Package
         run: cd build && ditto -c -k --keepParent Displate.app Displate.zip
       - uses: actions/upload-artifact@v4

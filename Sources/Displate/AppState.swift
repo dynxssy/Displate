@@ -114,6 +114,12 @@ final class AppState: ObservableObject {
         if useBrightnessKeys { watchAccessibility() }
     }
 
+    /// Used by `--render-preview` to show sample data.
+    func loadPreview(_ displays: [DisplayInfo]) {
+        self.displays = displays
+        if shortcuts.isEmpty { shortcuts = HotkeyAction.defaults }
+    }
+
     func dismissWelcome() {
         withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) { showWelcome = false }
         UserDefaults.standard.set(true, forKey: Keys.welcomeDismissed)

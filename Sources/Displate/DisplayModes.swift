@@ -22,6 +22,16 @@ struct DisplayMode: Identifiable, Hashable {
         return text
     }
 
+    init(id: Int32, width: Int, height: Int, pixelWidth: Int, pixelHeight: Int, refreshRate: Double, isDefault: Bool = false) {
+        self.id = id
+        self.width = width
+        self.height = height
+        self.pixelWidth = pixelWidth
+        self.pixelHeight = pixelHeight
+        self.refreshRate = refreshRate
+        self.isDefault = isDefault
+    }
+
     init(_ mode: CGDisplayMode) {
         id = mode.ioDisplayModeID
         width = mode.width
