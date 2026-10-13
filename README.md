@@ -13,10 +13,12 @@ and runs on both Apple silicon and Intel Macs.
 | **Brightness** | Built-in & Apple displays via DisplayServices, external monitors via **DDC/CI** (Apple silicon), anything else via software (gamma) dimming. Smooth animated transitions. |
 | **Contrast** | DDC/CI contrast slider for external monitors that support it. |
 | **Sync brightness** | One slider/shortcut drives all displays together. |
-| **Resolutions** | Tap-to-switch resolution grid, refresh rate picker and a full "All modes" list. |
+| **Resolutions** | Five curated sizes from *Larger Text* to *More Space*, with macOS' **Default** marked — just like System Settings. Refresh rate and the full resolution list live in each display's ⋯ menu. |
 | **HiDPI** | One-tap / one-key toggle between the HiDPI (crisp, 2×) and low resolution variant of the current size. For monitors where macOS offers no HiDPI modes, **Unlock HiDPI modes…** installs a standard display override (asks for your admin password, removable any time). |
-| **Shortcuts** | System-wide hotkeys acting on the display under the mouse pointer. Fully re-assignable in Settings. No Accessibility permission needed. |
-| **On-screen indicator** | System-style HUD with segmented level bar and animated symbols. |
+| **Brightness keys** | F1/F2 (and Touch Bar / Control Strip) brightness keys work on external monitors too — they act on the display under the pointer. Needs Accessibility access (the app walks you through it). Hold ⌥⇧ for fine steps. |
+| **Shortcuts** | System-wide hotkeys acting on the display under the mouse pointer. Fully re-assignable in Settings. |
+| **On-screen indicator** | Compact pill that drops down below the menu bar whenever a key or shortcut is used. |
+| **Menu bar panel** | Compact, rounded, vibrant panel that animates from the menu bar icon; opens automatically when you launch the app. |
 | **Launch at login** | Via the modern `SMAppService` API. |
 
 ### Default shortcuts
@@ -50,13 +52,20 @@ cp -R build/Displate.app /Applications/ && open /Applications/Displate.app
   The built-in HDMI port on some M1/M2 Macs does not support DDC.
 - **HiDPI unlock** writes `/Library/Displays/Contents/Resources/Overrides/DisplayVendorID-*/DisplayProductID-*`.
   Reconnect the monitor (or log out and in) for new modes to appear. Use *Remove HiDPI unlock* to undo.
+- **Brightness keys** need Accessibility permission (System Settings → Privacy & Security → Accessibility).
+  Because the app is ad-hoc signed, macOS may ask again after you install a new build: remove the old
+  Displate entry from the list and allow it again.
 - Software dimming is reset by macOS when the app quits and restored when it starts again.
 
 ## Project layout
 
 ```
 Sources/Displate/
-  DisplateApp.swift   App entry, menu bar extra & settings scenes
+  main.swift          App entry point
+  AppDelegate.swift   Lifecycle, main menu, settings window
+  StatusBar.swift     Menu bar icon and the rounded panel
+  MediaKeys.swift     F1/F2 brightness key event tap
+  Preview.swift       --render-preview (UI snapshots used by CI)
   AppState.swift      Display model, actions, shortcut handling
   MenuView.swift      Menu bar UI (display cards, sliders, resolution grid)
   SettingsView.swift  Settings window & shortcut recorder
