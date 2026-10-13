@@ -79,13 +79,10 @@ private struct WelcomeCard: View {
             }
             HStack {
                 if state.useBrightnessKeys && !state.accessibilityGranted {
-                    Button("Enable F1/F2 keys…") { state.requestAccessibility() }
-                        .controlSize(.small)
+                    CapsuleButton(title: "Enable F1/F2 keys", prominent: false) { state.requestAccessibility() }
                 }
                 Spacer()
-                Button("Got it") { state.dismissWelcome() }
-                    .controlSize(.small)
-                    .keyboardShortcut(.defaultAction)
+                CapsuleButton(title: "Got it", prominent: true) { state.dismissWelcome() }
             }
         }
         .padding(12)
@@ -131,8 +128,7 @@ private struct BrightnessKeysCard: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
             Spacer(minLength: 4)
-            Button("Allow") { state.requestAccessibility() }
-                .controlSize(.small)
+            CapsuleButton(title: "Allow", prominent: true) { state.requestAccessibility() }
         }
         .padding(10)
         .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Color.accentColor.opacity(0.12)))
@@ -417,6 +413,30 @@ struct PillSlider: View {
         .animation(.spring(response: 0.25, dampingFraction: 0.7), value: dragging)
         .onHover { hovering = $0 }
         .animation(.easeOut(duration: 0.15), value: hovering)
+    }
+}
+
+struct CapsuleButton: View {
+    let title: String
+    var prominent = true
+    let action: () -> Void
+    @State private var hovering = false
+
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .font(.system(size: 11.5, weight: .semibold))
+                .foregroundStyle(prominent ? Color.white : Color.primary)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 5)
+                .background(
+                    Capsule().fill(prominent ? Color.accentColor.opacity(hovering ? 0.85 : 1) : Color.primary.opacity(hovering ? 0.14 : 0.08))
+                )
+                .contentShape(Capsule())
+        }
+        .buttonStyle(PressableStyle())
+        .onHover { hovering = $0 }
+        .animation(.easeOut(duration: 0.12), value: hovering)
     }
 }
 

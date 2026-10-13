@@ -253,7 +253,8 @@ final class AppState: ObservableObject {
         if let flagged = all.first(where: \.isDefault),
            let match = sizes.first(where: { $0.sizeLabel == flagged.sizeLabel }) { return match }
         // No flag (e.g. modes added by a HiDPI unlock): 4K+ panels default to half their pixels, smaller ones to native.
-        let nativeWidth = Double(all.map(\.pixelWidth).max() ?? current.pixelWidth)
+        // Low resolution modes reflect the real panel; HiDPI ones may come from an unlock with doubled sizes.
+        let nativeWidth = Double(all.filter { !$0.isHiDPI }.map(\.width).max() ?? all.map(\.pixelWidth).max() ?? current.pixelWidth)
         let target = current.isHiDPI && nativeWidth >= 3000 ? nativeWidth / 2 : nativeWidth
         return sizes.min { abs(Double($0.width) - target) < abs(Double($1.width) - target) }!
     }

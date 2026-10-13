@@ -82,8 +82,9 @@ final class HUD {
     }
 }
 
-private struct HUDView: View {
+struct HUDView: View {
     @ObservedObject var model: HUDModel
+    var solidBackground = false // ImageRenderer cannot draw NSVisualEffectView
 
     var body: some View {
         HStack(spacing: 12) {
@@ -122,7 +123,13 @@ private struct HUDView: View {
         }
         .padding(.horizontal, 14)
         .frame(width: 300, height: 58)
-        .background(VisualEffectBackground(material: .hudWindow))
+        .background {
+            if solidBackground {
+                Color(white: 0.16)
+            } else {
+                VisualEffectBackground(material: .hudWindow)
+            }
+        }
         .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: 18, style: .continuous)
