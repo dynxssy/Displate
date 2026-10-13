@@ -84,6 +84,8 @@ final class AppState: ObservableObject {
 
     private var names: [CGDirectDisplayID: String] = [:]
     private var refreshTask: Task<Void, Never>?
+    /// Mode switches requested by shortcuts but not applied yet, so fast repeated presses keep stepping.
+    private var pendingModes: [CGDirectDisplayID: DisplayMode] = [:]
 
     // MARK: Lifecycle
 
@@ -296,7 +298,7 @@ final class AppState: ObservableObject {
     }
 
     private func cycleResolution(_ direction: Int, on display: CGDirectDisplayID) {
-        guard let current = DisplayModes.current(for: display) else { return }
+        guard let current = pendingModes[display] ?? DisplayModes.current(for: display) else { return }
         var seen = Set<String>()
         let candidates = DisplayModes.list(for: display)
             .filter { $0.isHiDPI == current.isHiDPI && abs($0.refreshRate - current.refreshRate) < 1 }
@@ -316,9 +318,12 @@ final class AppState: ObservableObject {
         HUD.shared.show(symbol: direction > 0 ? "arrow.up.left.and.arrow.down.right" : "arrow.down.right.and.arrow.up.left",
                         title: mode.sizeLabel, subtitle: detail, on: display)
         // Let the indicator appear before the (briefly blocking) reconfiguration.
+        pendingModes[display] = mode
         Task { @MainActor in
             try? await Task.sleep(for: .milliseconds(60))
+            guard self.pendingModes[display]?.id == mode.id else { return } // superseded by a newer press
             DisplayModes.apply(mode, to: display)
+            self.pendingModes[display] = nil
             self.scheduleRefresh()
         }
     }
