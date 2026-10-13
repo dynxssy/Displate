@@ -20,6 +20,16 @@ enum HotkeyAction: String, CaseIterable, Identifiable {
         }
     }
 
+    var symbol: String {
+        switch self {
+        case .brightnessUp: return "sun.max.fill"
+        case .brightnessDown: return "sun.min.fill"
+        case .resolutionNext: return "arrow.up.left.and.arrow.down.right"
+        case .resolutionPrevious: return "arrow.down.right.and.arrow.up.left"
+        case .toggleHiDPI: return "sparkles.tv"
+        }
+    }
+
     static var defaults: [HotkeyAction: Shortcut] {
         let mods = UInt32(controlKey | optionKey | cmdKey)
         return [

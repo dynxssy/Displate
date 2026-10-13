@@ -16,6 +16,16 @@ rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 cp "$BIN_DIR/Displate" "$APP/Contents/MacOS/Displate"
 cp App/Info.plist "$APP/Contents/Info.plist"
+
+# App icon (rendered from code; the app still builds if this step fails)
+if swift scripts/make-icon.swift build/AppIcon.iconset >/dev/null && \
+   iconutil -c icns build/AppIcon.iconset -o "$APP/Contents/Resources/AppIcon.icns"; then
+    echo "Generated app icon"
+else
+    echo "warning: could not generate the app icon" >&2
+fi
+rm -rf build/AppIcon.iconset
+
 codesign --force --sign - "$APP"
 
 echo "Built $APP"

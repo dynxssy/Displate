@@ -21,6 +21,7 @@ enum DDC {
     private static let chipAddress: UInt32 = 0x37
     private static let dataAddress: UInt32 = 0x51
     static let brightnessVCP: UInt8 = 0x10
+    static let contrastVCP: UInt8 = 0x12
 
     // MARK: Discovery
 
@@ -140,22 +141,24 @@ enum DDC {
     }
 }
 
-/// One external monitor's DDC channel. Writes are serialized and coalesced so slider drags stay smooth.
+/// One external monitor's DDC channel. Writes are serialized and coalesced per VCP code,
+/// so dragging a slider never queues up a backlog of slow I2C transactions.
 final class DDCService: @unchecked Sendable {
     let service: OpaquePointer
-    private let queue = DispatchQueue(label: "Displate.DDC")
+    private let queue = DispatchQueue(label: "Displate.DDC", qos: .userInitiated)
     private let lock = NSLock()
-    private var pending: UInt16?
+    private var pending: [UInt8: UInt16] = [:]
     private var writing = false
-    private var maxValue: UInt16 = 100
+    private var maxValues: [UInt8: UInt16] = [:]
 
     init(service: OpaquePointer) {
         self.service = service
     }
 
-    func setBrightness(_ fraction: Double) {
+    func set(_ vcp: UInt8, fraction: Double) {
         lock.lock()
-        pending = UInt16((fraction * Double(maxValue)).rounded())
+        let maximum = maxValues[vcp] ?? 100
+        pending[vcp] = UInt16((min(max(fraction, 0), 1) * Double(maximum)).rounded())
         let shouldStart = !writing
         writing = true
         lock.unlock()
@@ -167,23 +170,24 @@ final class DDCService: @unchecked Sendable {
     private func drain() {
         while true {
             lock.lock()
-            guard let value = pending else {
+            guard let entry = pending.first else {
                 writing = false
                 lock.unlock()
                 return
             }
-            pending = nil
+            pending[entry.key] = nil
             lock.unlock()
-            DDC.write(service, vcp: DDC.brightnessVCP, value: value)
+            DDC.write(service, vcp: entry.key, value: entry.value)
         }
     }
 
-    func readBrightness(_ completion: @escaping (Double?) -> Void) {
+    /// Reads a VCP value as a 0...1 fraction; the completion runs on the main queue.
+    func read(_ vcp: UInt8, completion: @escaping (Double?) -> Void) {
         queue.async {
-            let result = DDC.read(self.service, vcp: DDC.brightnessVCP)
+            let result = DDC.read(self.service, vcp: vcp)
             if let result {
                 self.lock.lock()
-                self.maxValue = result.max
+                self.maxValues[vcp] = result.max
                 self.lock.unlock()
             }
             let fraction: Double? = result.map { min(1, Double($0.current) / Double($0.max)) }

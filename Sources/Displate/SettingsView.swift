@@ -5,37 +5,103 @@ struct SettingsView: View {
     @ObservedObject var state: AppState
 
     var body: some View {
+        TabView {
+            GeneralSettings(state: state)
+                .tabItem { Label("General", systemImage: "gearshape") }
+            ShortcutSettings(state: state)
+                .tabItem { Label("Shortcuts", systemImage: "keyboard") }
+            AboutView()
+                .tabItem { Label("About", systemImage: "info.circle") }
+        }
+        .frame(width: 500)
+    }
+}
+
+private struct GeneralSettings: View {
+    @ObservedObject var state: AppState
+
+    var body: some View {
         Form {
             Section {
-                ForEach(HotkeyAction.allCases) { action in
-                    HStack {
-                        Text(action.title)
-                        Spacer()
-                        ShortcutRecorder(action: action, state: state)
-                    }
-                }
-                Button("Restore Default Shortcuts") { state.resetShortcuts() }
-            } header: {
-                Text("Keyboard Shortcuts")
-            } footer: {
-                Text("Shortcuts act on the display under the mouse pointer.")
-                    .foregroundStyle(.secondary)
-            }
-
-            Section("General") {
                 Toggle("Launch at login", isOn: $state.launchAtLogin)
                 Toggle("Show on-screen indicator", isOn: $state.showHUD)
-                Toggle("Show low resolution duplicates of HiDPI modes", isOn: $state.showAllModes)
-                Picker("Brightness step", selection: $state.brightnessStep) {
+            }
+            Section("Brightness") {
+                Toggle("Sync brightness across displays", isOn: $state.syncBrightness)
+                Picker("Shortcut step", selection: $state.brightnessStep) {
                     Text("5%").tag(0.05)
                     Text("6.25% (16 steps)").tag(0.0625)
                     Text("10%").tag(0.1)
                 }
             }
+            Section {
+                Toggle("Show low resolution duplicates in All modes", isOn: $state.showAllModes)
+            } header: {
+                Text("Resolutions")
+            } footer: {
+                Text("External monitor without HiDPI modes? Open its card in the menu and choose “Unlock HiDPI modes…”.")
+                    .foregroundStyle(.secondary)
+            }
         }
         .formStyle(.grouped)
-        .frame(width: 480)
         .fixedSize(horizontal: false, vertical: true)
+    }
+}
+
+private struct ShortcutSettings: View {
+    @ObservedObject var state: AppState
+
+    var body: some View {
+        Form {
+            Section {
+                ForEach(HotkeyAction.allCases) { action in
+                    HStack {
+                        Image(systemName: action.symbol)
+                            .foregroundStyle(.secondary)
+                            .frame(width: 20)
+                        Text(action.title)
+                        Spacer()
+                        ShortcutRecorder(action: action, state: state)
+                    }
+                }
+            } footer: {
+                HStack {
+                    Text("Shortcuts act on the display under the mouse pointer.")
+                        .foregroundStyle(.secondary)
+                    Spacer()
+                    Button("Restore Defaults") { state.resetShortcuts() }
+                }
+            }
+        }
+        .formStyle(.grouped)
+        .fixedSize(horizontal: false, vertical: true)
+    }
+}
+
+private struct AboutView: View {
+    private var version: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
+    }
+
+    var body: some View {
+        VStack(spacing: 10) {
+            AppBadge(size: 84)
+                .shadow(color: .black.opacity(0.2), radius: 10, y: 5)
+                .padding(.top, 8)
+            Text("Displate")
+                .font(.system(size: 22, weight: .bold, design: .rounded))
+            Text("Version \(version)")
+                .font(.system(size: 12))
+                .foregroundStyle(.secondary)
+            Text("Brightness, resolution and HiDPI control for every display — from the menu bar or your keyboard.")
+                .font(.system(size: 12))
+                .multilineTextAlignment(.center)
+                .foregroundStyle(.secondary)
+                .frame(maxWidth: 340)
+                .padding(.top, 4)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(28)
     }
 }
 
@@ -47,10 +113,27 @@ private struct ShortcutRecorder: View {
 
     var body: some View {
         HStack(spacing: 4) {
-            Button(recording ? "Type shortcut…" : (state.shortcuts[action]?.displayString ?? "None")) {
+            Button {
                 recording ? stop() : start()
+            } label: {
+                Text(recording ? "Type shortcut…" : (state.shortcuts[action]?.displayString ?? "Record Shortcut"))
+                    .font(.system(size: 12, weight: .medium, design: .rounded))
+                    .foregroundStyle(recording ? Color.accentColor : (state.shortcuts[action] == nil ? Color.secondary : Color.primary))
+                    .frame(minWidth: 110)
+                    .padding(.vertical, 4)
+                    .padding(.horizontal, 8)
+                    .background(
+                        RoundedRectangle(cornerRadius: 6, style: .continuous)
+                            .fill(Color.primary.opacity(0.06))
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6, style: .continuous)
+                            .strokeBorder(recording ? Color.accentColor : Color.primary.opacity(0.1), lineWidth: recording ? 1.5 : 0.5)
+                    )
+                    .contentShape(Rectangle())
             }
-            .frame(minWidth: 120)
+            .buttonStyle(.plain)
+            .animation(.easeOut(duration: 0.15), value: recording)
 
             if state.shortcuts[action] != nil, !recording {
                 Button {
