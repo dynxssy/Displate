@@ -79,7 +79,7 @@ enum PreviewRenderer {
         let external = modes(native: (3840, 2160), widths: Array(stride(from: 960, through: 3840, by: 16)), hiDPI: true, rates: [60, 120, 144], defaultWidth: 1920)
             + modes(native: (3840, 2160), widths: [1920, 2560, 3840], hiDPI: false, rates: [60, 120, 144], defaultWidth: nil)
         // 1440p monitor after "Unlock HiDPI modes": dense list, no default flag (the user's case).
-        let unlocked = modes(native: (2560, 1440), widths: Array(stride(from: 840, through: 2560, by: 16)), hiDPI: true, rates: [144], defaultWidth: nil)
+        let unlocked = modes(native: (2560, 1440), widths: [800, 840, 960] + Array(stride(from: 1024, through: 2544, by: 16)), hiDPI: true, rates: [144], defaultWidth: nil)
             + modes(native: (2560, 1440), widths: [1280, 1920, 2560], hiDPI: false, rates: [144], defaultWidth: nil)
 
         func info(_ id: CGDirectDisplayID, _ name: String, builtIn isBuiltIn: Bool, modes: [DisplayMode], currentWidth: Int,

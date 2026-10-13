@@ -111,6 +111,7 @@ struct HUDView: View {
                         .contentTransition(.numericText())
                 }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
 
             if let value = model.value {
                 Text("\(Int((value * 100).rounded()))%")
