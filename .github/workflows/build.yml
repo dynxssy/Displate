@@ -1,0 +1,28 @@
+name: Build
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            Package.swift
+            Sources
+            App
+            scripts
+          sparse-checkout-cone-mode: false
+      - name: Toolchain
+        run: swift --version
+      - name: Build app
+        run: ./scripts/build-app.sh --universal
+      - name: Package
+        run: cd build && ditto -c -k --keepParent Displate.app Displate.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Displate
+          path: build/Displate.zip
