@@ -499,7 +499,7 @@ struct AppBadge: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: size * 0.27, style: .continuous)
-                .fill(LinearGradient(colors: [Color(red: 1.0, green: 0.62, blue: 0.2), Color(red: 0.93, green: 0.27, blue: 0.45), Color(red: 0.42, green: 0.27, blue: 0.85)],
+                .fill(LinearGradient(colors: [Color(red: 0.949, green: 0.659, blue: 0.545), Color(red: 0.890, green: 0.545, blue: 0.427), Color(red: 0.800, green: 0.420, blue: 0.310)],
                                      startPoint: .top, endPoint: .bottom))
             Image(systemName: "sun.max.fill")
                 .font(.system(size: size * 0.5, weight: .semibold))

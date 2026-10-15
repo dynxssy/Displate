@@ -28,9 +28,7 @@ final class StatusBarController: NSObject {
     func setup() {
         let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = item.button {
-            let image = NSImage(systemSymbolName: "sun.max", accessibilityDescription: "Displate")
-            image?.isTemplate = true
-            button.image = image
+            button.image = MenuBarArt.symbol("sun.max", description: "Displate")
             button.target = self
             button.action = #selector(toggle)
             button.sendAction(on: [.leftMouseDown, .rightMouseDown])
@@ -178,5 +176,29 @@ private struct PanelRoot: View {
             })
             .onPreferenceChange(SizeKey.self) { size in onSize(size) }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+    }
+}
+
+/// Menu bar artwork drawn the way macOS draws its own status items.
+enum MenuBarArt {
+    /// SF Symbol at the size and weight Control Center uses.
+    static func symbol(_ name: String, description: String) -> NSImage? {
+        let configuration = NSImage.SymbolConfiguration(pointSize: 15, weight: .regular)
+            .applying(NSImage.SymbolConfiguration(scale: .medium))
+        let image = NSImage(systemSymbolName: name, accessibilityDescription: description)?
+            .withSymbolConfiguration(configuration)
+        image?.isTemplate = true
+        return image
+    }
+
+    /// The menu bar's own font, with fixed-width digits so live numbers don't jitter.
+    static var font: NSFont {
+        NSFont.monospacedDigitSystemFont(ofSize: NSFont.menuBarFont(ofSize: 0).pointSize, weight: .regular)
+    }
+
+    static func title(_ text: String, color: NSColor? = nil) -> NSAttributedString {
+        var attributes: [NSAttributedString.Key: Any] = [.font: font]
+        if let color { attributes[.foregroundColor] = color }
+        return NSAttributedString(string: text.isEmpty ? "" : " " + text, attributes: attributes)
     }
 }

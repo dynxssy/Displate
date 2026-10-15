@@ -28,9 +28,7 @@ final class StatusBarController: NSObject {
     func setup() {
         let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let button = item.button {
-            let image = NSImage(systemSymbolName: "memorychip", accessibilityDescription: "Unload")
-            image?.isTemplate = true
-            button.image = image
+            button.image = MenuBarArt.memoryGauge(fraction: 0, alert: nil)
             button.imagePosition = .imageLeading
             button.target = self
             button.action = #selector(toggle)
@@ -59,12 +57,9 @@ final class StatusBarController: NSObject {
         case .gigabytes: text = memory.total > 0 ? memory.used.memoryString : ""
         case .icon: text = ""
         }
-        let color: NSColor = memory.pressure == .critical ? .systemRed : memory.pressure == .warning ? .systemOrange : .labelColor
-        button.attributedTitle = NSAttributedString(string: text.isEmpty ? "" : " " + text, attributes: [
-            .font: NSFont.monospacedDigitSystemFont(ofSize: 12, weight: .medium),
-            .foregroundColor: color,
-            .baselineOffset: 0.5,
-        ])
+        let alert: NSColor? = memory.pressure == .critical ? .systemRed : memory.pressure == .warning ? .systemOrange : nil
+        button.image = MenuBarArt.memoryGauge(fraction: memory.usedFraction, alert: alert)
+        button.attributedTitle = MenuBarArt.title(text, color: alert)
         button.toolTip = "Memory used: \(memory.used.memoryString) of \(memory.total.memoryString) · Pressure \(memory.pressure.label)"
     }
 
@@ -200,5 +195,50 @@ private struct PanelRoot: View {
             })
             .onPreferenceChange(SizeKey.self) { size in onSize(size) }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+    }
+}
+
+/// Menu bar artwork drawn the way macOS draws its own status items.
+enum MenuBarArt {
+    /// SF Symbol at the size and weight Control Center uses.
+    static func symbol(_ name: String, description: String) -> NSImage? {
+        let configuration = NSImage.SymbolConfiguration(pointSize: 15, weight: .regular)
+            .applying(NSImage.SymbolConfiguration(scale: .medium))
+        let image = NSImage(systemSymbolName: name, accessibilityDescription: description)?
+            .withSymbolConfiguration(configuration)
+        image?.isTemplate = true
+        return image
+    }
+
+    /// The menu bar's own font, with fixed-width digits so live numbers don't jitter.
+    static var font: NSFont {
+        NSFont.monospacedDigitSystemFont(ofSize: NSFont.menuBarFont(ofSize: 0).pointSize, weight: .regular)
+    }
+
+    static func title(_ text: String, color: NSColor? = nil) -> NSAttributedString {
+        var attributes: [NSAttributedString.Key: Any] = [.font: font]
+        if let color { attributes[.foregroundColor] = color }
+        return NSAttributedString(string: text.isEmpty ? "" : " " + text, attributes: attributes)
+    }
+
+    /// A small level capsule that fills with memory use. Template (follows the menu bar) unless an alert color is given.
+    static func memoryGauge(fraction: Double, alert: NSColor?) -> NSImage {
+        let size = NSSize(width: 20, height: 12)
+        let image = NSImage(size: size, flipped: false) { _ in
+            let body = NSRect(x: 1, y: 2.5, width: 18, height: 7)
+            let ink = alert == nil ? NSColor.black : NSColor.labelColor
+            let outline = NSBezierPath(roundedRect: body, xRadius: 3.5, yRadius: 3.5)
+            outline.lineWidth = 1.2
+            ink.withAlphaComponent(0.55).setStroke()
+            outline.stroke()
+            let inner = body.insetBy(dx: 1.8, dy: 1.8)
+            let width = max(inner.height, inner.width * min(max(fraction, 0), 1))
+            (alert ?? NSColor.black).setFill()
+            NSBezierPath(roundedRect: NSRect(x: inner.minX, y: inner.minY, width: width, height: inner.height),
+                         xRadius: inner.height / 2, yRadius: inner.height / 2).fill()
+            return true
+        }
+        image.isTemplate = alert == nil
+        return image
     }
 }

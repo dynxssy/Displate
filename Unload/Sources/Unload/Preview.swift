@@ -34,6 +34,17 @@ enum PreviewRenderer {
 
         // Marketing shots: panel only, transparent around it.
         isRenderingPreview = true
+        for (name, scheme) in [("menubar-light", ColorScheme.light), ("menubar-dark", .dark)] {
+            let item = HStack(spacing: 2) {
+                Image(nsImage: MenuBarArt.memoryGauge(fraction: 0.62, alert: nil)).renderingMode(.template)
+                Text("62%").font(Font(MenuBarArt.font))
+            }
+            .foregroundStyle(scheme == .dark ? Color.white : Color.black)
+            .padding(.horizontal, 8)
+            .frame(height: 24)
+            .background(scheme == .dark ? Color(white: 0.16) : Color(white: 0.94))
+            render(item.scaleEffect(1), to: directory.appendingPathComponent("\(name).png"))
+        }
         render(AppBadge(size: 120).padding(4), to: directory.appendingPathComponent("icon.png"))
         model.dismissWelcome()
         model.showAll = false

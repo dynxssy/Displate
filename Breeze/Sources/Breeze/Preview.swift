@@ -48,6 +48,17 @@ enum PreviewRenderer {
 
         // Marketing shots: panel only, transparent around it.
         isRenderingPreview = true
+        for (name, scheme) in [("menubar-light", ColorScheme.light), ("menubar-dark", .dark)] {
+            let item = HStack(spacing: 2) {
+                Image(nsImage: MenuBarArt.symbol("fan", description: "Breeze") ?? NSImage()).renderingMode(.template)
+                Text("58°").font(Font(MenuBarArt.font))
+            }
+            .foregroundStyle(scheme == .dark ? Color.white : Color.black)
+            .padding(.horizontal, 8)
+            .frame(height: 24)
+            .background(scheme == .dark ? Color(white: 0.16) : Color(white: 0.94))
+            render(item.scaleEffect(1), to: directory.appendingPathComponent("\(name).png"))
+        }
         render(AppBadge(size: 120).padding(4), to: directory.appendingPathComponent("icon.png"))
         model.dismissWelcome()
         model.loadPreview(temperatures: temperatures, fans: fans, history: history, mode: .curve, helper: .ready)

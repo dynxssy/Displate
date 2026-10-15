@@ -28,9 +28,7 @@ final class StatusBarController: NSObject {
     func setup() {
         let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let button = item.button {
-            let image = NSImage(systemSymbolName: "fan", accessibilityDescription: "Breeze")
-            image?.isTemplate = true
-            button.image = image
+            button.image = MenuBarArt.symbol("fan", description: "Breeze")
             button.imagePosition = .imageLeading
             button.target = self
             button.action = #selector(toggle)
@@ -64,11 +62,7 @@ final class StatusBarController: NSObject {
             break
         }
         let hot = (temperature ?? 0) >= 90
-        button.attributedTitle = NSAttributedString(string: text.isEmpty ? "" : " " + text, attributes: [
-            .font: NSFont.monospacedDigitSystemFont(ofSize: 12, weight: .medium),
-            .foregroundColor: hot ? NSColor.systemRed : NSColor.labelColor,
-            .baselineOffset: 0.5,
-        ])
+        button.attributedTitle = MenuBarArt.title(text, color: hot ? .systemRed : nil)
         let fans = model.fans.map { fan in "\(fan.name) \(Int(fan.actual.rounded())) rpm" }.joined(separator: ", ")
         button.toolTip = "CPU \(model.format(model.temperatures.cpu)) · GPU \(model.format(model.temperatures.gpu))" + (fans.isEmpty ? "" : " · " + fans)
     }
@@ -204,5 +198,29 @@ private struct PanelRoot: View {
             })
             .onPreferenceChange(SizeKey.self) { size in onSize(size) }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+    }
+}
+
+/// Menu bar artwork drawn the way macOS draws its own status items.
+enum MenuBarArt {
+    /// SF Symbol at the size and weight Control Center uses.
+    static func symbol(_ name: String, description: String) -> NSImage? {
+        let configuration = NSImage.SymbolConfiguration(pointSize: 15, weight: .regular)
+            .applying(NSImage.SymbolConfiguration(scale: .medium))
+        let image = NSImage(systemSymbolName: name, accessibilityDescription: description)?
+            .withSymbolConfiguration(configuration)
+        image?.isTemplate = true
+        return image
+    }
+
+    /// The menu bar's own font, with fixed-width digits so live numbers don't jitter.
+    static var font: NSFont {
+        NSFont.monospacedDigitSystemFont(ofSize: NSFont.menuBarFont(ofSize: 0).pointSize, weight: .regular)
+    }
+
+    static func title(_ text: String, color: NSColor? = nil) -> NSAttributedString {
+        var attributes: [NSAttributedString.Key: Any] = [.font: font]
+        if let color { attributes[.foregroundColor] = color }
+        return NSAttributedString(string: text.isEmpty ? "" : " " + text, attributes: attributes)
     }
 }

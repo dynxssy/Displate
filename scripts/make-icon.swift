@@ -30,9 +30,9 @@ func render(pixels: Int) -> Data? {
 
     // Sunrise gradient
     let gradient = NSGradient(colors: [
-        NSColor(red: 0.42, green: 0.27, blue: 0.85, alpha: 1),
-        NSColor(red: 0.93, green: 0.27, blue: 0.45, alpha: 1),
-        NSColor(red: 1.00, green: 0.62, blue: 0.20, alpha: 1),
+        NSColor(red: 0.800, green: 0.420, blue: 0.310, alpha: 1),
+        NSColor(red: 0.890, green: 0.545, blue: 0.427, alpha: 1),
+        NSColor(red: 0.949, green: 0.659, blue: 0.545, alpha: 1),
     ])
     gradient?.draw(in: shape, angle: 90)
 

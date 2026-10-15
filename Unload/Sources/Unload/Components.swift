@@ -74,7 +74,7 @@ struct AppBadge: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: size * 0.27, style: .continuous)
-                .fill(LinearGradient(colors: [Color(red: 0.2, green: 0.9, blue: 0.72), Color(red: 0.1, green: 0.62, blue: 0.86), Color(red: 0.16, green: 0.3, blue: 0.86)],
+                .fill(LinearGradient(colors: [Color(red: 0.533, green: 0.835, blue: 0.592), Color(red: 0.306, green: 0.729, blue: 0.396), Color(red: 0.204, green: 0.580, blue: 0.290)],
                                      startPoint: .top, endPoint: .bottom))
             Image(systemName: "memorychip.fill")
                 .font(.system(size: size * 0.46, weight: .semibold))
