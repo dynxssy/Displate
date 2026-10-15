@@ -42,6 +42,7 @@ enum PreviewRenderer {
         }
         // Marketing shots: panel only, transparent around it.
         isRenderingPreview = true
+        render(AppBadge(size: 120).padding(4), to: directory.appendingPathComponent("icon.png"))
         state.loadPreview(Array(sampleDisplays().prefix(2)))
         for scheme in [ColorScheme.dark, .light] {
             render(marketingShot(MenuView(state: state), scheme: scheme),

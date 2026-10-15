@@ -48,6 +48,7 @@ enum PreviewRenderer {
 
         // Marketing shots: panel only, transparent around it.
         isRenderingPreview = true
+        render(AppBadge(size: 120).padding(4), to: directory.appendingPathComponent("icon.png"))
         model.dismissWelcome()
         model.loadPreview(temperatures: temperatures, fans: fans, history: history, mode: .curve, helper: .ready)
         for scheme in [ColorScheme.dark, .light] {
