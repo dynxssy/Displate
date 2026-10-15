@@ -8,6 +8,8 @@ struct ProcessEntry: Identifiable, Hashable {
     let path: String
     /// Physical footprint — the "Memory" column in Activity Monitor (RSS for processes we can't inspect).
     let footprint: UInt64
+    /// Memory-mapped / GPU-wired memory not counted in the footprint (e.g. llama.cpp model weights). Included in `footprint`.
+    var mapped: UInt64 = 0
     let isOtherUser: Bool
     /// e.g. "mlx_lm.server" for an interpreter running a script
     let detail: String?
@@ -28,11 +30,21 @@ struct ProcessGroup: Identifiable, Hashable {
     var isProtected: Bool
     var isOtherUser: Bool
 
+    var mapped: UInt64 { processes.reduce(0) { $0 + $1.mapped } }
+
     var subtitle: String {
-        if processes.count > 1 { return "\(processes.count) processes" }
-        let process = processes[0]
-        if process.detail != nil { return "\(process.name) · PID \(process.pid)" }
-        return isOtherUser ? "System · PID \(process.pid)" : "PID \(process.pid)"
+        let base: String
+        if processes.count > 1 {
+            base = "\(processes.count) processes"
+        } else {
+            let process = processes[0]
+            if process.detail != nil {
+                base = "\(process.name) · PID \(process.pid)"
+            } else {
+                base = isOtherUser ? "System · PID \(process.pid)" : "PID \(process.pid)"
+            }
+        }
+        return mapped > 0 ? "\(base) · \(mapped.memoryString) model in memory" : base
     }
 
     var pids: [pid_t] { processes.map(\.pid) }
@@ -77,8 +89,11 @@ final class ProcessScanner: @unchecked Sendable {
             alive.insert(pid)
             let path = Self.path(for: pid)
             let name = Self.name(for: pid, path: path)
-            if let footprint = Self.footprint(for: pid) {
-                entries.append(makeEntry(pid: pid, name: name, path: path, footprint: footprint, otherUser: Self.uid(for: pid) != ownUID))
+            if let usage = Self.memory(for: pid) {
+                var entry = makeEntry(pid: pid, name: name, path: path, footprint: usage.footprint + usage.mapped,
+                                      otherUser: Self.uid(for: pid) != ownUID)
+                entry.mapped = usage.mapped
+                entries.append(entry)
             } else if includeOtherUsers {
                 unreadable[pid] = path.isEmpty ? name : path
             }
@@ -229,15 +244,27 @@ final class ProcessScanner: @unchecked Sendable {
         return Array(pids.prefix(Int(count)))
     }
 
-    static func footprint(for pid: pid_t) -> UInt64? {
+    /// Physical footprint plus memory the footprint leaves out: wired pages and large memory-mapped
+    /// files kept resident. llama.cpp, for example, mmaps its model and Metal wires it for the GPU,
+    /// so a process with a 13 GB model reports a ~1.6 GB footprint.
+    static func memory(for pid: pid_t) -> (footprint: UInt64, mapped: UInt64)? {
         var usage = rusage_info_v4()
         let result = withUnsafeMutablePointer(to: &usage) { pointer in
             pointer.withMemoryRebound(to: rusage_info_t?.self, capacity: 1) {
                 proc_pid_rusage(pid, RUSAGE_INFO_V4, $0)
             }
         }
-        return result == 0 ? usage.ri_phys_footprint : nil
+        guard result == 0 else { return nil }
+        let footprint = usage.ri_phys_footprint
+        let resident = usage.ri_resident_size
+        // Everyday apps keep a few hundred MB of shared libraries resident on top of their footprint;
+        // only count the difference when it is clearly more than that.
+        let residentExtra = resident > footprint + mappedThreshold ? resident - footprint : 0
+        let wired = usage.ri_wired_size > mappedThreshold ? usage.ri_wired_size : 0
+        return (footprint, max(residentExtra, wired))
     }
+
+    private static let mappedThreshold: UInt64 = 1 << 30
 
     private static func path(for pid: pid_t) -> String {
         var buffer = [CChar](repeating: 0, count: 4096) // PROC_PIDPATHINFO_MAXSIZE

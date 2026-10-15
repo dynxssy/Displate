@@ -35,7 +35,7 @@ enum PreviewRenderer {
         let hud = HUDModel()
         hud.symbol = "checkmark.circle.fill"
         hud.title = "Freed 7.8 GB"
-        hud.subtitle = "python3.11 · mlx_lm.server"
+        hud.subtitle = "mlx_lm.server"
         hud.visible = true
         render(HUDView(model: hud, solidBackground: true).frame(width: 340, height: 110)
             .background(Color(red: 0.25, green: 0.35, blue: 0.5)), to: directory.appendingPathComponent("hud.png"))
@@ -82,12 +82,14 @@ enum PreviewRenderer {
     private static func sampleGroups() -> [ProcessGroup] {
         var nextPID: pid_t = 4000
         func group(_ name: String, bundle: String?, sizes: [Double], ai: Bool = false, detail: String? = nil,
-                   system: Bool = false, protected: Bool = false) -> ProcessGroup {
+                   system: Bool = false, protected: Bool = false, mapped: Double = 0) -> ProcessGroup {
             let processes = sizes.enumerated().map { index, size -> ProcessEntry in
                 nextPID += 7
                 let processName = index == 0 ? name : "\(name) Helper"
+                let extra = index == 0 ? UInt64(mapped * Double(gb)) : 0
                 return ProcessEntry(pid: nextPID, name: processName, path: bundle.map { "\($0)/Contents/MacOS/\(processName)" } ?? "/usr/local/bin/\(name)",
-                                    footprint: UInt64(size * Double(gb)), isOtherUser: system, detail: index == 0 ? detail : nil, isAI: ai)
+                                    footprint: UInt64(size * Double(gb)) + extra, mapped: extra, isOtherUser: system,
+                                    detail: index == 0 ? detail : nil, isAI: ai)
             }
             let id = bundle ?? "pid:\(processes[0].pid)"
             return ProcessGroup(id: id, name: detail ?? name, bundlePath: bundle, bundleID: nil,
@@ -95,7 +97,7 @@ enum PreviewRenderer {
                                 isAI: ai, isProtected: protected, isOtherUser: system)
         }
         return [
-            group("ollama_llama_server", bundle: nil, sizes: [19.6], ai: true),
+            group("llama-server", bundle: nil, sizes: [1.6], ai: true, mapped: 13.2),
             group("python3.11", bundle: nil, sizes: [7.8], ai: true, detail: "mlx_lm.server"),
             group("Google Chrome", bundle: "/Applications/Google Chrome.app", sizes: [1.1, 0.9, 0.6, 0.5, 0.3]),
             group("Xcode", bundle: "/Applications/Xcode.app", sizes: [2.4]),
