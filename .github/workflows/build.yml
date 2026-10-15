@@ -46,3 +46,41 @@ jobs:
         with:
           name: Displate
           path: build/Displate.zip
+
+  unload:
+    runs-on: macos-15
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: Unload
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: Unload
+      - name: Build app
+        run: ./scripts/build-app.sh --universal
+      - name: Verify bundle
+        run: |
+          test -x build/Unload.app/Contents/MacOS/Unload
+          test -f build/Unload.app/Contents/Resources/AppIcon.icns
+          lipo -archs build/Unload.app/Contents/MacOS/Unload
+          codesign --verify --verbose build/Unload.app
+      - name: Launch smoke test
+        run: |
+          open build/Unload.app
+          sleep 8
+          pgrep -x Unload || { echo "Unload exited during launch"; log show --last 2m --predicate 'process == "Unload"' | tail -50; exit 1; }
+          pkill -x Unload
+      - name: Render UI preview
+        timeout-minutes: 3
+        run: build/Unload.app/Contents/MacOS/Unload --render-preview build/preview
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unload-ui-preview
+          path: Unload/build/preview/*.png
+      - name: Package
+        run: cd build && ditto -c -k --keepParent Unload.app Unload.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Unload
+          path: Unload/build/Unload.zip
