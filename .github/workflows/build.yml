@@ -84,3 +84,44 @@ jobs:
         with:
           name: Unload
           path: Unload/build/Unload.zip
+
+  breeze:
+    runs-on: macos-15
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: Breeze
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: Breeze
+      - name: Build app
+        run: ./scripts/build-app.sh --universal
+      - name: Verify bundle
+        run: |
+          test -x build/Breeze.app/Contents/MacOS/Breeze
+          test -x build/Breeze.app/Contents/MacOS/BreezeHelper
+          test -f build/Breeze.app/Contents/Resources/AppIcon.icns
+          lipo -archs build/Breeze.app/Contents/MacOS/Breeze
+          lipo -archs build/Breeze.app/Contents/MacOS/BreezeHelper
+          codesign --verify --verbose build/Breeze.app
+          codesign --verify --verbose build/Breeze.app/Contents/MacOS/BreezeHelper
+      - name: Launch smoke test
+        run: |
+          open build/Breeze.app
+          sleep 8
+          pgrep -x Breeze || { echo "Breeze exited during launch"; log show --last 2m --predicate 'process == "Breeze"' | tail -50; exit 1; }
+          pkill -x Breeze
+      - name: Render UI preview
+        timeout-minutes: 3
+        run: build/Breeze.app/Contents/MacOS/Breeze --render-preview build/preview
+      - uses: actions/upload-artifact@v4
+        with:
+          name: breeze-ui-preview
+          path: Breeze/build/preview/*.png
+      - name: Package
+        run: cd build && ditto -c -k --keepParent Breeze.app Breeze.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Breeze
+          path: Breeze/build/Breeze.zip
