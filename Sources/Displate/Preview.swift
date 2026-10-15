@@ -40,7 +40,25 @@ enum PreviewRenderer {
                 .frame(width: 340, height: 110)
                 .background(Color(red: 0.25, green: 0.35, blue: 0.5)), to: directory.appendingPathComponent("\(name).png"))
         }
+        // Marketing shots: panel only, transparent around it.
+        isRenderingPreview = true
+        state.loadPreview(Array(sampleDisplays().prefix(2)))
+        for scheme in [ColorScheme.dark, .light] {
+            render(marketingShot(MenuView(state: state), scheme: scheme),
+                   to: directory.appendingPathComponent("shot-\(scheme == .dark ? "dark" : "light").png"))
+        }
         return true
+    }
+
+    static func marketingShot<V: View>(_ view: V, scheme: ColorScheme) -> some View {
+        view
+            .background(scheme == .dark ? Color(red: 0.16, green: 0.16, blue: 0.17) : Color(red: 0.975, green: 0.973, blue: 0.965))
+            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .strokeBorder(scheme == .dark ? Color.white.opacity(0.1) : Color.black.opacity(0.08), lineWidth: 0.5))
+            .shadow(color: .black.opacity(scheme == .dark ? 0.45 : 0.16), radius: 24, y: 12)
+            .padding(36)
+            .environment(\.colorScheme, scheme)
     }
 
     private static func render<V: View>(_ view: V, to url: URL) {

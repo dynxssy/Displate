@@ -14,6 +14,7 @@ struct SettingsView: View {
                 .tabItem { Label("About", systemImage: "info.circle") }
         }
         .frame(width: 500)
+        .tint(.brand)
     }
 }
 
@@ -132,7 +133,7 @@ private struct ShortcutRecorder: View {
             } label: {
                 Text(recording ? "Type shortcut…" : (state.shortcuts[action]?.displayString ?? "Record Shortcut"))
                     .font(.system(size: 12, weight: .medium, design: .rounded))
-                    .foregroundStyle(recording ? Color.accentColor : (state.shortcuts[action] == nil ? Color.secondary : Color.primary))
+                    .foregroundStyle(recording ? Color.brand : (state.shortcuts[action] == nil ? Color.secondary : Color.primary))
                     .frame(minWidth: 110)
                     .padding(.vertical, 4)
                     .padding(.horizontal, 8)
@@ -142,7 +143,7 @@ private struct ShortcutRecorder: View {
                     )
                     .overlay(
                         RoundedRectangle(cornerRadius: 6, style: .continuous)
-                            .strokeBorder(recording ? Color.accentColor : Color.primary.opacity(0.1), lineWidth: recording ? 1.5 : 0.5)
+                            .strokeBorder(recording ? Color.brand : Color.primary.opacity(0.1), lineWidth: recording ? 1.5 : 0.5)
                     )
                     .contentShape(Rectangle())
             }

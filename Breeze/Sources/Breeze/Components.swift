@@ -28,7 +28,7 @@ struct IconButton: View {
                 .font(.system(size: 11, weight: .semibold))
                 .foregroundStyle(active ? Color.white : Color.primary.opacity(0.75))
                 .frame(width: 24, height: 24)
-                .background(Circle().fill(active ? Color.accentColor : Color.primary.opacity(hovering ? 0.12 : 0.0)))
+                .background(Circle().fill(active ? Color.brand : Color.primary.opacity(hovering ? 0.12 : 0.0)))
                 .contentShape(Circle())
         }
         .buttonStyle(PressableStyle())
@@ -41,7 +41,7 @@ struct IconButton: View {
 struct CapsuleButton: View {
     let title: String
     var symbol: String?
-    var tint: Color = .accentColor
+    var tint: Color = .brand
     var prominent = true
     let action: () -> Void
     @State private var hovering = false

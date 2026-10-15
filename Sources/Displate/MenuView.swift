@@ -30,6 +30,7 @@ struct MenuView: View {
         }
         .padding(10)
         .frame(width: 320)
+        .tint(.brand)
         .animation(.spring(response: 0.38, dampingFraction: 0.86), value: state.displays.map(\.id))
         .animation(.spring(response: 0.38, dampingFraction: 0.86), value: state.accessibilityGranted)
     }
@@ -131,7 +132,7 @@ private struct BrightnessKeysCard: View {
             CapsuleButton(title: "Allow", prominent: true) { state.requestAccessibility() }
         }
         .padding(10)
-        .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Color.accentColor.opacity(0.12)))
+        .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Color.brand.opacity(0.12)))
     }
 }
 
@@ -148,7 +149,7 @@ private struct DisplayCard: View {
             PillSlider(
                 value: Binding(get: { display.brightness }, set: { state.setBrightness($0, for: display.id) }),
                 symbol: display.brightness < 0.33 ? "sun.min.fill" : "sun.max.fill",
-                tint: .accentColor
+                tint: .brand
             )
             .help("Brightness (\(display.brightnessMethod.rawValue))")
 
@@ -209,6 +210,23 @@ private struct DisplayMenu: View {
     @State private var hovering = false
 
     var body: some View {
+        if isRenderingPreview {
+            menuLabel
+        } else {
+            menu
+        }
+    }
+
+    private var menuLabel: some View {
+        Image(systemName: "ellipsis")
+            .font(.system(size: 12, weight: .bold))
+            .foregroundStyle(.secondary)
+            .frame(width: 26, height: 26)
+            .background(Circle().fill(Color.primary.opacity(hovering ? 0.12 : 0.06)))
+            .contentShape(Circle())
+    }
+
+    private var menu: some View {
         Menu {
             if display.hasHiDPIModes {
                 Toggle("HiDPI", isOn: Binding(
@@ -330,9 +348,9 @@ private struct ResolutionStrip: View {
                 .background {
                     if selected {
                         RoundedRectangle(cornerRadius: 9, style: .continuous)
-                            .fill(Color.accentColor)
+                            .fill(Color.brand)
                             .matchedGeometryEffect(id: "selection", in: selection)
-                            .shadow(color: Color.accentColor.opacity(0.35), radius: 4, y: 2)
+                            .shadow(color: Color.brand.opacity(0.35), radius: 4, y: 2)
                     } else {
                         RoundedRectangle(cornerRadius: 9, style: .continuous)
                             .fill(Color.primary.opacity(hovered == mode.id ? 0.11 : 0.06))
@@ -341,7 +359,7 @@ private struct ResolutionStrip: View {
                 .overlay(alignment: .topTrailing) {
                     if isDefault {
                         Circle()
-                            .fill(selected ? Color.white : Color.accentColor)
+                            .fill(selected ? Color.white : Color.brand)
                             .frame(width: 4, height: 4)
                             .padding(5)
                     }
@@ -364,7 +382,7 @@ private struct ResolutionStrip: View {
 struct PillSlider: View {
     @Binding var value: Double
     let symbol: String
-    var tint: Color = .accentColor
+    var tint: Color = .brand
 
     @State private var dragging = false
     @State private var hovering = false
@@ -430,7 +448,7 @@ struct CapsuleButton: View {
                 .padding(.horizontal, 12)
                 .padding(.vertical, 5)
                 .background(
-                    Capsule().fill(prominent ? Color.accentColor.opacity(hovering ? 0.85 : 1) : Color.primary.opacity(hovering ? 0.14 : 0.08))
+                    Capsule().fill(prominent ? Color.brand.opacity(hovering ? 0.85 : 1) : Color.primary.opacity(hovering ? 0.14 : 0.08))
                 )
                 .contentShape(Capsule())
         }
@@ -462,7 +480,7 @@ struct IconButton: View {
                 .foregroundStyle(active ? Color.white : Color.primary.opacity(0.75))
                 .frame(width: 24, height: 24)
                 .background(
-                    Circle().fill(active ? Color.accentColor : Color.primary.opacity(hovering ? 0.12 : 0.0))
+                    Circle().fill(active ? Color.brand : Color.primary.opacity(hovering ? 0.12 : 0.0))
                 )
                 .contentShape(Circle())
         }

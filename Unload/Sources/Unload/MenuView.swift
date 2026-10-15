@@ -23,6 +23,7 @@ struct MenuView: View {
         }
         .padding(10)
         .frame(width: 340)
+        .tint(.brand)
     }
 
     private var header: some View {
@@ -315,7 +316,7 @@ private struct ProcessCard: View {
                                 .rotationEffect(.degrees(model.showAll ? 180 : 0))
                         }
                         .font(.system(size: 11, weight: .medium))
-                        .foregroundStyle(Color.accentColor)
+                        .foregroundStyle(Color.brand)
                         .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)

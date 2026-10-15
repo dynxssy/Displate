@@ -46,10 +46,30 @@ enum PreviewRenderer {
             }
         }
 
+        // Marketing shots: panel only, transparent around it.
+        isRenderingPreview = true
+        model.dismissWelcome()
+        model.loadPreview(temperatures: temperatures, fans: fans, history: history, mode: .curve, helper: .ready)
+        for scheme in [ColorScheme.dark, .light] {
+            render(marketingShot(MenuView(model: model), scheme: scheme),
+                   to: directory.appendingPathComponent("shot-\(scheme == .dark ? "dark" : "light").png"))
+        }
+
         model.loadPreview(temperatures: temperatures, fans: [], history: history, mode: .auto, helper: .notInstalled)
         render(MenuView(model: model).background(Color(white: 0.17)).environment(\.colorScheme, .dark),
                to: directory.appendingPathComponent("menu-fanless.png"))
         return true
+    }
+
+    static func marketingShot<V: View>(_ view: V, scheme: ColorScheme) -> some View {
+        view
+            .background(scheme == .dark ? Color(red: 0.16, green: 0.16, blue: 0.17) : Color(red: 0.975, green: 0.973, blue: 0.965))
+            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .strokeBorder(scheme == .dark ? Color.white.opacity(0.1) : Color.black.opacity(0.08), lineWidth: 0.5))
+            .shadow(color: .black.opacity(scheme == .dark ? 0.45 : 0.16), radius: 24, y: 12)
+            .padding(36)
+            .environment(\.colorScheme, scheme)
     }
 
     private static func render<V: View>(_ view: V, to url: URL) {

@@ -34,6 +34,7 @@ struct MenuView: View {
         }
         .padding(10)
         .frame(width: 340)
+        .tint(.brand)
         .animation(.spring(response: 0.4, dampingFraction: 0.86), value: model.mode)
         .animation(.spring(response: 0.4, dampingFraction: 0.86), value: model.helperState)
     }
@@ -207,8 +208,8 @@ private struct FanRow: View {
                         .font(.system(size: 8, weight: .heavy))
                         .padding(.horizontal, 4)
                         .padding(.vertical, 1)
-                        .background(Capsule().fill(Color.blue.opacity(0.18)))
-                        .foregroundStyle(.blue)
+                        .background(Capsule().fill(Color.brand.opacity(0.18)))
+                        .foregroundStyle(Color.brand)
                 }
                 Spacer()
                 Text(fan.actual.rpmString)
@@ -220,7 +221,7 @@ private struct FanRow: View {
                 ZStack(alignment: .leading) {
                     Capsule().fill(Color.primary.opacity(0.08))
                     Capsule()
-                        .fill(LinearGradient(colors: [.cyan, .blue], startPoint: .leading, endPoint: .trailing))
+                        .fill(LinearGradient(colors: [Color.brand.opacity(0.75), Color.brand], startPoint: .leading, endPoint: .trailing))
                         .frame(width: max(5, geometry.size.width * fan.fraction))
                 }
             }
@@ -258,9 +259,9 @@ private struct ModeCard: View {
                             .background {
                                 if model.mode == mode {
                                     Capsule()
-                                        .fill(Color.accentColor)
+                                        .fill(Color.brand)
                                         .matchedGeometryEffect(id: "mode", in: selection)
-                                        .shadow(color: Color.accentColor.opacity(0.3), radius: 4, y: 2)
+                                        .shadow(color: Color.brand.opacity(0.3), radius: 4, y: 2)
                                 }
                             }
                             .contentShape(Capsule())
@@ -328,11 +329,19 @@ private struct CurveControl: View {
                             .foregroundStyle(active ? Color.white : Color.primary.opacity(0.8))
                             .padding(.horizontal, 9)
                             .padding(.vertical, 4)
-                            .background(Capsule().fill(active ? Color.accentColor : Color.primary.opacity(0.07)))
+                            .background(Capsule().fill(active ? Color.brand : Color.primary.opacity(0.07)))
                     }
                     .buttonStyle(PressableStyle())
                 }
                 Spacer()
+                if isRenderingPreview {
+                    HStack(spacing: 3) {
+                        Image(systemName: "thermometer.medium")
+                        Text(model.curve.sensor.title)
+                    }
+                    .font(.system(size: 11, weight: .medium))
+                    .foregroundStyle(Color.brand)
+                } else {
                 Menu {
                     Picker("Follow", selection: $model.curve.sensor) {
                         ForEach(SensorKind.allCases, id: \.self) { kind in
@@ -346,12 +355,13 @@ private struct CurveControl: View {
                         Text(model.curve.sensor.title)
                     }
                     .font(.system(size: 11, weight: .medium))
-                    .foregroundStyle(Color.accentColor)
+                    .foregroundStyle(Color.brand)
                 }
                 .menuStyle(.borderlessButton)
                 .menuIndicator(.hidden)
                 .fixedSize()
                 .help("Temperature the curve follows")
+                }
             }
 
             Text("Drag the points to shape the curve.")
@@ -408,8 +418,8 @@ struct CurveEditor: View {
                     path.addLine(to: CGPoint(x: plot.minX, y: plot.maxY))
                     path.closeSubpath()
                 }
-                .fill(LinearGradient(colors: [Color.blue.opacity(0.3), Color.cyan.opacity(0.03)], startPoint: .top, endPoint: .bottom))
-                line.stroke(LinearGradient(colors: [.cyan, .blue, .indigo], startPoint: .leading, endPoint: .trailing),
+                .fill(LinearGradient(colors: [Color.brand.opacity(0.32), Color.brand.opacity(0.03)], startPoint: .top, endPoint: .bottom))
+                line.stroke(LinearGradient(colors: [Color.brand.opacity(0.7), Color.brand], startPoint: .leading, endPoint: .trailing),
                             style: StrokeStyle(lineWidth: 2.5, lineCap: .round, lineJoin: .round))
 
                 // Live marker
@@ -432,7 +442,7 @@ struct CurveEditor: View {
                     Circle()
                         .fill(Color.white)
                         .frame(width: dragging == index ? 16 : 12, height: dragging == index ? 16 : 12)
-                        .overlay(Circle().stroke(Color.blue, lineWidth: 2.5))
+                        .overlay(Circle().stroke(Color.brand, lineWidth: 2.5))
                         .shadow(color: .black.opacity(0.25), radius: 2, y: 1)
                         .overlay(alignment: .top) {
                             if dragging == index {
@@ -501,7 +511,7 @@ struct CurveEditor: View {
 struct PillSlider: View {
     @Binding var value: Double
     let symbol: String
-    var tint: Color = .accentColor
+    var tint: Color = .brand
 
     @State private var dragging = false
     private let height: CGFloat = 26
@@ -554,7 +564,7 @@ private struct HelperCard: View {
         HStack(spacing: 10) {
             Image(systemName: icon)
                 .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(isError ? .orange : .blue)
+                .foregroundStyle(isError ? Color.orange : Color.brand)
             VStack(alignment: .leading, spacing: 1) {
                 Text(title)
                     .font(.system(size: 12, weight: .semibold))
@@ -567,7 +577,7 @@ private struct HelperCard: View {
             CapsuleButton(title: model.helperState == .notInstalled ? "Install" : "Reinstall") { model.installHelper() }
         }
         .padding(10)
-        .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill((isError ? Color.orange : Color.blue).opacity(0.12)))
+        .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill((isError ? Color.orange : Color.brand).opacity(0.12)))
     }
 
     private var isError: Bool {

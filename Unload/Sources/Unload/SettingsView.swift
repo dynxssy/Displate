@@ -30,6 +30,7 @@ struct SettingsView: View {
                 .tabItem { Label("About", systemImage: "info.circle") }
         }
         .frame(width: 480)
+        .tint(.brand)
     }
 }
 

@@ -117,6 +117,7 @@ final class AppState: ObservableObject {
     /// Used by `--render-preview` to show sample data.
     func loadPreview(_ displays: [DisplayInfo]) {
         self.displays = displays
+        accessibilityGranted = true
         if shortcuts.isEmpty { shortcuts = HotkeyAction.defaults }
     }
 
