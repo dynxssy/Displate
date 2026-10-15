@@ -223,11 +223,11 @@ enum MenuBarArt {
 
     /// A small level capsule that fills with memory use. Template (follows the menu bar) unless an alert color is given.
     static func memoryGauge(fraction: Double, alert: NSColor?) -> NSImage {
-        let size = NSSize(width: 20, height: 12)
+        let size = NSSize(width: 24, height: 14)
         let image = NSImage(size: size, flipped: false) { _ in
-            let body = NSRect(x: 1, y: 2.5, width: 18, height: 7)
+            let body = NSRect(x: 1, y: 2.75, width: 22, height: 8.5)
             let ink = alert == nil ? NSColor.black : NSColor.labelColor
-            let outline = NSBezierPath(roundedRect: body, xRadius: 3.5, yRadius: 3.5)
+            let outline = NSBezierPath(roundedRect: body, xRadius: 4.25, yRadius: 4.25)
             outline.lineWidth = 1.2
             ink.withAlphaComponent(0.55).setStroke()
             outline.stroke()
