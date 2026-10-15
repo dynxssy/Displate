@@ -172,18 +172,17 @@ private struct Sparkline: View {
             if points.count > 1 {
                 let step = geometry.size.width / CGFloat(59)
                 let offset = geometry.size.width - step * CGFloat(points.count - 1)
-                let path = Path { path in
+                let line = Path { builder in
                     for (index, value) in points.enumerated() {
                         let point = CGPoint(x: offset + CGFloat(index) * step, y: geometry.size.height * (1 - value))
-                        index == 0 ? path.move(to: point) : path.addLine(to: point)
+                        if index == 0 { builder.move(to: point) } else { builder.addLine(to: point) }
                     }
                 }
                 ZStack {
-                    path
-                        .applying(.identity)
+                    line
                         .stroke(color, style: StrokeStyle(lineWidth: 1.5, lineCap: .round, lineJoin: .round))
                     Path { fill in
-                        fill.addPath(path)
+                        fill.addPath(line)
                         fill.addLine(to: CGPoint(x: geometry.size.width, y: geometry.size.height))
                         fill.addLine(to: CGPoint(x: offset, y: geometry.size.height))
                         fill.closeSubpath()

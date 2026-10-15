@@ -52,9 +52,9 @@ enum SystemMemory {
             var pageSize: vm_size_t = 0
             host_page_size(host, &pageSize)
             let page = UInt64(pageSize)
-            let internal = UInt64(stats.internal_page_count)
+            let anonymous = UInt64(stats.internal_page_count)
             let purgeable = UInt64(stats.purgeable_count)
-            snapshot.app = (internal > purgeable ? internal - purgeable : 0) * page
+            snapshot.app = (anonymous > purgeable ? anonymous - purgeable : 0) * page
             snapshot.wired = UInt64(stats.wire_count) * page
             snapshot.compressed = UInt64(stats.compressor_page_count) * page
             snapshot.cached = (UInt64(stats.external_page_count) + purgeable) * page
