@@ -26,7 +26,11 @@ enum PreviewRenderer {
             FanInfo(index: 1, actual: 3290, minimum: 1200, maximum: 6100, target: 3300, isManual: true),
         ]
         let temperatures = Temperatures(cpu: 71.4, gpu: 58.2, hottest: 71.4)
-        let history = (0..<90).map { 52 + 19 * Double($0) / 89 + 2.5 * sin(Double($0) / 6) }
+        let history: [Double] = (0..<90).map { index in
+            let t = Double(index)
+            let trend: Double = 52 + 19 * t / 89
+            return trend + 2.5 * sin(t / 6)
+        }
 
         for (name, mode) in [("curve", FanMode.curve), ("fixed", FanMode.fixed), ("auto", FanMode.auto)] {
             model.loadPreview(temperatures: temperatures, fans: fans, history: history, mode: mode,

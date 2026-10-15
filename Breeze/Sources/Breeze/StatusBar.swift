@@ -69,7 +69,7 @@ final class StatusBarController: NSObject {
             .foregroundColor: hot ? NSColor.systemRed : NSColor.labelColor,
             .baselineOffset: 0.5,
         ])
-        let fans = model.fans.map { "\(/bin/bash.name) \(Int(/bin/bash.actual.rounded())) rpm" }.joined(separator: ", ")
+        let fans = model.fans.map { fan in "\(fan.name) \(Int(fan.actual.rounded())) rpm" }.joined(separator: ", ")
         button.toolTip = "CPU \(model.format(model.temperatures.cpu)) · GPU \(model.format(model.temperatures.gpu))" + (fans.isEmpty ? "" : " · " + fans)
     }
 
