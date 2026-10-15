@@ -22,7 +22,9 @@ struct MenuView: View {
                         .transition(.opacity.combined(with: .scale(scale: 0.97, anchor: .top)))
                 }
             } else if model.hasReading {
-                Label("This Mac has no fans — showing temperatures only.", systemImage: "wind")
+                Label(SMC.shared.isAvailable ? "This Mac has no fans — showing temperatures only."
+                                             : "Can't read this Mac's sensors (no SMC access, e.g. in a virtual machine).",
+                      systemImage: SMC.shared.isAvailable ? "wind" : "exclamationmark.triangle")
                     .font(.system(size: 11.5))
                     .foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
