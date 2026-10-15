@@ -125,3 +125,30 @@ jobs:
         with:
           name: Breeze
           path: Breeze/build/Breeze.zip
+
+  # Publishes the three apps to a stable release so they can be downloaded without a GitHub account:
+  # https://github.com/<owner>/<repo>/releases/download/apps/<App>.zip
+  release:
+    needs: [build, unload, breeze]
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          ls -R dist
+          notes="Displate (displays), Unload (memory) and Breeze (fans) — menu bar apps for macOS 14+. Built from ${GITHUB_SHA::7}."
+          if ! gh release view apps -R "$REPO" >/dev/null 2>&1; then
+            gh release create apps -R "$REPO" --target "$GITHUB_SHA" --title "Displate, Unload & Breeze" --notes "$notes" --latest
+          else
+            gh release edit apps -R "$REPO" --notes "$notes"
+          fi
+          gh release upload apps -R "$REPO" --clobber \
+            dist/Displate/Displate.zip dist/Unload/Unload.zip dist/Breeze/Breeze.zip
