@@ -339,7 +339,7 @@ private struct ProcessCard: View {
                 ScrollView {
                     rows
                 }
-                .frame(height: 360)
+                .frame(height: min(CGFloat(max(model.visibleGroups.count, 1)) * 44 + 4, 360))
                 .scrollIndicators(.automatic)
             } else {
                 rows
@@ -435,14 +435,20 @@ private struct ProcessRow: View {
                 }
             }
             .padding(.horizontal, 6)
-            .padding(.vertical, 5)
-            .background(alignment: .leading) {
+            .padding(.top, 5)
+            .padding(.bottom, 7)
+            .overlay(alignment: .bottomLeading) {
+                // Share of the largest entry, as a slim bar under the row.
                 GeometryReader { geometry in
-                    RoundedRectangle(cornerRadius: 8, style: .continuous)
-                        .fill(barColor.opacity(0.13))
-                        .frame(width: geometry.size.width * min(1, Double(group.footprint) / Double(largest)))
+                    Capsule()
+                        .fill(LinearGradient(colors: [barColor.opacity(0.9), barColor.opacity(0.5)], startPoint: .leading, endPoint: .trailing))
+                        .frame(width: max(3, geometry.size.width * min(1, Double(group.footprint) / Double(largest))), height: 2.5)
                         .animation(.smooth(duration: 0.5), value: group.footprint)
                 }
+                .frame(height: 2.5)
+                .padding(.leading, 39)
+                .padding(.trailing, 6)
+                .padding(.bottom, 2)
             }
             .background(RoundedRectangle(cornerRadius: 8, style: .continuous).fill(Color.primary.opacity(hovering ? 0.06 : 0)))
             .contentShape(Rectangle())

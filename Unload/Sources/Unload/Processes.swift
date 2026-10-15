@@ -29,9 +29,10 @@ struct ProcessGroup: Identifiable, Hashable {
     var isOtherUser: Bool
 
     var subtitle: String {
-        if processes.count == 1, let detail = processes[0].detail { return detail }
         if processes.count > 1 { return "\(processes.count) processes" }
-        return isOtherUser ? "System process" : "Process \(processes[0].pid)"
+        let process = processes[0]
+        if process.detail != nil { return "\(process.name) · PID \(process.pid)" }
+        return isOtherUser ? "System · PID \(process.pid)" : "PID \(process.pid)"
     }
 
     var pids: [pid_t] { processes.map(\.pid) }
@@ -170,8 +171,8 @@ final class ProcessScanner: @unchecked Sendable {
                 }
             } else {
                 let key = "pid:\(entry.pid)"
-                let name = entry.detail.map { "\(entry.name) · \($0)" } ?? entry.name
-                groups[key] = ProcessGroup(id: key, name: entry.detail == nil ? entry.name : name, bundlePath: nil, bundleID: nil,
+                // Interpreters are named after the script they run ("mlx_lm.server", not "python3.11").
+                groups[key] = ProcessGroup(id: key, name: entry.detail ?? entry.name, bundlePath: nil, bundleID: nil,
                                            processes: [entry], footprint: entry.footprint, isAI: entry.isAI,
                                            isProtected: isProtected(entry), isOtherUser: entry.isOtherUser)
             }

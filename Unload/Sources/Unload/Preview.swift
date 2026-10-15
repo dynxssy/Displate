@@ -90,7 +90,7 @@ enum PreviewRenderer {
                                     footprint: UInt64(size * Double(gb)), isOtherUser: system, detail: index == 0 ? detail : nil, isAI: ai)
             }
             let id = bundle ?? "pid:\(processes[0].pid)"
-            return ProcessGroup(id: id, name: detail.map { "\(name) · \($0)" } ?? name, bundlePath: bundle, bundleID: nil,
+            return ProcessGroup(id: id, name: detail ?? name, bundlePath: bundle, bundleID: nil,
                                 processes: processes, footprint: processes.reduce(0) { $0 + $1.footprint },
                                 isAI: ai, isProtected: protected, isOtherUser: system)
         }
